@@ -1,22 +1,22 @@
 const mapData = {
   command: {
     title: "Command deck",
-    image: "megaships/Ops-Megaship_Command.svg",
+    image: "maps/megaships/decks/Ops-Megaship_Command.svg",
     description: "Bridge and operations spaces for primary ship command.",
   },
   cargo: {
     title: "Cargo deck",
-    image: "megaships/Ops-Megaship_Cargo.svg",
+    image: "maps/megaships/decks/Ops-Megaship_Cargo.svg",
     description: "Storage, transfer routes, and loading access points.",
   },
   engineering: {
     title: "Engineering deck",
-    image: "megaships/Ops-Megaship_Engineering.svg",
+    image: "maps/megaships/decks/Ops-Megaship_Engineering.svg",
     description: "Core systems, maintenance routes, and technical access.",
   },
   habitat: {
     title: "Habitat deck",
-    image: "megaships/Ops-Megaship_Habitat.svg",
+    image: "maps/megaships/decks/Ops-Megaship_Habitat.svg",
     description: "Living quarters, common spaces, and connecting corridors.",
   },
 };
