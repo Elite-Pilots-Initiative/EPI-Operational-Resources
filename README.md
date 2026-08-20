@@ -11,6 +11,19 @@ This site is configured to use Bun for local development and preview.
 5. Open the preview URL in your browser, usually `http://localhost:3000`.
 6. Vite will watch the HTML, CSS, and SVG source files and auto-refresh the page whenever they change.
 
+## Route configuration
+
+Edit `site-config.js` to enable or disable site routes:
+
+```js
+routes: {
+	home: false,
+	maps: true,
+}
+```
+
+With the default configuration, the root URL redirects to the fullscreen megaship maps page and home navigation is hidden.
+
 This project is an attempt to map the interior spaces of megaships and other large structures in **Elite Dangerous** in a form that is actually useful while playing.
 
 The maps are not intended to be engineering drawings, nor do I expect the measurements to be exact. They are navigational schematics, built from direct observation, screenshots, repeated architectural features, player movement, and whatever reasonably repeatable measurements the game allows.
@@ -22,11 +35,11 @@ In other words:
 
 The useful questions are fairly simple:
 
-* Where am I?
-* Where does this corridor go?
-* How do these rooms connect?
-* Where is the lift, stairwell, terminal, or other point of interest?
-* How large is this space relative to the one beside it?
+- Where am I?
+- Where does this corridor go?
+- How do these rooms connect?
+- Where is the lift, stairwell, terminal, or other point of interest?
+- How large is this space relative to the one beside it?
 
 If the map answers those questions clearly, it is doing its job.
 
@@ -40,12 +53,12 @@ Layouts are reconstructed through exploration of the in-game environment.
 
 Measurements and placement may be based on:
 
-* repeatable in-game distances
-* player movement
-* relative room and corridor dimensions
-* repeated structural elements
-* alignment between connected spaces
-* screenshots and visual comparison
+- repeatable in-game distances
+- player movement
+- relative room and corridor dimensions
+- repeated structural elements
+- alignment between connected spaces
+- screenshots and visual comparison
 
 Where a measurement is uncertain, I would rather preserve that uncertainty than manufacture precision.
 

@@ -8,6 +8,8 @@
       content="Elite Pilots Initiative provides operational tools, route planning, megaship navigation utilities, and community-driven intelligence for Elite Dangerous commanders."
     />
     <title>Elite Pilots Initiative | Operational Resources</title>
+    <script src="site-config.js"></script>
+    <script src="route-guard.js"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -20,6 +22,7 @@
 
         <nav class="main-nav" aria-label="Main navigation">
           <a href="#tools">Tools</a>
+          <a href="maps.html">Maps</a>
           <a href="#mission">Mission</a>
           <a href="#resources">Resources</a>
           <a href="#about">About</a>
@@ -34,8 +37,9 @@
             <p class="eyebrow">Operational resources for commanders</p>
             <h1>Mission control for the galaxy.</h1>
             <p class="lede">
-              Built for Elite Dangerous players who want faster decisions, cleaner intel,
-              and better coordination across stations, megaships, trade routes, and fleet ops.
+              Built for Elite Dangerous players who want faster decisions,
+              cleaner intel, and better coordination across stations, megaships,
+              trade routes, and fleet ops.
             </p>
 
             <div class="cta-row">
@@ -50,11 +54,22 @@
             </ul>
           </div>
 
-          <div class="hero-visual" aria-label="Elite Dangerous megaship illustrations">
+          <div
+            class="hero-visual"
+            aria-label="Elite Dangerous megaship illustrations"
+          >
             <div class="visual-frame">
               <div class="visual-glow"></div>
-              <img src="Ops-Megaship_Command.svg" alt="Operations megaship illustration" class="ship ship-command" />
-              <img src="Ops-Megaship_Engineering.svg" alt="Engineering megaship illustration" class="ship ship-engineering" />
+              <img
+                src="megaships/Ops-Megaship_Command.svg"
+                alt="Operations megaship illustration"
+                class="ship ship-command"
+              />
+              <img
+                src="megaships/Ops-Megaship_Engineering.svg"
+                alt="Engineering megaship illustration"
+                class="ship ship-engineering"
+              />
               <div class="floating-panel panel-top">
                 <span>Command Deck</span>
                 <strong>Operations</strong>
@@ -78,8 +93,12 @@
               <div class="card-icon">01</div>
               <h3>Megaship navigation</h3>
               <p>
-                Clear schematics for complex interiors, routes, lift access, and key points of interest.
+                Clear schematics for complex interiors, routes, lift access, and
+                key points of interest.
               </p>
+              <a class="card-link" href="maps.html"
+                >Open map viewer <span aria-hidden="true">&#8594;</span></a
+              >
               <span class="card-tag">Navigation</span>
             </article>
 
@@ -87,7 +106,8 @@
               <div class="card-icon">02</div>
               <h3>Trade planning</h3>
               <p>
-                Track profitable runs, compare routes, and manage jump-to-jump logistics with confidence.
+                Track profitable runs, compare routes, and manage jump-to-jump
+                logistics with confidence.
               </p>
               <span class="card-tag">Economy</span>
             </article>
@@ -96,7 +116,8 @@
               <div class="card-icon">03</div>
               <h3>Route intelligence</h3>
               <p>
-                Identify efficient pathways, dangerous systems, and useful intermediate stops across the bubble.
+                Identify efficient pathways, dangerous systems, and useful
+                intermediate stops across the bubble.
               </p>
               <span class="card-tag">Mapping</span>
             </article>
@@ -105,7 +126,8 @@
               <div class="card-icon">04</div>
               <h3>Fleet coordination</h3>
               <p>
-                Keep missions, schedules, and team objectives aligned from the cockpit to the station floor.
+                Keep missions, schedules, and team objectives aligned from the
+                cockpit to the station floor.
               </p>
               <span class="card-tag">Ops</span>
             </article>
@@ -117,13 +139,21 @@
             <p class="eyebrow">Why EPI</p>
             <h2>Helpful tools for real commanders.</h2>
             <p>
-              This website brings together operational resources, reference data, and practical mission aids into one command layer.
-              It is designed to be useful while you play: quick, readable, and built for decisions under pressure.
+              This website brings together operational resources, reference
+              data, and practical mission aids into one command layer. It is
+              designed to be useful while you play: quick, readable, and built
+              for decisions under pressure.
             </p>
             <ul>
               <li>Focused on fast, readable layouts for active play.</li>
-              <li>Optimized for station operations, route planning, and fleet prep.</li>
-              <li>Made to feel like a crew operations hub, not a cluttered dashboard.</li>
+              <li>
+                Optimized for station operations, route planning, and fleet
+                prep.
+              </li>
+              <li>
+                Made to feel like a crew operations hub, not a cluttered
+                dashboard.
+              </li>
             </ul>
           </div>
 
@@ -131,12 +161,18 @@
             <div class="mini-panel">
               <span class="panel-label">Current focus</span>
               <h3>Megaship maps</h3>
-              <p>Spatial schematics that support navigation and orientation inside large structures.</p>
+              <p>
+                Spatial schematics that support navigation and orientation
+                inside large structures.
+              </p>
             </div>
             <div class="mini-panel accent-panel">
               <span class="panel-label">Next tools</span>
               <h3>Trade + route utilities</h3>
-              <p>Set-up dashboards for commodity flow, skip-jumps, and route optimization.</p>
+              <p>
+                Set-up dashboards for commodity flow, skip-jumps, and route
+                optimization.
+              </p>
             </div>
           </div>
         </section>
@@ -162,5 +198,6 @@
         <p>Operational resources for players of Elite Dangerous.</p>
       </footer>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Interactive megaship deck maps for Elite Dangerous commanders."
+    />
+    <title>Megaship Maps | Elite Pilots Initiative</title>
+    <script src="site-config.js"></script>
+    <script src="route-guard.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="maps-page">
+    <main class="map-app">
+      <aside class="map-sidebar" aria-label="Megaship map selection">
+        <div class="map-app-brand">
+          <a
+            class="map-back"
+            data-route-link="home"
+            href="index.html"
+            aria-label="Back to EPI home"
+            >&#8592;</a
+          >
+          <div>
+            <img
+              class="map-brand-logo"
+              src="dist/assets/img/EDPI-logo_square.png"
+              alt="Elite Pilots Initiative Squadron"
+            /><span>Megaship atlas</span>
+          </div>
+        </div>
+        <div class="map-sidebar-heading">
+          <p class="eyebrow">Deck schematics</p>
+          <h1>Choose a deck.</h1>
+        </div>
+        <div class="map-list" aria-label="Megaship maps">
+          <button
+            class="map-option is-active"
+            type="button"
+            aria-pressed="true"
+            data-map="habitat"
+          >
+            <span class="map-index">01</span
+            ><span class="map-option-copy"
+              ><strong>Habitat</strong
+              ><small>Living quarters and access</small></span
+            ><span class="map-arrow" aria-hidden="true">&#8594;</span>
+          </button>
+          <button
+            class="map-option"
+            type="button"
+            aria-pressed="false"
+            data-map="command"
+          >
+            <span class="map-index">02</span
+            ><span class="map-option-copy"
+              ><strong>Command</strong
+              ><small>Bridge and operations</small></span
+            ><span class="map-arrow" aria-hidden="true">&#8594;</span>
+          </button>
+          <button
+            class="map-option"
+            type="button"
+            aria-pressed="false"
+            data-map="engineering"
+          >
+            <span class="map-index">03</span
+            ><span class="map-option-copy"
+              ><strong>Engineering</strong
+              ><small>Systems and maintenance</small></span
+            ><span class="map-arrow" aria-hidden="true">&#8594;</span>
+          </button>
+          <button
+            class="map-option"
+            type="button"
+            aria-pressed="false"
+            data-map="cargo"
+          >
+            <span class="map-index">04</span
+            ><span class="map-option-copy"
+              ><strong>Cargo</strong><small>Storage and transfer</small></span
+            ><span class="map-arrow" aria-hidden="true">&#8594;</span>
+          </button>
+        </div>
+        <section class="layer-controls" aria-labelledby="layer-title">
+          <div class="layer-controls-heading">
+            <div>
+              <p class="eyebrow">Map layers</p>
+              <h2 id="layer-title">Show / hide</h2>
+            </div>
+            <button class="layer-reset" type="button" id="show-all-layers">
+              All
+            </button>
+          </div>
+          <div class="layer-tree">
+            <div class="layer-group" data-layer-group="architecture">
+              <div class="layer-group-heading">
+                <button
+                  class="layer-disclosure"
+                  type="button"
+                  aria-expanded="true"
+                  aria-controls="architecture-layers"
+                >
+                  <span aria-hidden="true">&#9662;</span
+                  ><span>Architecture</span>
+                </button>
+                <button
+                  class="layer-toggle layer-parent is-visible"
+                  type="button"
+                  aria-label="Show Architecture"
+                  aria-pressed="true"
+                  data-layer="architecture"
+                >
+                  <span class="layer-swatch architecture-swatch"></span>
+                </button>
+              </div>
+              <div class="layer-children" id="architecture-layers">
+                <div class="layer-subgroup">
+                  <button
+                    class="layer-disclosure"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="floor-layers"
+                  >
+                    <span aria-hidden="true">&#9662;</span><span>Floors</span>
+                  </button>
+                  <div class="layer-children" id="floor-layers">
+                    <button
+                      class="layer-toggle is-visible"
+                      type="button"
+                      aria-pressed="true"
+                      data-layer="f0"
+                    >
+                      <span class="layer-swatch architecture-swatch"></span
+                      >Floor 0
+                    </button>
+                    <button
+                      class="layer-toggle is-visible"
+                      type="button"
+                      aria-pressed="true"
+                      data-layer="f1"
+                    >
+                      <span class="layer-swatch architecture-swatch"></span
+                      >Floor 1
+                    </button>
+                    <button
+                      class="layer-toggle is-visible"
+                      type="button"
+                      aria-pressed="true"
+                      data-layer="f2"
+                    >
+                      <span class="layer-swatch architecture-swatch"></span
+                      >Floor 2
+                    </button>
+                    <button
+                      class="layer-toggle is-visible"
+                      type="button"
+                      aria-pressed="true"
+                      data-layer="f3"
+                    >
+                      <span class="layer-swatch architecture-swatch"></span
+                      >Floor 3
+                    </button>
+                  </div>
+                </div>
+                <div class="layer-subgroup">
+                  <button
+                    class="layer-disclosure"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="elevated-layers"
+                  >
+                    <span aria-hidden="true">&#9662;</span><span>Elevated</span>
+                  </button>
+                  <div class="layer-children" id="elevated-layers">
+                    <button
+                      class="layer-toggle is-visible"
+                      type="button"
+                      aria-pressed="true"
+                      data-layer="e1"
+                    >
+                      <span class="layer-swatch architecture-swatch"></span
+                      >Elevated 1
+                    </button>
+                    <button
+                      class="layer-toggle is-visible"
+                      type="button"
+                      aria-pressed="true"
+                      data-layer="e2"
+                    >
+                      <span class="layer-swatch architecture-swatch"></span
+                      >Elevated 2
+                    </button>
+                    <button
+                      class="layer-toggle is-visible"
+                      type="button"
+                      aria-pressed="true"
+                      data-layer="e3"
+                    >
+                      <span class="layer-swatch architecture-swatch"></span
+                      >Elevated 3
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layer-group" data-layer-group="consumables">
+              <div class="layer-group-heading">
+                <button
+                  class="layer-disclosure"
+                  type="button"
+                  aria-expanded="true"
+                  aria-controls="consumable-layers"
+                >
+                  <span aria-hidden="true">&#9662;</span
+                  ><span>Consumables</span>
+                </button>
+                <button
+                  class="layer-toggle layer-parent is-visible"
+                  type="button"
+                  aria-label="Show Consumables"
+                  aria-pressed="true"
+                  data-layer="consumables"
+                >
+                  <span class="layer-swatch consumables-swatch"></span>
+                </button>
+              </div>
+              <div class="layer-children" id="consumable-layers">
+                <button
+                  class="layer-toggle is-visible"
+                  type="button"
+                  aria-pressed="true"
+                  data-layer="energy-ports"
+                >
+                  <span class="layer-swatch energy-swatch"></span>Energy ports
+                </button>
+                <button
+                  class="layer-toggle is-visible"
+                  type="button"
+                  aria-pressed="true"
+                  data-layer="ammo-boxes"
+                >
+                  <span class="layer-swatch ammo-swatch"></span>Ammo boxes
+                </button>
+                <button
+                  class="layer-toggle is-visible"
+                  type="button"
+                  aria-pressed="true"
+                  data-layer="batteries"
+                >
+                  <span class="layer-swatch battery-swatch"></span>Batteries
+                </button>
+                <button
+                  class="layer-toggle is-visible"
+                  type="button"
+                  aria-pressed="true"
+                  data-layer="grenade-cases"
+                >
+                  <span class="layer-swatch grenade-swatch"></span>Grenade Cases
+                </button>
+                <button
+                  class="layer-toggle is-visible"
+                  type="button"
+                  aria-pressed="true"
+                  data-layer="medpacks"
+                >
+                  <span class="layer-swatch medpack-swatch"></span>Med packs
+                </button>
+              </div>
+            </div>
+            <div class="layer-group" data-layer-group="text">
+              <div class="layer-group-heading">
+                <button
+                  class="layer-disclosure"
+                  type="button"
+                  aria-expanded="true"
+                  aria-controls="text-layers"
+                >
+                  <span aria-hidden="true">&#9662;</span><span>Text</span>
+                </button>
+                <button
+                  class="layer-toggle layer-parent is-visible"
+                  type="button"
+                  aria-label="Show Text"
+                  aria-pressed="true"
+                  data-layer="text"
+                >
+                  <span class="layer-swatch text-swatch"></span>
+                </button>
+              </div>
+              <div class="layer-children" id="text-layers">
+                <button
+                  class="layer-toggle is-visible"
+                  type="button"
+                  aria-pressed="true"
+                  data-layer="labels"
+                >
+                  <span class="layer-swatch labels-swatch"></span>Labels
+                </button>
+                <button
+                  class="layer-toggle is-visible"
+                  type="button"
+                  aria-pressed="true"
+                  data-layer="headers"
+                >
+                  <span class="layer-swatch headers-swatch"></span>Headers
+                </button>
+                <button
+                  class="layer-toggle is-visible"
+                  type="button"
+                  aria-pressed="true"
+                  data-layer="footers"
+                >
+                  <span class="layer-swatch text-swatch"></span>Footers
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="map-sidebar-footer">
+          <p class="map-sidebar-note">
+            Drag to pan <span aria-hidden="true">&#8226;</span> Ctrl + scroll or
+            pinch to zoom
+          </p>
+          <button class="about-cta" type="button" id="open-about">
+            About the Elite Pilots Initiative Squadron
+            <span aria-hidden="true">&#8599;</span>
+          </button>
+        </div>
+      </aside>
+
+      <section class="map-stage" aria-label="Interactive map viewer">
+        <header class="map-toolbar">
+          <div>
+            <span class="panel-label">Selected schematic</span>
+            <h2 id="map-title">Habitat deck</h2>
+          </div>
+          <div class="map-toolbar-actions">
+            <div class="orientation-controls" aria-label="Map orientation">
+              <button
+                class="orientation-option is-active"
+                type="button"
+                aria-pressed="true"
+                data-orientation="portrait"
+              >
+                Portrait
+              </button>
+              <button
+                class="orientation-option"
+                type="button"
+                aria-pressed="false"
+                data-orientation="landscape"
+              >
+                Landscape
+              </button>
+            </div>
+            <div class="zoom-controls" aria-label="Map zoom controls">
+              <button type="button" id="zoom-out" aria-label="Zoom out">
+                &#8722;
+              </button>
+              <span id="zoom-level">100%</span>
+              <button type="button" id="zoom-in" aria-label="Zoom in">+</button>
+            </div>
+            <button class="reset-button" type="button" id="reset-map">
+              Reset view
+            </button>
+          </div>
+        </header>
+        <div class="map-viewport" id="map-viewport">
+          <div class="map-grid" aria-hidden="true"></div>
+          <div
+            id="map-image"
+            role="img"
+            aria-label="Command deck megaship map"
+          ></div>
+          <div class="map-crosshair" aria-hidden="true"></div>
+          <img
+            class="map-watermark"
+            src="dist/assets/img/EDPI-logo_no-text.png"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+        <footer class="map-stage-footer">
+          <p id="map-description">
+            Living quarters, common spaces, and connecting corridors.
+          </p>
+          <section class="map-fine-print" aria-label="Legal disclaimer">
+            <p>
+              Elite Dangerous and its associated names, assets, and intellectual
+              property belong to Frontier Developments plc and their respective
+              rights holders.
+            </p>
+            <p>
+              This is an unofficial fan-created project and is not affiliated
+              with or endorsed by Frontier Developments.
+            </p>
+          </section>
+        </footer>
+      </section>
+    </main>
+    <dialog
+      class="about-dialog"
+      id="about-dialog"
+      aria-labelledby="about-title"
+    >
+      <div class="about-dialog-content">
+        <button
+          class="dialog-close"
+          type="button"
+          id="close-about"
+          aria-label="Close about dialog"
+        >
+          &#10005;
+        </button>
+        <img
+          class="about-logo"
+          src="dist/assets/img/EDPI-logo_square.png"
+          alt="Elite Pilots Initiative Squadron logo"
+        />
+        <div class="about-copy">
+          <p class="eyebrow">Elite Pilots Initiative</p>
+          <h2 id="about-title">About Elite Pilots Initiative</h2>
+          <p>
+            We welcome curious pilots who are looking to expand their skills and
+            pursue their goals in Elite Dangerous.
+          </p>
+          <p>
+            We empower pilots to mentor others in EPI through collaboration and
+            discussion.
+          </p>
+          <p>We fly farther together!</p>
+          <a
+            class="inara-link"
+            href="https://inara.cz/elite/squadron/16749/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Visit our Inara squadron page
+            <span aria-hidden="true">&#8599;</span></a
+          >
+        </div>
+      </div>
+    </dialog>
+    <script src="map-viewer.js"></script>
+  </body>
+</html>
