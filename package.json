@@ -1,0 +1,11 @@
+{
+  "name": "epi-operational-resources",
+  "private": true,
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vite": "^5.4.10"
+  }
+}

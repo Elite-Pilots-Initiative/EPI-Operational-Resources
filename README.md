@@ -1,5 +1,16 @@
 # Elite Dangerous Megaship Mapping Project
 
+## Local preview in VS Code
+
+This site is configured to use Bun for local development and preview.
+
+1. Install Bun if it is not already available on your machine.
+2. From the repository root, run `bun install`.
+3. Start the dev server with `bun run dev`.
+4. In VS Code, open the terminal task `EPI: start preview`, or run the command manually.
+5. Open the preview URL in your browser, usually `http://localhost:3000`.
+6. Vite will watch the HTML, CSS, and SVG source files and auto-refresh the page whenever they change.
+
 This project is an attempt to map the interior spaces of megaships and other large structures in **Elite Dangerous** in a form that is actually useful while playing.
 
 The maps are not intended to be engineering drawings, nor do I expect the measurements to be exact. They are navigational schematics, built from direct observation, screenshots, repeated architectural features, player movement, and whatever reasonably repeatable measurements the game allows.
