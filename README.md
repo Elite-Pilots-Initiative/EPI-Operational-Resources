@@ -1,4 +1,4 @@
-# Elite Dangerous Megaship Mapping Project
+# Elite Dangerous Operations Megaship Maps
 
 This project is an attempt to map the interior spaces of megaships and other large structures in **Elite Dangerous** in a form that is actually useful while playing.
 
@@ -6,6 +6,8 @@ The maps are not intended to be engineering drawings, nor do I expect the measur
 
 In other words:
 "I'm a tinkerer, not an engineer."
+
+**[Open Elite Dangerous Operations Megaship Maps](https://elite-pilots-initiative.github.io/EPI-Operational-Resources/)**
 
 ## What these maps are trying to do
 
@@ -40,29 +42,11 @@ Where a measurement is uncertain, I would rather preserve that uncertainty than 
 
 As the maps improve, better observations can replace earlier approximations.
 
-## Local preview of the project in VS Code
+## Using and contributing
 
-This site is configured to use Bun for local development and preview.
+**Players:** Visit [Elite Dangerous Operations Megaship Maps](https://elite-pilots-initiative.github.io/EPI-Operational-Resources/) to view and use the interactive maps.
 
-1. Install Bun if it is not already available on your machine.
-2. From the repository root, run `bun install`.
-3. Start the dev server with `bun run dev`.
-4. In VS Code, open the terminal task `EPI: start preview`, or run the command manually.
-5. Open the preview URL in your browser, usually `http://localhost:3000`.
-6. Vite will watch the HTML, CSS, and SVG source files and auto-refresh the page whenever they change.
-
-## Site routing configuration
-
-Edit `site-config.js` to enable or disable site routes:
-
-```js
-routes: {
-	home: false,
-	maps: true,
-}
-```
-
-With the default configuration, the root URL redirects to the fullscreen megaship maps page and home navigation is hidden.
+**Developers and contributors:** Visit the [Elite Dangerous Operations Megaship Maps repository](https://github.com/Elite-Pilots-Initiative/EPI-Operational-Resources) for the project source, development, and contributions.
 
 ## Found something wrong?
 
