@@ -353,8 +353,10 @@ function setZoom(
 ) {
   const boundedScale = Math.min(4, Math.max(0.25, nextScale));
   const ratio = boundedScale / scale;
-  offsetX = originX - (originX - offsetX) * ratio;
-  offsetY = originY - (originY - offsetY) * ratio;
+  const centerX = viewport.clientWidth / 2;
+  const centerY = viewport.clientHeight / 2;
+  offsetX = (originX - centerX) - (originX - centerX - offsetX) * ratio;
+  offsetY = (originY - centerY) - (originY - centerY - offsetY) * ratio;
   scale = boundedScale;
   renderMap();
 }
@@ -476,12 +478,15 @@ viewport.addEventListener(
     } else if (event.touches.length === 2) {
       dragStart = null;
       viewport.classList.remove("is-dragging");
+      const bounds = viewport.getBoundingClientRect();
       pinchStart = {
         distance: Math.hypot(
           event.touches[0].clientX - event.touches[1].clientX,
           event.touches[0].clientY - event.touches[1].clientY,
         ),
         scale,
+        midX: (event.touches[0].clientX + event.touches[1].clientX) / 2 - bounds.left,
+        midY: (event.touches[0].clientY + event.touches[1].clientY) / 2 - bounds.top,
       };
     }
   },
@@ -501,7 +506,7 @@ viewport.addEventListener(
         event.touches[0].clientX - event.touches[1].clientX,
         event.touches[0].clientY - event.touches[1].clientY,
       );
-      setZoom(pinchStart.scale * (distance / pinchStart.distance));
+      setZoom(pinchStart.scale * (distance / pinchStart.distance), pinchStart.midX, pinchStart.midY);
     }
   },
   { passive: false },
