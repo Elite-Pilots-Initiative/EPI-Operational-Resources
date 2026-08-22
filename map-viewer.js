@@ -361,10 +361,10 @@ function setZoom(
   renderMap();
 }
 
-document.querySelectorAll(".map-option").forEach((button) => {
+document.querySelectorAll(".deck-option").forEach((button) => {
   button.addEventListener("click", async () => {
     const map = mapData[button.dataset.map];
-    document.querySelectorAll(".map-option").forEach((option) => {
+    document.querySelectorAll(".deck-option").forEach((option) => {
       const selected = option === button;
       option.classList.toggle("is-active", selected);
       option.setAttribute("aria-pressed", String(selected));
