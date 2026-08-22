@@ -8,65 +8,14 @@
    version="1.1"
    id="svg1"
    xml:space="preserve"
-   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
-   sodipodi:docname="Ops-Megaship.svg"
-   inkscape:export-filename="..\..\Desktop\Page 1.svg"
-   inkscape:export-xdpi="300"
-   inkscape:export-ydpi="300"
-   inkscape:export-batch-name="Ops-Megaship"
-   inkscape:export-batch-path="C:\Users\indy\docs\floorplans"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/"><title
-   id="title3883">Operations Megaship</title><sodipodi:namedview
-   id="namedview1"
-   pagecolor="#505050"
-   bordercolor="#ffffff"
-   borderopacity="1"
-   inkscape:showpageshadow="0"
-   inkscape:pageopacity="0"
-   inkscape:pagecheckerboard="1"
-   inkscape:deskcolor="#505050"
-   inkscape:document-units="px"
-   showgrid="true"
-   inkscape:zoom="0.70585876"
-   inkscape:cx="5647.022"
-   inkscape:cy="1731.9329"
-   inkscape:window-width="1920"
-   inkscape:window-height="1009"
-   inkscape:window-x="1072"
-   inkscape:window-y="468"
-   inkscape:window-maximized="1"
-   inkscape:current-layer="architecture_cargo"
-   inkscape:export-bgcolor="#000000ff"><inkscape:grid
-     id="grid1"
-     units="px"
-     originx="-481.56"
-     originy="0"
-     spacingx="0.26458333"
-     spacingy="0.26458334"
-     empcolor="#3f3fff"
-     empopacity="0.25098039"
-     color="#3f3fff"
-     opacity="0.1254902"
-     empspacing="5"
-     enabled="true"
-     visible="true" /><inkscape:page
-     x="0"
-     y="0"
-     width="419.60001"
-     height="609.59991"
-     id="page1111"
-     margin="0"
-     bleed="0"
-     inkscape:label="Engineering" /></sodipodi:namedview><defs
+   id="title3883">Operations Megaship</title><defs
    id="defs1"><pattern
-     inkscape:collect="always"
      xlink:href="#DiamondPlate"
      preserveAspectRatio="xMidYMid"
      id="pattern57"
@@ -78,19 +27,14 @@
      height="84"
      preserveAspectRatio="xMidYMid"
      id="DiamondPlate"
-     inkscape:stockid="Diamond Plate"
      style="fill:#ff860d"
      patternTransform="matrix(0.35355339,0.35355339,-0.35355339,0.35355339,0,0)"
      x="0"
-     y="0"
-     inkscape:label="Diamond Plate"
-     inkscape:collect="always"
-     inkscape:isstock="true"><path
+     y="0"><path
        id="rect22"
        style="fill-opacity:1;stroke:none"
        d="m 29.441406,0 c -0.485427,1.590892 -0.802734,3.4057 -0.802734,5.466797 0,5.423014 2.298575,9.285029 3.939453,11.560547 1.640878,-2.275518 3.939453,-6.137533 3.939453,-11.560547 0,-2.061091 -0.315357,-3.875908 -0.800781,-5.466797 z m 42,0 c -0.485427,1.590892 -0.802734,3.4057 -0.802734,5.466797 0,5.423014 2.298575,9.285029 3.939453,11.560547 1.640878,-2.275518 3.939453,-6.137533 3.939453,-11.560547 C 78.517578,3.405706 78.202221,1.590889 77.716797,0 Z M 11.578125,1.527344 c -5.423017,0 -9.283074,2.29858 -11.558594,3.939453 2.27552,1.640874 6.135577,3.939453 11.558594,3.939453 5.451291,0 9.197845,-2.20152 11.560547,-3.939453 C 20.77597,3.728865 17.029416,1.527344 11.578125,1.527344 Z m 42,0 c -5.423019,0 -9.283075,2.29858 -11.558594,3.939453 2.275519,1.640874 6.135575,3.939453 11.558594,3.939453 5.451291,0 9.197845,-2.20152 11.560547,-3.939453 C 62.77597,3.728865 59.029416,1.527344 53.578125,1.527344 Z m -42,13.378906 C 9.840198,17.268958 7.638672,21.0155 7.638672,26.4668 c 0,5.42301 2.298575,9.28503 3.939453,11.56054 1.640878,-2.27551 3.939453,-6.13753 3.939453,-11.56054 0,-5.4513 -2.201525,-9.197842 -3.939453,-11.56055 z m 42,0 c -1.737928,2.362708 -3.939453,6.10925 -3.939453,11.56055 0,5.42301 2.298575,9.28503 3.939453,11.56054 1.640878,-2.27551 3.939453,-6.13753 3.939453,-11.56054 0,-5.4513 -2.201525,-9.197842 -3.939453,-11.56055 z m -21,7.62109 c -5.423019,0 -9.283075,2.29858 -11.558594,3.93946 2.275519,1.64087 6.135575,3.93945 11.558594,3.93945 5.451291,0 9.197845,-2.20152 11.560547,-3.93945 -2.362702,-1.73793 -6.109256,-3.93946 -11.560547,-3.93946 z m 41,0 c -5.423015,0 -9.283076,2.29858 -11.558594,3.93946 2.275518,1.64087 6.135579,3.93945 11.558594,3.93945 4.031903,0 7.125505,-1.20476 9.421875,-2.53516 V 25.0625 C 80.70363,23.7321 77.610028,22.52734 73.578125,22.52734 Z M 0,25.0625 v 2.80859 C 0.808414,27.40274 1.523479,26.91931 2.138672,26.4668 1.523479,26.01428 0.808414,25.53085 0,25.0625 Z m 32.578125,10.84375 c -1.737928,2.36271 -3.939453,6.10925 -3.939453,11.56055 0,5.42301 2.298575,9.28503 3.939453,11.56054 1.640878,-2.27551 3.939453,-6.13753 3.939453,-11.56054 0,-5.4513 -2.201525,-9.19784 -3.939453,-11.56055 z m 42,0 c -1.737928,2.36271 -3.939453,6.10925 -3.939453,11.56055 0,5.42301 2.298575,9.28503 3.939453,11.56054 1.640878,-2.27551 3.939453,-6.13753 3.939453,-11.56054 0,-5.4513 -2.201525,-9.19784 -3.939453,-11.56055 z m -63,7.62109 c -5.423018,0 -9.283075,2.29858 -11.558594,3.93946 2.275519,1.64087 6.135576,3.93945 11.558594,3.93945 5.451291,0 9.197845,-2.20152 11.560547,-3.93945 -2.362702,-1.73793 -6.109256,-3.93946 -11.560547,-3.93946 z m 42,0 c -5.423019,0 -9.283075,2.29858 -11.558594,3.93946 2.275519,1.64087 6.135575,3.93945 11.558594,3.93945 5.451291,0 9.197845,-2.20152 11.560547,-3.93945 -2.362702,-1.73793 -6.109256,-3.93946 -11.560547,-3.93946 z m -42,13.37891 C 9.840198,59.26896 7.638672,63.0155 7.638672,68.4668 c 0,5.42301 2.298575,9.28503 3.939453,11.56054 1.640878,-2.27551 3.939453,-6.13753 3.939453,-11.56054 0,-5.4513 -2.201525,-9.19784 -3.939453,-11.56055 z m 42,0 c -1.737928,2.36271 -3.939453,6.10925 -3.939453,11.56055 0,5.42301 2.298575,9.28503 3.939453,11.56054 1.640878,-2.27551 3.939453,-6.13753 3.939453,-11.56054 0,-5.4513 -2.201525,-9.19784 -3.939453,-11.56055 z m -21,7.62109 c -5.423019,0 -9.283075,2.29858 -11.558594,3.93946 2.275519,1.64087 6.135575,3.93945 11.558594,3.93945 5.451291,0 9.197845,-2.20152 11.560547,-3.93945 -2.362702,-1.73793 -6.109256,-3.93946 -11.560547,-3.93946 z m 41,0 c -5.423015,0 -9.283076,2.29858 -11.558594,3.93946 2.275518,1.64087 6.135579,3.93945 11.558594,3.93945 4.031903,0 7.125505,-1.20476 9.421875,-2.53516 V 67.0625 C 80.70363,65.7321 77.610028,64.52734 73.578125,64.52734 Z M 0,67.0625 v 2.80859 C 0.808414,69.40274 1.523479,68.91931 2.138672,68.4668 1.523479,68.01428 0.808414,67.53085 0,67.0625 Z M 32.578125,77.90625 C 31.497295,79.37563 30.239861,81.38322 29.441406,84 h 6.275391 c -0.798455,-2.61679 -2.05784,-4.62436 -3.138672,-6.09375 z m 42,0 C 73.497295,79.37563 72.239861,81.38322 71.441406,84 h 6.275391 c -0.798455,-2.61679 -2.05784,-4.62436 -3.138672,-6.09375 z" /></pattern><linearGradient
-     id="swatch1"
-     inkscape:swatch="solid"><stop
+     id="swatch1"><stop
        style="stop-color:#000000;stop-opacity:1;"
        offset="0"
        id="stop1" /></linearGradient><font
@@ -6691,9 +6635,7 @@
  <g
    class="Page"
    id="deck_engineering"
-   inkscape:label="Engineering Deck"
-   transform="matrix(0.01,0,0,0.01,-1.1324797e-5,0)"
-   sodipodi:insensitive="true">
+   transform="matrix(0.01,0,0,0.01,-1.1324797e-5,0)">
       <defs
    class="SlideBackground"
    id="defs82" />
@@ -6703,14 +6645,12 @@
       <g
    class="Group"
    id="architecture_engineering"
-   style="display:inline"
-   inkscape:label="Architecture">
+   style="display:inline">
        <g
    class="com.sun.star.drawing.PolyPolygonShape"
    id="f0_engineering"
    style="display:inline"
-   transform="translate(3.2203189e-4)"
-   inkscape:label="Floor 0">
+   transform="translate(3.2203189e-4)">
        <g
    id="id3-0">
         <rect
@@ -6737,8 +6677,7 @@
    class="com.sun.star.drawing.PolyPolygonShape"
    id="f1_engineering"
    style="display:inline"
-   transform="translate(3.2203189e-4)"
-   inkscape:label="Floor 1">
+   transform="translate(3.2203189e-4)">
        <g
    id="id4-3">
         <rect
@@ -17757,7 +17696,6 @@
    class="Group"
    id="e1_engineering"
    style="display:inline"
-   inkscape:label="Elevated 1"
    transform="translate(3.2203189e-4)">
        
        
@@ -19618,9 +19556,7 @@
       <g
    class="Group"
    id="consumables_engineering"
-   style="display:inline"
-   inkscape:label="Consumables"
-   sodipodi:insensitive="true">
+   style="display:inline">
        
        
        
@@ -19654,8 +19590,7 @@
        
        
       <g
-   id="medpacks_engineering"
-   inkscape:label="MedPacks"
+   id="medkits_engineering"
    transform="translate(-42959.998)"
    style="display:inline"><g
      class="Group"
@@ -19789,7 +19724,6 @@
         </g>
        </g></g><g
    id="grenade-cases_engineering"
-   inkscape:label="Grenade Cases"
    transform="translate(-42959.998)"
    style="display:inline"><g
      class="Group"
@@ -21592,7 +21526,6 @@
         </g>
        </g></g><g
    id="energy-ports_engineering"
-   inkscape:label="Energy Ports"
    transform="translate(-42959.998)"
    style="display:inline"><g
      class="Group"
@@ -21752,7 +21685,6 @@
         </g>
        </g></g><g
    id="batteries_engineering"
-   inkscape:label="Batteries"
    transform="translate(-42959.998)"
    style="display:inline"><g
      class="Group"
@@ -21990,7 +21922,6 @@
         </g>
        </g></g><g
    id="ammo-boxes_engineering"
-   inkscape:label="Ammo Boxes"
    transform="translate(-42959.998)"
    style="display:inline"><g
      class="Group"
@@ -22860,9 +22791,7 @@
        </g></g></g><g
    class="Group"
    id="text_engineering"
-   style="display:inline"
-   inkscape:label="Text"
-   sodipodi:insensitive="true">
+   style="display:inline">
        
        
        
@@ -22878,7 +22807,6 @@
        
       <g
    id="footers_engineering"
-   inkscape:label="Footers"
    transform="translate(-42959.998)"><g
      class="TextShape"
      id="g1868"
@@ -22947,7 +22875,6 @@
         </g>
        </g></g><g
    id="labels_engineering"
-   inkscape:label="Labels"
    transform="translate(-42959.998)"><g
      class="TextShape"
      id="g1810"
@@ -23558,7 +23485,6 @@
         </g>
        </g></g><g
    id="headers_engineering"
-   inkscape:label="Headers"
    transform="translate(-42959.998)"><g
      class="TextShape"
      id="g1871"
