@@ -467,7 +467,15 @@ viewport.addEventListener("pointerup", () => {
 viewport.addEventListener(
   "touchstart",
   (event) => {
-    if (event.touches.length === 2) {
+    if (event.touches.length === 1) {
+      dragStart = {
+        x: event.touches[0].clientX - offsetX,
+        y: event.touches[0].clientY - offsetY,
+      };
+      viewport.classList.add("is-dragging");
+    } else if (event.touches.length === 2) {
+      dragStart = null;
+      viewport.classList.remove("is-dragging");
       pinchStart = {
         distance: Math.hypot(
           event.touches[0].clientX - event.touches[1].clientX,
@@ -483,18 +491,25 @@ viewport.addEventListener(
 viewport.addEventListener(
   "touchmove",
   (event) => {
-    if (!pinchStart || event.touches.length !== 2) return;
     event.preventDefault();
-    const distance = Math.hypot(
-      event.touches[0].clientX - event.touches[1].clientX,
-      event.touches[0].clientY - event.touches[1].clientY,
-    );
-    setZoom(pinchStart.scale * (distance / pinchStart.distance));
+    if (event.touches.length === 1 && dragStart) {
+      offsetX = event.touches[0].clientX - dragStart.x;
+      offsetY = event.touches[0].clientY - dragStart.y;
+      renderMap();
+    } else if (event.touches.length === 2 && pinchStart) {
+      const distance = Math.hypot(
+        event.touches[0].clientX - event.touches[1].clientX,
+        event.touches[0].clientY - event.touches[1].clientY,
+      );
+      setZoom(pinchStart.scale * (distance / pinchStart.distance));
+    }
   },
   { passive: false },
 );
 
 viewport.addEventListener("touchend", () => {
+  dragStart = null;
   pinchStart = null;
+  viewport.classList.remove("is-dragging");
 });
 loadMap(activeMap).then(refreshUprightLayout);
