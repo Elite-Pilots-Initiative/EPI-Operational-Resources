@@ -97,6 +97,12 @@ const uprightLayerNames = [
   "medpacks",
 ];
 
+const overlapAvoidanceLayerNames = [
+  "labels",
+  "headers",
+  "footers",
+];
+
 function renderMap() {
   const rotation = orientation === "landscape" ? " rotate(90deg)" : "";
   image.style.transform = `translate(calc(-50% + ${offsetX}px), calc(-50% + ${offsetY}px)) scale(${scale})${rotation}`;
@@ -188,7 +194,7 @@ function setUprightTransform(object) {
 }
 
 function avoidUprightOverlaps(svg) {
-  const candidates = uprightLayerNames.flatMap((layerName) => {
+  const candidates = overlapAvoidanceLayerNames.flatMap((layerName) => {
     const group = svg.querySelector(`#${layerName}_${activeMap}`);
     return group
       ? [...group.querySelectorAll(":scope > g")].map((object) => ({
