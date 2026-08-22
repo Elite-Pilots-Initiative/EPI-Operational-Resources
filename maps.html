@@ -14,7 +14,7 @@
   </head>
   <body class="maps-page">
     <main class="map-app">
-      <aside class="map-sidebar" aria-label="Megaship Map selection">
+      <aside class="map-sidebar" aria-label="Map layers and information">
         <div class="map-app-brand">
           <a
             class="map-back"
@@ -30,59 +30,6 @@
               alt="Elite Pilots Initiative squadron"
             /><span>Operations Megaship Deck Maps</span>
           </div>
-        </div>
-        <div class="map-sidebar-heading">
-          <p class="eyebrow">Deck Maps</p>
-          <h1>Choose a deck.</h1>
-        </div>
-        <div class="map-list" aria-label="Megaship maps">
-          <button
-            class="map-option is-active"
-            type="button"
-            aria-pressed="true"
-            data-map="habitat"
-          >
-            <span class="map-index">01</span
-            ><span class="map-option-copy"
-              ><strong>Habitat Deck</strong
-              ><small>Living quarters, recreation, and Mess Hall</small></span
-            ><span class="map-arrow" aria-hidden="true">&#8594;</span>
-          </button>
-          <button
-            class="map-option"
-            type="button"
-            aria-pressed="false"
-            data-map="command"
-          >
-            <span class="map-index">02</span
-            ><span class="map-option-copy"
-              ><strong>Command Deck</strong
-              ><small>Command Center, Briefing Room, and Server Rooms</small></span
-            ><span class="map-arrow" aria-hidden="true">&#8594;</span>
-          </button>
-          <button
-            class="map-option"
-            type="button"
-            aria-pressed="false"
-            data-map="engineering"
-          >
-            <span class="map-index">03</span
-            ><span class="map-option-copy"
-              ><strong>Engineering Deck</strong
-              ><small>Power Plant and Breaker Rooms</small></span
-            ><span class="map-arrow" aria-hidden="true">&#8594;</span>
-          </button>
-          <button
-            class="map-option"
-            type="button"
-            aria-pressed="false"
-            data-map="cargo"
-          >
-            <span class="map-index">04</span
-            ><span class="map-option-copy"
-              ><strong>Cargo Deck</strong><small>Cargo Bays, Cargo Depot, and assorted storage</small></span
-            ><span class="map-arrow" aria-hidden="true">&#8594;</span>
-          </button>
         </div>
         <section class="layer-controls" aria-labelledby="layer-title">
           <div class="layer-controls-heading">
@@ -333,10 +280,45 @@
 
       <section class="map-stage" aria-label="Interactive map viewer">
         <header class="map-toolbar">
-          <div>
-            <span class="panel-label">Selected Deck</span>
-            <h2 id="map-title">Habitat Deck</h2>
-          </div>
+          <h1 class="map-title-sr" id="map-title">Habitat Deck</h1>
+          <nav class="deck-selector" aria-label="Choose a deck">
+            <button
+              class="deck-option is-active"
+              type="button"
+              aria-pressed="true"
+              aria-label="Habitat Deck: Living quarters, recreation, and Mess Hall"
+              data-map="habitat"
+            >
+              <span class="deck-index">01</span><span>Habitat Deck</span>
+            </button>
+            <button
+              class="deck-option"
+              type="button"
+              aria-pressed="false"
+              aria-label="Command Deck: Command Center, Briefing Room, and Server Rooms"
+              data-map="command"
+            >
+              <span class="deck-index">02</span><span>Command Deck</span>
+            </button>
+            <button
+              class="deck-option"
+              type="button"
+              aria-pressed="false"
+              aria-label="Engineering Deck: Power Plant and Breaker Rooms"
+              data-map="engineering"
+            >
+              <span class="deck-index">03</span><span>Engineering Deck</span>
+            </button>
+            <button
+              class="deck-option"
+              type="button"
+              aria-pressed="false"
+              aria-label="Cargo Deck: Cargo Bays, Cargo Depot, and assorted storage"
+              data-map="cargo"
+            >
+              <span class="deck-index">04</span><span>Cargo Deck</span>
+            </button>
+          </nav>
           <div class="map-toolbar-actions">
             <div class="orientation-controls" aria-label="Map orientation">
               <button
