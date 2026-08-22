@@ -682,7 +682,7 @@ a {
 .map-app-brand > div {
   gap: 9px;
   color: var(--text);
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -692,6 +692,17 @@ a {
   height: 32px;
   border-radius: 8px;
   font-size: 0.72rem;
+}
+
+.map-credits {
+  margin: -18px 8px 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+.credit-name {
+  white-space: nowrap;
 }
 
 .map-brand-logo {

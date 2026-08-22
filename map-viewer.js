@@ -83,7 +83,10 @@ let pinchStart;
 let activeMap = "habitat";
 let orientation = "portrait";
 const layerVisibility = Object.fromEntries(
-  layerNames.map((layerName) => [layerName, true]),
+  layerNames.map((layerName) => [
+    layerName,
+    !["headers", "footers"].includes(layerName),
+  ]),
 );
 
 const uprightLayerNames = [
@@ -158,6 +161,28 @@ function getDrawingScreenScale(svg) {
     x: Math.hypot(ctm.a, ctm.b) * Math.abs(matrix[0]),
     y: Math.hypot(ctm.c, ctm.d) * Math.abs(matrix[3]),
   };
+}
+
+function centerInitialMap() {
+  const svg = image.querySelector("svg");
+  const architecture = svg?.querySelector(`#architecture_${activeMap}`);
+  if (!svg || !architecture) return;
+
+  const previousTransition = image.style.transition;
+  image.style.transition = "none";
+  renderMap();
+  image.getBoundingClientRect();
+  const viewportBox = viewport.getBoundingClientRect();
+  const architectureBox = architecture.getBoundingClientRect();
+  offsetX +=
+    viewportBox.left + viewportBox.width / 2 -
+    (architectureBox.left + architectureBox.width / 2);
+  offsetY +=
+    viewportBox.top + viewportBox.height / 2 -
+    (architectureBox.top + architectureBox.height / 2);
+  renderMap();
+  image.getBoundingClientRect();
+  image.style.transition = previousTransition;
 }
 
 function applyOrientation() {
@@ -517,4 +542,7 @@ viewport.addEventListener("touchend", () => {
   pinchStart = null;
   viewport.classList.remove("is-dragging");
 });
-loadMap(activeMap).then(refreshUprightLayout);
+loadMap(activeMap).then(() => {
+  centerInitialMap();
+  refreshUprightLayout();
+});
