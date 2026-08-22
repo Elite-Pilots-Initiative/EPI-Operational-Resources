@@ -52,7 +52,7 @@ const layerNames = [
   "ammo-boxes",
   "batteries",
   "grenade-cases",
-  "medpacks",
+  "medkits",
   "text",
   "labels",
   "headers",
@@ -65,7 +65,7 @@ const layerChildren = {
     "ammo-boxes",
     "batteries",
     "grenade-cases",
-    "medpacks",
+    "medkits",
   ],
   text: ["labels", "headers", "footers"],
 };
@@ -94,7 +94,7 @@ const uprightLayerNames = [
   "ammo-boxes",
   "batteries",
   "grenade-cases",
-  "medpacks",
+  "medkits",
 ];
 
 const overlapAvoidanceLayerNames = [
