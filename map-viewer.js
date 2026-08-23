@@ -163,7 +163,7 @@ function getDrawingScreenScale(svg) {
   };
 }
 
-function centerInitialMap() {
+function centerMap() {
   const svg = image.querySelector("svg");
   const architecture = svg?.querySelector(`#architecture_${activeMap}`);
   if (!svg || !architecture) return;
@@ -183,6 +183,19 @@ function centerInitialMap() {
   renderMap();
   image.getBoundingClientRect();
   image.style.transition = previousTransition;
+}
+
+function rotateViewAroundCenter(nextOrientation) {
+  if (nextOrientation === orientation) return;
+
+  const previousOffsetX = offsetX;
+  if (nextOrientation === "landscape") {
+    offsetX = -offsetY;
+    offsetY = previousOffsetX;
+  } else {
+    offsetX = offsetY;
+    offsetY = -previousOffsetX;
+  }
 }
 
 function applyOrientation() {
@@ -433,7 +446,9 @@ document.querySelector("#show-all-layers").addEventListener("click", () => {
 
 document.querySelectorAll(".orientation-option").forEach((button) => {
   button.addEventListener("click", () => {
-    orientation = button.dataset.orientation;
+    const nextOrientation = button.dataset.orientation;
+    rotateViewAroundCenter(nextOrientation);
+    orientation = nextOrientation;
     document.querySelectorAll(".orientation-option").forEach((option) => {
       const selected = option === button;
       option.classList.toggle("is-active", selected);
@@ -454,7 +469,7 @@ document.querySelector("#reset-map").addEventListener("click", () => {
   scale = 1;
   offsetX = 0;
   offsetY = 0;
-  renderMap();
+  centerMap();
 });
 
 viewport.addEventListener(
@@ -543,6 +558,6 @@ viewport.addEventListener("touchend", () => {
   viewport.classList.remove("is-dragging");
 });
 loadMap(activeMap).then(() => {
-  centerInitialMap();
+  centerMap();
   refreshUprightLayout();
 });
