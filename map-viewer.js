@@ -475,7 +475,6 @@ document.querySelector("#reset-map").addEventListener("click", () => {
 viewport.addEventListener(
   "wheel",
   (event) => {
-    if (!event.ctrlKey && !event.metaKey) return;
     event.preventDefault();
     const bounds = viewport.getBoundingClientRect();
     setZoom(
@@ -486,6 +485,13 @@ viewport.addEventListener(
   },
   { passive: false },
 );
+
+viewport.addEventListener("dblclick", (event) => {
+  const bounds = viewport.getBoundingClientRect();
+  offsetX += bounds.left + bounds.width / 2 - event.clientX;
+  offsetY += bounds.top + bounds.height / 2 - event.clientY;
+  renderMap();
+});
 
 viewport.addEventListener("pointerdown", (event) => {
   if (event.pointerType === "touch") return;
