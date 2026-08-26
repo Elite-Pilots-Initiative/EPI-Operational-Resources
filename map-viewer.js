@@ -80,6 +80,7 @@ const mapApp = document.querySelector(".map-app");
 const sidebarContent = document.querySelector("#map-sidebar-content");
 const sidebarToggle = document.querySelector("#map-sidebar-toggle");
 const layerControls = document.querySelector(".layer-controls");
+const baseMapScale = 1.5;
 let scale = 1;
 let offsetX = 0;
 let offsetY = 0;
@@ -156,7 +157,11 @@ sidebarToggle.addEventListener("click", () => {
   setSidebarExpanded(sidebarToggle.getAttribute("aria-expanded") !== "true");
 });
 
-setSidebarExpanded(!window.matchMedia("(max-width: 720px)").matches);
+const compactLayout = window.matchMedia("(max-width: 720px)");
+setSidebarExpanded(!compactLayout.matches);
+compactLayout.addEventListener("change", (event) => {
+  setSidebarExpanded(!event.matches);
+});
 
 new ResizeObserver(() => {
   if (!pinnedMapPoint) return;
@@ -204,7 +209,7 @@ function renderMap() {
   const rotation = orientation === "landscape" ? " rotate(90deg)" : "";
   offsetXRatio = offsetX / mapWidth;
   offsetYRatio = offsetY / mapHeight;
-  image.style.transform = `translate(calc(-50% + ${offsetXRatio * 100}%), calc(-50% + ${offsetYRatio * 100}%)) scale(${scale})${rotation}`;
+  image.style.transform = `translate(calc(-50% + ${offsetXRatio * 100}%), calc(-50% + ${offsetYRatio * 100}%)) scale(${scale * baseMapScale})${rotation}`;
   zoomLevel.textContent = `${Math.round(scale * 100)}%`;
   rememberMapPointAtReticle();
 }
@@ -282,19 +287,6 @@ function centerMap() {
   renderMap();
   image.getBoundingClientRect();
   image.style.transition = previousTransition;
-}
-
-function rotateViewAroundCenter(nextOrientation) {
-  if (nextOrientation === orientation) return;
-
-  const previousOffsetX = offsetX;
-  if (nextOrientation === "landscape") {
-    offsetX = -offsetY;
-    offsetY = previousOffsetX;
-  } else {
-    offsetX = offsetY;
-    offsetY = -previousOffsetX;
-  }
 }
 
 function applyOrientation() {
@@ -563,8 +555,8 @@ document.querySelector("#show-all-layers").addEventListener("click", () => {
 
 document.querySelectorAll(".orientation-option").forEach((button) => {
   button.addEventListener("click", () => {
+    const mapPoint = getMapPointAtReticle();
     const nextOrientation = button.dataset.orientation;
-    rotateViewAroundCenter(nextOrientation);
     orientation = nextOrientation;
     document.querySelectorAll(".orientation-option").forEach((option) => {
       const selected = option === button;
@@ -574,6 +566,7 @@ document.querySelectorAll(".orientation-option").forEach((button) => {
     applyOrientation();
     syncOffsetsToMapSize();
     refreshUprightLayout();
+    restoreMapPointAtReticle(mapPoint);
   });
 });
 
