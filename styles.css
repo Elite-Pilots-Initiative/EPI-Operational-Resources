@@ -649,27 +649,90 @@ a {
 }
 
 .map-app {
+  position: relative;
   display: grid;
-  grid-template-columns: 292px minmax(0, 1fr);
+  grid-template-columns: 360px minmax(0, 1fr);
   width: 100vw;
   height: 100vh;
   min-height: 0;
 }
 
+.map-app.is-sidebar-collapsed {
+  grid-template-columns: 24px minmax(0, 1fr);
+}
+
 .map-sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 24px;
+  width: auto;
   min-height: 0;
   overflow: hidden;
-  padding: 24px 18px;
   border-right: 1px solid var(--line);
   background: linear-gradient(
     180deg,
     rgba(10, 18, 31, 0.98),
     rgba(5, 11, 21, 0.98)
   );
-  z-index: 2;
+  z-index: 3;
+}
+
+.map-app.is-sidebar-collapsed .map-sidebar {
+  grid-template-columns: 24px;
+  width: 24px;
+}
+
+.map-sidebar-content {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  padding: 24px 12px 24px 18px;
+}
+
+.map-sidebar-content[hidden] {
+  display: none;
+}
+
+.map-sidebar-toggle {
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 100%;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  border-left: 1px solid var(--line);
+  background: rgba(13, 21, 39, 0.72);
+  color: var(--cyan);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.78rem;
+}
+
+.map-sidebar-toggle:hover,
+.map-sidebar-toggle:focus-visible {
+  background: rgba(118, 215, 255, 0.13);
+  color: var(--text);
+}
+
+.map-sidebar-toggle span {
+  transition: transform 180ms ease;
+}
+
+.map-app.is-sidebar-collapsed .map-sidebar-toggle {
+  grid-column: 1;
+  border-left: 0;
+}
+
+.map-app.is-sidebar-collapsed .map-sidebar-toggle span {
+  transform: rotate(180deg);
 }
 
 .map-app-brand,
@@ -736,6 +799,38 @@ a {
   min-height: 0;
   overflow-y: auto;
   padding: 0 8px;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: thin;
+}
+
+.layer-controls.is-scrolling {
+  scrollbar-color: rgba(118, 215, 255, 0.72) transparent;
+}
+
+.layer-controls::-webkit-scrollbar {
+  width: 8px;
+}
+
+.layer-controls::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.layer-controls::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.layer-controls::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  background-clip: padding-box;
+}
+
+.layer-controls.is-scrolling::-webkit-scrollbar-thumb {
+  background: rgba(118, 215, 255, 0.72);
+  background-clip: padding-box;
 }
 
 .layer-controls-heading {
@@ -842,6 +937,19 @@ a {
 
 .layer-subgroup .layer-children {
   padding-left: 28px;
+}
+
+.layer-subgroup.has-single-child {
+  border-top: 0;
+  padding: 0;
+}
+
+.layer-subgroup.has-single-child > .layer-disclosure {
+  display: none;
+}
+
+.layer-subgroup.has-single-child > .layer-children {
+  padding: 0 0 0 7px;
 }
 
 .layer-children[hidden] {
@@ -998,7 +1106,7 @@ a {
   position: absolute;
   right: 16px;
   bottom: 14px;
-  z-index: 3;
+  z-index: 1;
   width: min(8.333vw, 8.333vh);
   height: min(8.333vw, 8.333vh);
   object-fit: contain;
@@ -1090,10 +1198,13 @@ a {
 
 .map-stage {
   position: relative;
+  grid-column: 2;
   display: grid;
   grid-template-rows: auto minmax(0, 1fr) auto;
   min-width: 0;
   min-height: 0;
+  container-name: map-stage;
+  container-type: inline-size;
 }
 
 .map-toolbar {
@@ -1130,7 +1241,7 @@ a {
   gap: 6px;
   flex: 1 1 auto;
   min-width: 0;
-  overflow-x: auto;
+  overflow-x: hidden;
   padding-bottom: 2px;
 }
 
@@ -1264,11 +1375,13 @@ a {
 }
 
 .map-viewport {
+  --map-width-limit: 84cqw;
   position: relative;
   width: 100%;
   min-height: 0;
   overflow: hidden;
   background: #070d17;
+  container-type: size;
   cursor: grab;
   touch-action: none;
 }
@@ -1288,11 +1401,18 @@ a {
 }
 
 .map-viewport #map-image {
+  --map-aspect-ratio: 0.68832;
   position: absolute;
   top: 50%;
   left: 50%;
-  width: min(84%, 1100px);
-  max-height: 88%;
+  width: min(
+    var(--map-width-limit),
+    calc(88cqh * var(--map-aspect-ratio)),
+    1100px
+  );
+  height: auto;
+  max-height: none;
+  aspect-ratio: var(--map-aspect-ratio);
   object-fit: contain;
   transform-origin: center;
   -webkit-user-select: none;
@@ -1303,6 +1423,11 @@ a {
 }
 
 .map-viewport #map-image.is-landscape {
+  width: min(
+    88cqh,
+    calc(var(--map-width-limit) * var(--map-aspect-ratio)),
+    calc(1100px * var(--map-aspect-ratio))
+  );
   transform: translate(
       calc(-50% + var(--map-offset-x, 0px)),
       calc(-50% + var(--map-offset-y, 0px))
@@ -1333,14 +1458,13 @@ a {
 
 .map-stage-footer {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 20px;
   width: 100%;
   min-width: 0;
-  min-height: 62px;
   margin: 0;
-  padding: 12px 24px;
+  padding: 6px 24px;
   border-top: 1px solid var(--line);
   background: rgba(5, 11, 21, 0.86);
   color: var(--muted);
@@ -1354,43 +1478,86 @@ a {
   font-size: 0.8rem;
 }
 
-@media (max-width: 1120px) {
+@container map-stage (max-width: 980px) {
   .map-toolbar {
     align-items: stretch;
     flex-direction: column;
+    gap: 6px;
+    min-height: 0;
+    padding: 8px 12px;
   }
 
   .deck-selector {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4px;
     width: 100%;
+    overflow-x: hidden;
+    padding-bottom: 0;
+  }
+
+  .deck-option {
+    justify-content: center;
+    min-width: 0;
+    min-height: 32px;
+    padding: 3px 6px;
   }
 
   .map-toolbar-actions {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 6px;
+    width: 100%;
     justify-content: space-between;
+  }
+
+  .orientation-controls,
+  .zoom-controls {
+    padding: 1px;
+  }
+
+  .orientation-option {
+    min-height: 26px;
+  }
+
+  .zoom-controls button {
+    height: 26px;
+  }
+
+  .map-toolbar-actions .reset-button {
+    width: auto;
+    height: 28px;
   }
 }
 
 @media (max-width: 720px) {
   .maps-page {
-    overflow: auto;
+    overflow: hidden;
   }
 
-  .map-app {
+  .map-app,
+  .map-app.is-sidebar-collapsed {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 100vh;
-    height: auto;
+    width: 100vw;
+    height: 100vh;
+    min-height: 0;
   }
 
   .map-sidebar {
-    gap: 16px;
-    padding: 14px 12px;
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: min(360px, calc(100vw - 24px));
+    z-index: 3;
   }
 
-  .layer-controls {
-    max-height: 42vh;
+  .map-app.is-sidebar-collapsed .map-sidebar {
+    width: 24px;
+  }
+
+  .map-sidebar-content {
+    gap: 16px;
+    padding: 14px 12px;
   }
 
   .map-sidebar-note {
@@ -1418,31 +1585,14 @@ a {
   }
 
   .map-stage {
-    min-height: calc(100vh - 90px);
-  }
-
-  .map-toolbar {
-    padding: 14px 16px;
-  }
-
-  .deck-option {
-    min-height: 44px;
-  }
-
-  .map-toolbar-actions {
-    display: grid;
-    grid-template-columns: auto auto;
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .map-toolbar-actions .reset-button {
-    grid-column: 1 / -1;
-    width: 100%;
+    flex: 1 1 auto;
+    margin-left: 24px;
+    min-width: 0;
+    min-height: 0;
   }
 
   .map-viewport #map-image {
-    width: 92%;
+    --map-width-limit: 92cqw;
   }
 
   .layer-controls {
@@ -1457,10 +1607,14 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .layer-subgroup .layer-children {
+    grid-template-columns: 1fr;
+  }
+
   .map-stage-footer {
-    align-items: flex-end;
+    align-items: center;
     gap: 10px;
-    padding: 10px 16px;
+    padding: 6px 16px;
   }
 
   .map-fine-print {
@@ -1470,6 +1624,35 @@ a {
 
   .map-fine-print p {
     white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  .deck-option {
+    gap: 0;
+    padding: 2px 3px;
+    line-height: 1.05;
+    white-space: normal;
+  }
+
+  .deck-index {
+    display: none;
+  }
+
+  .orientation-option {
+    padding: 0 5px;
+  }
+
+  .zoom-controls button {
+    min-width: 26px;
+  }
+
+  .zoom-controls span {
+    min-width: 40px;
+  }
+
+  .reset-button {
+    padding: 0 6px;
   }
 }
 

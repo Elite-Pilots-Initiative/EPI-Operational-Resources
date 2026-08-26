@@ -75,18 +75,108 @@ const image = document.querySelector("#map-image");
 const title = document.querySelector("#map-title");
 const description = document.querySelector("#map-description");
 const zoomLevel = document.querySelector("#zoom-level");
+const reticle = document.querySelector(".map-crosshair");
+const mapApp = document.querySelector(".map-app");
+const sidebarContent = document.querySelector("#map-sidebar-content");
+const sidebarToggle = document.querySelector("#map-sidebar-toggle");
+const layerControls = document.querySelector(".layer-controls");
 let scale = 1;
 let offsetX = 0;
 let offsetY = 0;
+let offsetXRatio = 0;
+let offsetYRatio = 0;
+let mapWidth = 1;
+let mapHeight = 1;
 let dragStart;
 let pinchStart;
 let activeMap = "habitat";
 let orientation = "portrait";
+let scrollbarHideTimer;
+let mapPointFrame;
+let pinnedMapPoint;
 const layerVisibility = Object.fromEntries(
   layerNames.map((layerName) => [
     layerName,
     !["headers", "footers"].includes(layerName),
   ]),
+);
+
+function getMapPointAtReticle() {
+  const svg = image.querySelector("svg");
+  const matrix = svg?.getScreenCTM();
+  if (!svg || !matrix) return null;
+
+  const reticleBox = reticle.getBoundingClientRect();
+  const screenPoint = svg.createSVGPoint();
+  screenPoint.x = reticleBox.left + reticleBox.width / 2;
+  screenPoint.y = reticleBox.top + reticleBox.height / 2;
+  return { point: screenPoint.matrixTransform(matrix.inverse()), svg };
+}
+
+function restoreMapPointAtReticle(savedMapPoint) {
+  if (!savedMapPoint?.svg.isConnected) return;
+
+  const previousTransition = image.style.transition;
+  image.style.transition = "none";
+  image.getBoundingClientRect();
+
+  const matrix = savedMapPoint.svg.getScreenCTM();
+  if (matrix) {
+    const screenPoint = savedMapPoint.point.matrixTransform(matrix);
+    const reticleBox = reticle.getBoundingClientRect();
+    offsetX += reticleBox.left + reticleBox.width / 2 - screenPoint.x;
+    offsetY += reticleBox.top + reticleBox.height / 2 - screenPoint.y;
+    renderMap();
+    image.getBoundingClientRect();
+  }
+
+  image.style.transition = previousTransition;
+}
+
+function rememberMapPointAtReticle() {
+  window.cancelAnimationFrame(mapPointFrame);
+  mapPointFrame = window.requestAnimationFrame(() => {
+    pinnedMapPoint = getMapPointAtReticle();
+  });
+}
+
+function setSidebarExpanded(expanded) {
+  const mapPoint = getMapPointAtReticle();
+  const action = expanded ? "Collapse" : "Expand";
+  sidebarContent.hidden = !expanded;
+  sidebarToggle.setAttribute("aria-expanded", String(expanded));
+  sidebarToggle.setAttribute("aria-label", `${action} layers sidebar`);
+  sidebarToggle.title = `${action} layers sidebar`;
+  mapApp.classList.toggle("is-sidebar-collapsed", !expanded);
+  syncOffsetsToMapSize();
+  restoreMapPointAtReticle(mapPoint);
+}
+
+sidebarToggle.addEventListener("click", () => {
+  setSidebarExpanded(sidebarToggle.getAttribute("aria-expanded") !== "true");
+});
+
+setSidebarExpanded(!window.matchMedia("(max-width: 720px)").matches);
+
+new ResizeObserver(() => {
+  if (!pinnedMapPoint) return;
+  window.cancelAnimationFrame(mapPointFrame);
+  syncOffsetsToMapSize();
+  restoreMapPointAtReticle(pinnedMapPoint);
+}).observe(viewport);
+
+image.addEventListener("transitionend", rememberMapPointAtReticle);
+
+layerControls.addEventListener(
+  "scroll",
+  () => {
+    layerControls.classList.add("is-scrolling");
+    window.clearTimeout(scrollbarHideTimer);
+    scrollbarHideTimer = window.setTimeout(() => {
+      layerControls.classList.remove("is-scrolling");
+    }, 500);
+  },
+  { passive: true },
 );
 
 const uprightLayerNames = [
@@ -100,16 +190,23 @@ const uprightLayerNames = [
   "medkits",
 ];
 
-const overlapAvoidanceLayerNames = [
-  "labels",
-  "headers",
-  "footers",
-];
+const overlapAvoidanceLayerNames = ["labels", "headers", "footers"];
+
+function syncOffsetsToMapSize() {
+  const styles = getComputedStyle(image);
+  mapWidth = Number.parseFloat(styles.width) || 1;
+  mapHeight = Number.parseFloat(styles.height) || 1;
+  offsetX = offsetXRatio * mapWidth;
+  offsetY = offsetYRatio * mapHeight;
+}
 
 function renderMap() {
   const rotation = orientation === "landscape" ? " rotate(90deg)" : "";
-  image.style.transform = `translate(calc(-50% + ${offsetX}px), calc(-50% + ${offsetY}px)) scale(${scale})${rotation}`;
+  offsetXRatio = offsetX / mapWidth;
+  offsetYRatio = offsetY / mapHeight;
+  image.style.transform = `translate(calc(-50% + ${offsetXRatio * 100}%), calc(-50% + ${offsetYRatio * 100}%)) scale(${scale})${rotation}`;
   zoomLevel.textContent = `${Math.round(scale * 100)}%`;
+  rememberMapPointAtReticle();
 }
 
 function applyLayerVisibility() {
@@ -172,13 +269,15 @@ function centerMap() {
   image.style.transition = "none";
   renderMap();
   image.getBoundingClientRect();
-  const viewportBox = viewport.getBoundingClientRect();
+  const reticleBox = reticle.getBoundingClientRect();
   const architectureBox = architecture.getBoundingClientRect();
   offsetX +=
-    viewportBox.left + viewportBox.width / 2 -
+    reticleBox.left +
+    reticleBox.width / 2 -
     (architectureBox.left + architectureBox.width / 2);
   offsetY +=
-    viewportBox.top + viewportBox.height / 2 -
+    reticleBox.top +
+    reticleBox.height / 2 -
     (architectureBox.top + architectureBox.height / 2);
   renderMap();
   image.getBoundingClientRect();
@@ -360,7 +459,19 @@ function updateLayerAvailability() {
   });
 
   document.querySelectorAll(".layer-subgroup").forEach((subgroup) => {
-    subgroup.hidden = !subgroup.querySelector(".layer-toggle:not([hidden])");
+    const children = subgroup.querySelector(":scope > .layer-children");
+    const visibleChildren = children.querySelectorAll(
+      ":scope > .layer-toggle:not([hidden])",
+    );
+    const hasSingleChild = visibleChildren.length === 1;
+    subgroup.hidden = visibleChildren.length === 0;
+    subgroup.classList.toggle("has-single-child", hasSingleChild);
+
+    if (hasSingleChild) {
+      const disclosure = subgroup.querySelector(":scope > .layer-disclosure");
+      disclosure.setAttribute("aria-expanded", "true");
+      children.hidden = false;
+    }
   });
 }
 
@@ -376,12 +487,18 @@ async function loadMap(mapKey) {
   svg.removeAttribute("height");
   svg.setAttribute("aria-label", `${map.title} megaship map`);
   svg.setAttribute("draggable", "false");
+  const viewBox = svg.viewBox.baseVal;
+  image.style.setProperty(
+    "--map-aspect-ratio",
+    String(viewBox.width / viewBox.height),
+  );
   image.replaceChildren(svg);
   image.setAttribute("aria-label", `${map.title} megaship map`);
   activeMap = mapKey;
   updateLayerAvailability();
   applyLayerVisibility();
   applyOrientation();
+  syncOffsetsToMapSize();
 }
 
 function setZoom(
@@ -393,8 +510,8 @@ function setZoom(
   const ratio = boundedScale / scale;
   const centerX = viewport.clientWidth / 2;
   const centerY = viewport.clientHeight / 2;
-  offsetX = (originX - centerX) - (originX - centerX - offsetX) * ratio;
-  offsetY = (originY - centerY) - (originY - centerY - offsetY) * ratio;
+  offsetX = originX - centerX - (originX - centerX - offsetX) * ratio;
+  offsetY = originY - centerY - (originY - centerY - offsetY) * ratio;
   scale = boundedScale;
   renderMap();
 }
@@ -455,6 +572,7 @@ document.querySelectorAll(".orientation-option").forEach((button) => {
       option.setAttribute("aria-pressed", String(selected));
     });
     applyOrientation();
+    syncOffsetsToMapSize();
     refreshUprightLayout();
   });
 });
@@ -531,8 +649,12 @@ viewport.addEventListener(
           event.touches[0].clientY - event.touches[1].clientY,
         ),
         scale,
-        midX: (event.touches[0].clientX + event.touches[1].clientX) / 2 - bounds.left,
-        midY: (event.touches[0].clientY + event.touches[1].clientY) / 2 - bounds.top,
+        midX:
+          (event.touches[0].clientX + event.touches[1].clientX) / 2 -
+          bounds.left,
+        midY:
+          (event.touches[0].clientY + event.touches[1].clientY) / 2 -
+          bounds.top,
       };
     }
   },
@@ -552,7 +674,11 @@ viewport.addEventListener(
         event.touches[0].clientX - event.touches[1].clientX,
         event.touches[0].clientY - event.touches[1].clientY,
       );
-      setZoom(pinchStart.scale * (distance / pinchStart.distance), pinchStart.midX, pinchStart.midY);
+      setZoom(
+        pinchStart.scale * (distance / pinchStart.distance),
+        pinchStart.midX,
+        pinchStart.midY,
+      );
     }
   },
   { passive: false },
