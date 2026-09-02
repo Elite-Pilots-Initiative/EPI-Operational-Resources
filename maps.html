@@ -14,272 +14,292 @@
   </head>
   <body class="maps-page">
     <main class="map-app">
-      <aside class="map-sidebar" aria-label="Map layers and information">
-        <div class="map-app-brand">
-          <a
-            class="map-back"
-            data-route-link="home"
-            href="index.html"
-            aria-label="Back to EPI home"
-            >&#8592;</a
-          >
-          <div>
-            <img
-              class="map-brand-logo"
-              src="dist/assets/img/EDPI-logo_square.png"
-              alt="Elite Pilots Initiative squadron"
-            /><span>Operations Megaship Deck Maps</span>
-          </div>
-        </div>
-        <p class="map-credits">
-          Maps by <span class="credit-name">CMDR Indy Novascend</span><br />
-          Viewer by <span class="credit-name">CMDR Indy Novascend</span><br />
-          and <span class="credit-name">CMDR Jules Vector</span>
-        </p>
-        <section class="layer-controls" aria-labelledby="layer-title">
-          <div class="layer-controls-heading">
+      <aside
+        class="map-sidebar"
+        id="map-sidebar"
+        aria-label="Map layers and information"
+      >
+        <button
+          class="map-sidebar-toggle"
+          type="button"
+          id="map-sidebar-toggle"
+          aria-label="Collapse layers sidebar"
+          aria-controls="map-sidebar-content"
+          aria-expanded="true"
+          title="Collapse layers sidebar"
+        >
+          <span aria-hidden="true">&#10094;</span>
+        </button>
+        <div class="map-sidebar-content" id="map-sidebar-content">
+          <div class="map-app-brand">
+            <a
+              class="map-back"
+              data-route-link="home"
+              href="index.html"
+              aria-label="Back to EPI home"
+              >&#8592;</a
+            >
             <div>
-              <p class="eyebrow">Map Layers</p>
-              <h2 id="layer-title">Show / Hide</h2>
+              <img
+                class="map-brand-logo"
+                src="dist/assets/img/EDPI-logo_square.png"
+                alt="Elite Pilots Initiative squadron"
+              /><span>Operations Megaship Deck Maps</span>
             </div>
-            <button class="layer-reset" type="button" id="show-all-layers">
-              All
+          </div>
+          <p class="map-credits">
+            Maps by <span class="credit-name">CMDR Indy Novascend</span><br />
+            Viewer by <span class="credit-name">CMDR Indy Novascend</span><br />
+            and <span class="credit-name">CMDR Jules Vector</span>
+          </p>
+          <section class="layer-controls" aria-labelledby="layer-title">
+            <div class="layer-controls-heading">
+              <div>
+                <p class="eyebrow">Map Layers</p>
+                <h2 id="layer-title">Show / Hide</h2>
+              </div>
+              <button class="layer-reset" type="button" id="show-all-layers">
+                All
+              </button>
+            </div>
+            <div class="layer-tree">
+              <div class="layer-group" data-layer-group="architecture">
+                <div class="layer-group-heading">
+                  <button
+                    class="layer-disclosure"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="architecture-layers"
+                  >
+                    <span aria-hidden="true">&#9662;</span
+                    ><span>Architecture</span>
+                  </button>
+                  <button
+                    class="layer-toggle layer-parent is-visible"
+                    type="button"
+                    aria-label="Show Architecture"
+                    aria-pressed="true"
+                    data-layer="architecture"
+                  >
+                    <span class="layer-swatch architecture-swatch"></span>
+                  </button>
+                </div>
+                <div class="layer-children" id="architecture-layers">
+                  <div class="layer-subgroup">
+                    <button
+                      class="layer-disclosure"
+                      type="button"
+                      aria-expanded="true"
+                      aria-controls="floor-layers"
+                    >
+                      <span aria-hidden="true">&#9662;</span><span>Floors</span>
+                    </button>
+                    <div class="layer-children" id="floor-layers">
+                      <button
+                        class="layer-toggle is-visible"
+                        type="button"
+                        aria-pressed="true"
+                        data-layer="f0"
+                      >
+                        <span class="layer-swatch architecture-swatch"></span
+                        >Floor 0
+                      </button>
+                      <button
+                        class="layer-toggle is-visible"
+                        type="button"
+                        aria-pressed="true"
+                        data-layer="f1"
+                      >
+                        <span class="layer-swatch architecture-swatch"></span
+                        >Floor 1
+                      </button>
+                      <button
+                        class="layer-toggle is-visible"
+                        type="button"
+                        aria-pressed="true"
+                        data-layer="f2"
+                      >
+                        <span class="layer-swatch architecture-swatch"></span
+                        >Floor 2
+                      </button>
+                      <button
+                        class="layer-toggle is-visible"
+                        type="button"
+                        aria-pressed="true"
+                        data-layer="f3"
+                      >
+                        <span class="layer-swatch architecture-swatch"></span
+                        >Floor 3
+                      </button>
+                    </div>
+                  </div>
+                  <div class="layer-subgroup">
+                    <button
+                      class="layer-disclosure"
+                      type="button"
+                      aria-expanded="true"
+                      aria-controls="elevated-layers"
+                    >
+                      <span aria-hidden="true">&#9662;</span
+                      ><span>Elevated</span>
+                    </button>
+                    <div class="layer-children" id="elevated-layers">
+                      <button
+                        class="layer-toggle is-visible"
+                        type="button"
+                        aria-pressed="true"
+                        data-layer="e1"
+                      >
+                        <span class="layer-swatch architecture-swatch"></span
+                        >Elevated 1
+                      </button>
+                      <button
+                        class="layer-toggle is-visible"
+                        type="button"
+                        aria-pressed="true"
+                        data-layer="e2"
+                      >
+                        <span class="layer-swatch architecture-swatch"></span
+                        >Elevated 2
+                      </button>
+                      <button
+                        class="layer-toggle is-visible"
+                        type="button"
+                        aria-pressed="true"
+                        data-layer="e3"
+                      >
+                        <span class="layer-swatch architecture-swatch"></span
+                        >Elevated 3
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="layer-group" data-layer-group="consumables">
+                <div class="layer-group-heading">
+                  <button
+                    class="layer-disclosure"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="consumable-layers"
+                  >
+                    <span aria-hidden="true">&#9662;</span
+                    ><span>Consumables</span>
+                  </button>
+                  <button
+                    class="layer-toggle layer-parent is-visible"
+                    type="button"
+                    aria-label="Show Consumables"
+                    aria-pressed="true"
+                    data-layer="consumables"
+                  >
+                    <span class="layer-swatch consumables-swatch"></span>
+                  </button>
+                </div>
+                <div class="layer-children" id="consumable-layers">
+                  <button
+                    class="layer-toggle is-visible"
+                    type="button"
+                    aria-pressed="true"
+                    data-layer="energy-ports"
+                  >
+                    <span class="layer-swatch energy-swatch"></span>Energy Ports
+                  </button>
+                  <button
+                    class="layer-toggle is-visible"
+                    type="button"
+                    aria-pressed="true"
+                    data-layer="ammo-boxes"
+                  >
+                    <span class="layer-swatch ammo-swatch"></span>Ammo Boxes
+                  </button>
+                  <button
+                    class="layer-toggle is-visible"
+                    type="button"
+                    aria-pressed="true"
+                    data-layer="batteries"
+                  >
+                    <span class="layer-swatch battery-swatch"></span>Batteries
+                  </button>
+                  <button
+                    class="layer-toggle is-visible"
+                    type="button"
+                    aria-pressed="true"
+                    data-layer="grenade-cases"
+                  >
+                    <span class="layer-swatch grenade-swatch"></span>Grenade
+                    Cases
+                  </button>
+                  <button
+                    class="layer-toggle is-visible"
+                    type="button"
+                    aria-pressed="true"
+                    data-layer="medkits"
+                  >
+                    <span class="layer-swatch medkit-swatch"></span>Medkits
+                  </button>
+                </div>
+              </div>
+              <div class="layer-group" data-layer-group="text">
+                <div class="layer-group-heading">
+                  <button
+                    class="layer-disclosure"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="text-layers"
+                  >
+                    <span aria-hidden="true">&#9662;</span><span>Text</span>
+                  </button>
+                  <button
+                    class="layer-toggle layer-parent is-visible"
+                    type="button"
+                    aria-label="Show Text"
+                    aria-pressed="true"
+                    data-layer="text"
+                  >
+                    <span class="layer-swatch text-swatch"></span>
+                  </button>
+                </div>
+                <div class="layer-children" id="text-layers" hidden>
+                  <button
+                    class="layer-toggle is-visible"
+                    type="button"
+                    aria-pressed="true"
+                    data-layer="labels"
+                  >
+                    <span class="layer-swatch labels-swatch"></span>Labels
+                  </button>
+                  <button
+                    class="layer-toggle"
+                    type="button"
+                    aria-pressed="false"
+                    data-layer="headers"
+                  >
+                    <span class="layer-swatch headers-swatch"></span>Headers
+                  </button>
+                  <button
+                    class="layer-toggle"
+                    type="button"
+                    aria-pressed="false"
+                    data-layer="footers"
+                  >
+                    <span class="layer-swatch text-swatch"></span>Footers
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="map-sidebar-footer">
+            <p class="map-sidebar-note">
+              Drag to pan <span aria-hidden="true">&#8226;</span> Scroll or
+              pinch to zoom <span aria-hidden="true">&#8226;</span> Double-click
+              to center map on that location
+            </p>
+            <button class="about-cta" type="button" id="open-about">
+              About the Elite Pilots Initiative squadron
+              <span aria-hidden="true">&#8599;</span>
             </button>
           </div>
-          <div class="layer-tree">
-            <div class="layer-group" data-layer-group="architecture">
-              <div class="layer-group-heading">
-                <button
-                  class="layer-disclosure"
-                  type="button"
-                  aria-expanded="true"
-                  aria-controls="architecture-layers"
-                >
-                  <span aria-hidden="true">&#9662;</span
-                  ><span>Architecture</span>
-                </button>
-                <button
-                  class="layer-toggle layer-parent is-visible"
-                  type="button"
-                  aria-label="Show Architecture"
-                  aria-pressed="true"
-                  data-layer="architecture"
-                >
-                  <span class="layer-swatch architecture-swatch"></span>
-                </button>
-              </div>
-              <div class="layer-children" id="architecture-layers">
-                <div class="layer-subgroup">
-                  <button
-                    class="layer-disclosure"
-                    type="button"
-                    aria-expanded="true"
-                    aria-controls="floor-layers"
-                  >
-                    <span aria-hidden="true">&#9662;</span><span>Floors</span>
-                  </button>
-                  <div class="layer-children" id="floor-layers">
-                    <button
-                      class="layer-toggle is-visible"
-                      type="button"
-                      aria-pressed="true"
-                      data-layer="f0"
-                    >
-                      <span class="layer-swatch architecture-swatch"></span
-                      >Floor 0
-                    </button>
-                    <button
-                      class="layer-toggle is-visible"
-                      type="button"
-                      aria-pressed="true"
-                      data-layer="f1"
-                    >
-                      <span class="layer-swatch architecture-swatch"></span
-                      >Floor 1
-                    </button>
-                    <button
-                      class="layer-toggle is-visible"
-                      type="button"
-                      aria-pressed="true"
-                      data-layer="f2"
-                    >
-                      <span class="layer-swatch architecture-swatch"></span
-                      >Floor 2
-                    </button>
-                    <button
-                      class="layer-toggle is-visible"
-                      type="button"
-                      aria-pressed="true"
-                      data-layer="f3"
-                    >
-                      <span class="layer-swatch architecture-swatch"></span
-                      >Floor 3
-                    </button>
-                  </div>
-                </div>
-                <div class="layer-subgroup">
-                  <button
-                    class="layer-disclosure"
-                    type="button"
-                    aria-expanded="true"
-                    aria-controls="elevated-layers"
-                  >
-                    <span aria-hidden="true">&#9662;</span><span>Elevated</span>
-                  </button>
-                  <div class="layer-children" id="elevated-layers">
-                    <button
-                      class="layer-toggle is-visible"
-                      type="button"
-                      aria-pressed="true"
-                      data-layer="e1"
-                    >
-                      <span class="layer-swatch architecture-swatch"></span
-                      >Elevated 1
-                    </button>
-                    <button
-                      class="layer-toggle is-visible"
-                      type="button"
-                      aria-pressed="true"
-                      data-layer="e2"
-                    >
-                      <span class="layer-swatch architecture-swatch"></span
-                      >Elevated 2
-                    </button>
-                    <button
-                      class="layer-toggle is-visible"
-                      type="button"
-                      aria-pressed="true"
-                      data-layer="e3"
-                    >
-                      <span class="layer-swatch architecture-swatch"></span
-                      >Elevated 3
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="layer-group" data-layer-group="consumables">
-              <div class="layer-group-heading">
-                <button
-                  class="layer-disclosure"
-                  type="button"
-                  aria-expanded="true"
-                  aria-controls="consumable-layers"
-                >
-                  <span aria-hidden="true">&#9662;</span
-                  ><span>Consumables</span>
-                </button>
-                <button
-                  class="layer-toggle layer-parent is-visible"
-                  type="button"
-                  aria-label="Show Consumables"
-                  aria-pressed="true"
-                  data-layer="consumables"
-                >
-                  <span class="layer-swatch consumables-swatch"></span>
-                </button>
-              </div>
-              <div class="layer-children" id="consumable-layers">
-                <button
-                  class="layer-toggle is-visible"
-                  type="button"
-                  aria-pressed="true"
-                  data-layer="energy-ports"
-                >
-                  <span class="layer-swatch energy-swatch"></span>Energy Ports
-                </button>
-                <button
-                  class="layer-toggle is-visible"
-                  type="button"
-                  aria-pressed="true"
-                  data-layer="ammo-boxes"
-                >
-                  <span class="layer-swatch ammo-swatch"></span>Ammo Boxes
-                </button>
-                <button
-                  class="layer-toggle is-visible"
-                  type="button"
-                  aria-pressed="true"
-                  data-layer="batteries"
-                >
-                  <span class="layer-swatch battery-swatch"></span>Batteries
-                </button>
-                <button
-                  class="layer-toggle is-visible"
-                  type="button"
-                  aria-pressed="true"
-                  data-layer="grenade-cases"
-                >
-                  <span class="layer-swatch grenade-swatch"></span>Grenade Cases
-                </button>
-                <button
-                  class="layer-toggle is-visible"
-                  type="button"
-                  aria-pressed="true"
-                  data-layer="medkits"
-                >
-                  <span class="layer-swatch medkit-swatch"></span>Medkits
-                </button>
-              </div>
-            </div>
-            <div class="layer-group" data-layer-group="text">
-              <div class="layer-group-heading">
-                <button
-                  class="layer-disclosure"
-                  type="button"
-                  aria-expanded="true"
-                  aria-controls="text-layers"
-                >
-                  <span aria-hidden="true">&#9662;</span><span>Text</span>
-                </button>
-                <button
-                  class="layer-toggle layer-parent is-visible"
-                  type="button"
-                  aria-label="Show Text"
-                  aria-pressed="true"
-                  data-layer="text"
-                >
-                  <span class="layer-swatch text-swatch"></span>
-                </button>
-              </div>
-              <div class="layer-children" id="text-layers">
-                <button
-                  class="layer-toggle is-visible"
-                  type="button"
-                  aria-pressed="true"
-                  data-layer="labels"
-                >
-                  <span class="layer-swatch labels-swatch"></span>Labels
-                </button>
-                <button
-                  class="layer-toggle"
-                  type="button"
-                  aria-pressed="false"
-                  data-layer="headers"
-                >
-                  <span class="layer-swatch headers-swatch"></span>Headers
-                </button>
-                <button
-                  class="layer-toggle"
-                  type="button"
-                  aria-pressed="false"
-                  data-layer="footers"
-                >
-                  <span class="layer-swatch text-swatch"></span>Footers
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-        <div class="map-sidebar-footer">
-          <p class="map-sidebar-note">
-            Drag to pan <span aria-hidden="true">&#8226;</span> Scroll or pinch
-            to zoom <span aria-hidden="true">&#8226;</span> Double-click to center map on that location
-          </p>
-          <button class="about-cta" type="button" id="open-about">
-            About the Elite Pilots Initiative squadron
-            <span aria-hidden="true">&#8599;</span>
-          </button>
         </div>
       </aside>
 
@@ -371,9 +391,7 @@
           />
         </div>
         <footer class="map-stage-footer">
-          <p id="map-description">
-            Operations Megaship Deck Map
-          </p>
+          <p id="map-description">Operations Megaship Deck Map</p>
           <section class="map-fine-print" aria-label="Legal disclaimer">
             <p>
               Elite Dangerous and its associated names, assets, and intellectual
@@ -411,8 +429,8 @@
           <p class="eyebrow">Elite Pilots Initiative</p>
           <h2 id="about-title">About Elite Pilots Initiative</h2>
           <p>
-            We welcome pilots who are looking to expand their skills and
-            pursue their goals in Elite Dangerous.
+            We welcome pilots who are looking to expand their skills and pursue
+            their goals in Elite Dangerous.
           </p>
           <p>
             We empower pilots to mentor others in EPI through collaboration and
