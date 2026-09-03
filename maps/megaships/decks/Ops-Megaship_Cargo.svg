@@ -33005,6 +33005,263 @@
    id="path3498" />
          </g>
         </g>
+       </g><g
+     class="Group"
+     id="g3500-2"
+     style="display:inline"
+     transform="translate(111341.11,2701.9295)">
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g3488-3">
+         <g
+   id="id435-8-3">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21423"
+   y="36883"
+   width="221"
+   height="269"
+   id="rect3487-4" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21495,36957 c 18,-6 37,-13 55,-19 31,0 62,0 93,0 0,-15 0,-31 0,-47 0,-4 -5,-8 -11,-8 -24,0 -48,0 -72,0 -4,0 -8,2 -9,6 -16,0 -32,0 -48,0 -4,0 -8,1 -11,4 -2,3 -4,5 -8,9 -106,124 -35,166 -53,249 7,0 14,0 21,0 -40,-139 28,-129 43,-194 z m 26,-53 c 6,0 10,4 10,8 0,4 -4,8 -10,8 -5,0 -9,-4 -9,-8 0,-4 4,-8 9,-8 z"
+   id="path3487-1" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g3489-1">
+         <g
+   id="id436-5-3">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21474"
+   y="37051"
+   width="62"
+   height="66"
+   id="rect3488-8" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21535,37108 c 0,-16 0,-32 0,-49 0,-2 -1,-4 -3,-6 -2,-1 -5,-2 -7,-2 -13,0 -26,0 -39,0 -3,0 -6,2 -7,4 -1,11 -5,19 -5,33 0,10 2,16 4,24 0,2 3,4 6,4 13,0 27,0 40,0 6,0 11,-3 11,-8 z"
+   id="path3488-7" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g3490-4">
+         <g
+   id="id437-8-2">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21657"
+   y="37051"
+   width="63"
+   height="66"
+   id="rect3489-7" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21707,37051 c -13,0 -26,0 -40,0 -2,0 -5,1 -7,2 -2,2 -3,4 -3,6 0,17 0,33 0,49 0,5 5,8 11,8 14,0 27,0 41,0 3,0 6,-2 6,-4 2,-8 4,-14 4,-24 0,-14 -4,-22 -6,-33 0,-2 -3,-4 -6,-4 z"
+   id="path3489-7" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g3491-9">
+         <g
+   id="id438-11-3">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21552"
+   y="36976"
+   width="89"
+   height="65"
+   id="rect3490-1" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21562,37040 c 23,0 45,0 67,0 3,0 6,-1 8,-3 2,-1 3,-4 3,-6 -1,-16 -3,-31 -4,-47 0,-5 -5,-8 -10,-8 -20,0 -40,0 -60,0 -5,0 -10,3 -10,8 -2,16 -3,31 -4,47 0,2 1,5 3,6 2,2 5,3 7,3 z"
+   id="path3490-9" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g3492-8">
+         <g
+   id="id439-51-6">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21649"
+   y="36976"
+   width="56"
+   height="65"
+   id="rect3491-5" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21666,37040 c 10,0 21,0 31,0 3,0 5,-1 6,-3 1,-1 1,-3 0,-5 -14,-18 -31,-40 -41,-56 -3,0 -5,0 -7,0 -2,0 -3,1 -4,2 -2,1 -2,2 -2,4 2,17 4,33 6,50 1,5 5,8 11,8 z"
+   id="path3491-0" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g3493-2">
+         <g
+   id="id440-6-8">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21551"
+   y="37051"
+   width="93"
+   height="66"
+   id="rect3492-6" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21629,37051 c -22,0 -44,0 -65,0 -7,0 -13,4 -13,10 0,15 0,30 0,45 0,3 1,5 4,7 2,2 5,3 9,3 21,0 43,0 65,0 3,0 7,-1 9,-3 2,-2 4,-4 4,-7 0,-15 0,-30 -1,-45 0,-6 -5,-10 -12,-10 z"
+   id="path3492-0" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g3494-2">
+         <g
+   id="id441-2-4">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21489"
+   y="36976"
+   width="55"
+   height="65"
+   id="rect3493-8" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21537,36976 c -2,0 -4,0 -6,0 -10,16 -27,38 -41,56 -1,2 -1,4 0,5 1,2 3,3 5,3 11,0 21,0 31,0 6,0 10,-3 11,-8 2,-17 4,-33 6,-50 0,-2 0,-3 -2,-4 -1,-1 -2,-2 -4,-2 z"
+   id="path3493-6" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g3495-5">
+         <g
+   id="id442-9-0">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21649"
+   y="37127"
+   width="59"
+   height="67"
+   id="rect3494-9" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21700,37127 c -11,0 -22,0 -33,0 -6,0 -10,3 -11,8 -2,19 -2,36 -6,58 h 1 c 6,-2 16,-9 27,-19 12,-11 18,-26 28,-39 1,-2 1,-4 0,-5 -1,-2 -3,-3 -6,-3 z"
+   id="path3494-0" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g3496-0">
+         <g
+   id="id443-1-6">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21552"
+   y="37126"
+   width="90"
+   height="75"
+   id="rect3495-1" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21631,37127 c -23,0 -46,0 -69,0 -2,0 -5,1 -7,3 -2,1 -3,4 -3,6 1,19 3,38 4,57 0,2 2,4 5,5 12,0 21,2 36,2 14,0 23,-1 35,-2 3,-1 5,-2 5,-5 1,-19 3,-38 4,-57 0,-2 -1,-5 -3,-6 -2,-2 -5,-3 -7,-3 z"
+   id="path3495-3" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g3497-8">
+         <g
+   id="id444-7-9">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21486"
+   y="37127"
+   width="57"
+   height="67"
+   id="rect3496-3" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21525,37127 c -11,0 -22,0 -33,0 -2,0 -4,1 -5,2 -1,2 -1,4 0,6 8,12 14,25 25,36 12,12 24,20 29,22 1,0 1,0 1,0 -4,-22 -4,-39 -6,-58 -1,-5 -5,-8 -11,-8 z"
+   id="path3496-4" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g3498-4">
+         <g
+   id="id445-05-6">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21545"
+   y="36947"
+   width="105"
+   height="21"
+   id="rect3497-0" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21647,36952 c -1,-3 -3,-5 -6,-5 -30,0 -59,0 -88,0 -3,0 -6,2 -6,5 -1,5 0,5 -2,15 35,0 69,0 104,0 -3,-10 -2,-10 -2,-15 z"
+   id="path3497-6" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g3499-6">
+         <g
+   id="id446-4-1">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21654"
+   y="36912"
+   width="89"
+   height="72"
+   id="rect3498-8" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21738,36934 c -3,-7 -9,-12 -16,-16 -7,-4 -15,-6 -24,-6 -6,0 -12,1 -17,3 -8,2 -15,7 -20,13 -4,5 -7,12 -7,19 0,5 1,10 3,14 4,6 9,12 16,16 7,3 16,6 25,6 6,0 12,-1 17,-3 8,-3 15,-7 19,-13 5,-6 8,-12 8,-20 0,-5 -1,-9 -4,-13 z m -12,23 c -2,4 -6,8 -11,11 -5,2 -11,4 -17,4 -4,0 -8,-1 -12,-2 -6,-2 -10,-5 -14,-9 -3,-4 -5,-9 -5,-14 0,-3 1,-6 3,-9 2,-5 6,-8 11,-11 5,-3 11,-4 17,-4 4,0 8,0 12,2 5,1 10,5 13,9 4,3 5,8 5,13 0,4 0,7 -2,10 z"
+   id="path3498-4" />
+         </g>
+        </g>
        </g></g><g
    id="energy-ports_cargo"
    transform="translate(-128880)"
@@ -34414,6 +34671,179 @@
    stroke="none"
    d="m 20278,37341 c -24,0 -47,0 -71,0 0,3 0,6 0,9 24,0 47,0 71,0 0,-3 0,-6 0,-9 z"
    id="path3507" />
+         </g>
+        </g>
+       </g><g
+     class="Group"
+     id="g3509-4"
+     style="display:inline"
+     transform="translate(124085.64,6298.1738)">
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g3501-8">
+         <g
+   id="id447-27-8">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="20455"
+   y="37032"
+   width="71"
+   height="305"
+   id="rect3500-2" />
+          <path
+   fill="#ffffff"
+   stroke="none"
+   d="m 20465,37115 c 1,0 3,0 4,0 0,-25 5,-49 13,-72 0,-3 1,-5 2,-7 1,-3 3,-4 6,-4 3,0 6,2 6,4 1,2 2,4 2,7 9,23 13,47 13,72 1,0 3,0 4,0 0,14 0,27 0,41 3,9 7,18 10,26 0,51 0,103 0,154 -23,0 -47,0 -70,0 0,-52 0,-103 0,-154 3,-9 7,-18 10,-26 0,-14 0,-28 0,-41 z"
+   id="path3500-4" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g3502-5">
+         <g
+   id="id448-6-5">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="20455"
+   y="37341"
+   width="71"
+   height="10"
+   id="rect3501-1" />
+          <path
+   fill="#ffffff"
+   stroke="none"
+   d="m 20525,37341 c -23,0 -47,0 -70,0 0,3 0,6 0,9 23,0 47,0 70,0 0,-3 0,-6 0,-9 z"
+   id="path3501-7" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g3503-1">
+         <g
+   id="id449-8-1">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="20373"
+   y="37032"
+   width="72"
+   height="305"
+   id="rect3502-5" />
+          <path
+   fill="#ffffff"
+   stroke="none"
+   d="m 20384,37115 c 1,0 2,0 3,0 1,-25 5,-49 13,-72 1,-3 2,-5 3,-7 0,-3 3,-4 6,-4 2,0 5,2 6,4 1,2 1,4 2,7 8,23 12,47 13,72 1,0 2,0 3,0 0,14 0,27 0,41 4,9 7,18 11,26 0,51 0,103 0,154 -24,0 -47,0 -71,0 0,-52 0,-103 0,-154 3,-9 7,-18 10,-26 1,-14 1,-28 1,-41 z"
+   id="path3502-2" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g3504-7">
+         <g
+   id="id450-27-6">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="20373"
+   y="37341"
+   width="71"
+   height="10"
+   id="rect3503-1" />
+          <path
+   fill="#ffffff"
+   stroke="none"
+   d="m 20373,37341 c 0,3 0,6 0,9 23,0 47,0 70,0 0,-3 0,-6 0,-9 -23,0 -47,0 -70,0 z"
+   id="path3503-4" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g3505-2">
+         <g
+   id="id451-9-3">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="20289"
+   y="37032"
+   width="71"
+   height="305"
+   id="rect3504-2" />
+          <path
+   fill="#ffffff"
+   stroke="none"
+   d="m 20299,37115 c 1,0 3,0 4,0 0,-25 5,-49 13,-72 0,-3 1,-5 2,-7 1,-3 3,-4 6,-4 3,0 6,2 6,4 1,2 2,4 2,7 9,23 13,47 13,72 1,0 3,0 4,0 0,14 0,27 0,41 3,9 7,18 10,26 0,51 0,103 0,154 -23,0 -47,0 -70,0 0,-52 0,-103 0,-154 3,-9 7,-18 10,-26 0,-14 0,-28 0,-41 z"
+   id="path3504-2" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g3506-1">
+         <g
+   id="id452-5-6">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="20289"
+   y="37341"
+   width="71"
+   height="10"
+   id="rect3505-8" />
+          <path
+   fill="#ffffff"
+   stroke="none"
+   d="m 20359,37341 c -23,0 -47,0 -70,0 0,3 0,6 0,9 23,0 47,0 70,0 0,-3 0,-6 0,-9 z"
+   id="path3505-5" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g3507-7">
+         <g
+   id="id453-8-6">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="20207"
+   y="37032"
+   width="72"
+   height="305"
+   id="rect3506-1" />
+          <path
+   fill="#ffffff"
+   stroke="none"
+   d="m 20218,37115 c 1,0 2,0 3,0 1,-25 5,-49 13,-72 1,-3 2,-5 3,-7 0,-3 3,-4 6,-4 2,0 5,2 6,4 1,2 1,4 2,7 8,23 12,47 13,72 1,0 2,0 3,0 0,14 0,27 0,41 4,9 7,18 11,26 0,51 0,103 0,154 -24,0 -47,0 -71,0 0,-52 0,-103 0,-154 3,-9 7,-18 10,-26 1,-14 1,-28 1,-41 z"
+   id="path3506-8" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g3508-9">
+         <g
+   id="id454-1-2">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="20207"
+   y="37341"
+   width="72"
+   height="10"
+   id="rect3507-7" />
+          <path
+   fill="#ffffff"
+   stroke="none"
+   d="m 20278,37341 c -24,0 -47,0 -71,0 0,3 0,6 0,9 24,0 47,0 71,0 0,-3 0,-6 0,-9 z"
+   id="path3507-9" />
          </g>
         </g>
        </g></g></g>
