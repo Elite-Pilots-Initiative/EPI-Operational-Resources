@@ -6811,6 +6811,236 @@
    id="path85" />
        </g>
       </g><g
+   class="com.sun.star.drawing.CustomShape"
+   id="g1976-0"
+   style="display:inline"
+   transform="translate(11457.573,-15523.053)">
+        <g
+   id="id315-1">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="9502"
+   y="39685"
+   width="638"
+   height="638"
+   id="rect1974-6"
+   style="fill:url(#pattern56);stroke-width:26.4583;stroke-dasharray:none" />
+         
+         <path
+   fill="none"
+   stroke="#ff860d"
+   d="m 9821,40321 h -318 v -635 h 635 v 635 z"
+   id="path1976-06"
+   style="display:inline;stroke-width:26.4583;stroke-dasharray:none" />
+        </g>
+       </g><g
+   class="com.sun.star.drawing.CustomShape"
+   id="g1976-0-4"
+   style="display:inline"
+   transform="translate(10803.77,-15523.269)">
+        <g
+   id="id315-1-1">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="9502"
+   y="39685"
+   width="638"
+   height="638"
+   id="rect1974-6-4"
+   style="fill:url(#pattern56);stroke-width:26.4583;stroke-dasharray:none" />
+         
+         <path
+   fill="none"
+   stroke="#ff860d"
+   d="m 9821,40321 h -318 v -635 h 635 v 635 z"
+   id="path1976-06-9"
+   style="display:inline;stroke-width:26.4583;stroke-dasharray:none" />
+        </g>
+       </g><g
+   class="com.sun.star.drawing.CustomShape"
+   id="g1976-0-7"
+   style="display:inline"
+   transform="matrix(0.99714601,0,0,1.5782525,14578.621,-38101.332)">
+        <g
+   id="id315-1-7">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="9502"
+   y="39685"
+   width="638"
+   height="638"
+   id="rect1974-6-8"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="#ff860d"
+   stroke="none"
+   d="m 9821,40321 h -318 v -635 h 635 v 635 z"
+   id="path1975-4-38"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="none"
+   stroke="#ff860d"
+   d="m 9821,40321 h -318 v -635 h 635 v 635 z"
+   id="path1976-06-3"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+        </g>
+       </g><g
+   class="com.sun.star.drawing.CustomShape"
+   id="g1976-0-7-3"
+   style="display:inline"
+   transform="matrix(0.99714601,0,0,1.5782525,16028.254,-38101.298)">
+        <g
+   id="id315-1-7-4">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="9502"
+   y="39685"
+   width="638"
+   height="638"
+   id="rect1974-6-8-9"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="#ff860d"
+   stroke="none"
+   d="m 9821,40321 h -318 v -635 h 635 v 635 z"
+   id="path1975-4-38-6"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="none"
+   stroke="#ff860d"
+   d="m 9821,40321 h -318 v -635 h 635 v 635 z"
+   id="path1976-06-3-5"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+        </g>
+       </g><g
+   class="com.sun.star.drawing.CustomShape"
+   id="g1976-0-7-6"
+   style="display:inline"
+   transform="matrix(0.99714601,0,0,1.5782525,6347.9379,-38089.981)">
+        <g
+   id="id315-1-7-8">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="9502"
+   y="39685"
+   width="638"
+   height="638"
+   id="rect1974-6-8-3"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="#ff860d"
+   stroke="none"
+   d="m 9821,40321 h -318 v -635 h 635 v 635 z"
+   id="path1975-4-38-4"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="none"
+   stroke="#ff860d"
+   d="m 9821,40321 h -318 v -635 h 635 v 635 z"
+   id="path1976-06-3-8"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+        </g>
+       </g><g
+   class="com.sun.star.drawing.CustomShape"
+   id="g1976-0-7-3-4"
+   style="display:inline"
+   transform="matrix(0.99714601,0,0,1.5782525,7797.5707,-38089.947)">
+        <g
+   id="id315-1-7-4-9">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="9502"
+   y="39685"
+   width="638"
+   height="638"
+   id="rect1974-6-8-9-9"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="#ff860d"
+   stroke="none"
+   d="m 9821,40321 h -318 v -635 h 635 v 635 z"
+   id="path1975-4-38-6-2"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="none"
+   stroke="#ff860d"
+   d="m 9821,40321 h -318 v -635 h 635 v 635 z"
+   id="path1976-06-3-5-5"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+        </g>
+       </g><g
+   class="com.sun.star.drawing.CustomShape"
+   id="g1976-0-7-6-7"
+   style="display:inline"
+   transform="translate(4641.3516,-11424.884)">
+        <g
+   id="id315-1-7-8-4">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="9502"
+   y="39685"
+   width="638"
+   height="638"
+   id="rect1974-6-8-3-3"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="#ff860d"
+   stroke="none"
+   d="m 9821,40321 h -318 v -635 h 635 v 635 z"
+   id="path1975-4-38-4-8"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="none"
+   stroke="#ff860d"
+   d="m 9821,40321 h -318 v -635 h 635 v 635 z"
+   id="path1976-06-3-8-0"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+        </g>
+       </g><g
+   class="com.sun.star.drawing.CustomShape"
+   id="g1976-0-7-6-7-8"
+   style="display:inline"
+   transform="translate(17636.661,-11424.885)">
+        <g
+   id="id315-1-7-8-4-1">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="9502"
+   y="39685"
+   width="638"
+   height="638"
+   id="rect1974-6-8-3-3-9"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="#ff860d"
+   stroke="none"
+   d="m 9821,40321 h -318 v -635 h 635 v 635 z"
+   id="path1975-4-38-4-8-8"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="none"
+   stroke="#ff860d"
+   d="m 9821,40321 h -318 v -635 h 635 v 635 z"
+   id="path1976-06-3-8-0-9"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+        </g>
+       </g><g
    class="com.sun.star.drawing.LineShape"
    id="g2004"
    style="display:inline">
@@ -6900,6 +7130,30 @@
    stroke="#ff860d"
    d="m 21908,25092 v 318"
    id="path2022"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+        </g>
+       </g><g
+   class="com.sun.star.drawing.LineShape"
+   id="g949-9"
+   style="display:inline"
+   transform="matrix(0.19649069,0,0,1.0000001,17654.225,-0.01600762)">
+        <g
+   id="id175-4">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="13969"
+   y="24139"
+   width="6353"
+   height="3"
+   id="rect948-7"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="none"
+   stroke="#ff860d"
+   d="M 20320,24140 H 13970"
+   id="path949-8"
    style="stroke-width:26.4583;stroke-dasharray:none" />
         </g>
        </g><g
@@ -23275,7 +23529,7 @@
      class="TextShape"
      id="g567"
      style="display:inline"
-     transform="translate(-952.49993)">
+     transform="translate(-52.916544)">
         <g
    id="id28">
          <rect
@@ -23656,7 +23910,7 @@
      class="TextShape"
      id="g527"
      style="display:inline"
-     transform="translate(1.4767682e-4)">
+     transform="translate(211.66682)">
         <g
    id="id22">
          <rect
@@ -23698,7 +23952,7 @@
          fill="#ff860d"
          stroke="none"
          style="white-space:pre"
-         id="tspan522">OMMAND</tspan><tspan
+         id="tspan522">ONTROL</tspan><tspan
          font-family="'Liberation Mono', monospace"
          font-size="282px"
          font-weight="400"
@@ -23714,7 +23968,7 @@
          fill="#ff860d"
          stroke="none"
          style="white-space:pre"
-         id="tspan524">C</tspan><tspan
+         id="tspan524">R</tspan><tspan
          font-family="'Liberation Mono', monospace"
          font-size="282px"
          font-weight="400"
@@ -23722,7 +23976,7 @@
          fill="#ff860d"
          stroke="none"
          style="white-space:pre"
-         id="tspan525">ENTER</tspan></tspan></tspan></text>
+         id="tspan525">OOM</tspan></tspan></tspan></text>
         </g>
        </g><g
      class="TextShape"
