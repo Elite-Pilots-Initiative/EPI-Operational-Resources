@@ -38,6 +38,17 @@ aboutDialog.addEventListener("click", (event) => {
   if (event.target === aboutDialog) aboutDialog.close();
 });
 
+const shortcutsDialog = document.querySelector("#shortcuts-dialog");
+document
+  .querySelector("#open-shortcuts")
+  .addEventListener("click", () => shortcutsDialog.showModal());
+document
+  .querySelector("#close-shortcuts")
+  .addEventListener("click", () => shortcutsDialog.close());
+shortcutsDialog.addEventListener("click", (event) => {
+  if (event.target === shortcutsDialog) shortcutsDialog.close();
+});
+
 const layerNames = [
   "architecture",
   "f0",
@@ -95,6 +106,7 @@ let orientation = "portrait";
 let scrollbarHideTimer;
 let mapPointFrame;
 let pinnedMapPoint;
+let invertKeyboardPan = false;
 const layerVisibility = Object.fromEntries(
   layerNames.map((layerName) => [
     layerName,
@@ -581,6 +593,150 @@ document.querySelector("#reset-map").addEventListener("click", () => {
   offsetX = 0;
   offsetY = 0;
   centerMap();
+});
+
+const layerShortcuts = {
+  a: "architecture",
+  b: "batteries",
+  c: "consumables",
+  e: "energy-ports",
+  f: "footers",
+  g: "grenade-cases",
+  h: "headers",
+  l: "labels",
+  m: "medkits",
+  t: "text",
+  x: "ammo-boxes",
+};
+
+const floorShortcuts = {
+  Digit0: "f0",
+  Digit1: "f1",
+  Digit2: "f2",
+  Digit3: "f3",
+};
+
+const elevatedShortcuts = {
+  Digit1: "e1",
+  Digit2: "e2",
+  Digit3: "e3",
+};
+
+function clickAvailableLayer(layerName) {
+  if (!layerName) return false;
+  const button = document.querySelector(`.layer-toggle[data-layer="${layerName}"]`);
+  if (!button || button.hidden) return false;
+  button.click();
+  return true;
+}
+
+function isTypingOrUsingControl(target) {
+  return Boolean(
+    target.closest(
+      'input, textarea, select, button, a, [contenteditable]:not([contenteditable="false"])',
+    ),
+  );
+}
+
+function updateKeyboardPanMode() {
+  const mode = invertKeyboardPan ? "Move viewpoint" : "Move map";
+  document.querySelector("#keyboard-pan-mode").textContent = mode;
+  document.querySelector("#keyboard-shortcut-status").textContent =
+    `Arrow keys now ${mode.toLowerCase()}`;
+}
+
+document.addEventListener("keydown", (event) => {
+  if (
+    event.defaultPrevented ||
+    isTypingOrUsingControl(event.target) ||
+    aboutDialog.open ||
+    shortcutsDialog.open ||
+    event.altKey ||
+    event.metaKey
+  ) {
+    return;
+  }
+
+  const repeatable = event.key.startsWith("Arrow") || ["+", "=", "-", "_"].includes(event.key);
+  if (event.repeat && !repeatable) return;
+
+  let handled = false;
+
+  if (event.ctrlKey && event.shiftKey && elevatedShortcuts[event.code]) {
+    handled = clickAvailableLayer(elevatedShortcuts[event.code]);
+  } else if (!event.ctrlKey && event.shiftKey && floorShortcuts[event.code]) {
+    handled = clickAvailableLayer(floorShortcuts[event.code]);
+  } else if (!event.ctrlKey && !event.shiftKey && /^Digit[1-4]$/.test(event.code)) {
+    const deck = document.querySelectorAll(".deck-option")[Number(event.code.at(-1)) - 1];
+    if (deck) {
+      deck.click();
+      handled = true;
+    }
+  } else if (!event.ctrlKey && !event.shiftKey && event.code === "Space") {
+    document.querySelector("#show-all-layers").click();
+    handled = true;
+  } else if (!event.ctrlKey && ["+", "="].includes(event.key)) {
+    document.querySelector("#zoom-in").click();
+    handled = true;
+  } else if (!event.ctrlKey && ["-", "_"].includes(event.key)) {
+    document.querySelector("#zoom-out").click();
+    handled = true;
+  } else if (!event.ctrlKey && !event.shiftKey && event.key.toLowerCase() === "r") {
+    document.querySelector("#reset-map").click();
+    handled = true;
+  } else if (!event.ctrlKey && !event.shiftKey && event.key.toLowerCase() === "p") {
+    const nextOrientation = orientation === "portrait" ? "landscape" : "portrait";
+    document.querySelector(`[data-orientation="${nextOrientation}"]`).click();
+    handled = true;
+  } else if (!event.ctrlKey && !event.shiftKey && event.key === "\\") {
+    invertKeyboardPan = !invertKeyboardPan;
+    updateKeyboardPanMode();
+    handled = true;
+  } else if (!event.ctrlKey && event.key === "?") {
+    shortcutsDialog.showModal();
+    handled = true;
+  } else if (!event.ctrlKey && !event.shiftKey && event.key.startsWith("Arrow")) {
+    const panStep = 40;
+    const direction = invertKeyboardPan ? -1 : 1;
+    if (event.key === "ArrowLeft") offsetX -= panStep * direction;
+    if (event.key === "ArrowRight") offsetX += panStep * direction;
+    if (event.key === "ArrowUp") offsetY -= panStep * direction;
+    if (event.key === "ArrowDown") offsetY += panStep * direction;
+    renderMap();
+    handled = true;
+  } else if (!event.ctrlKey && !event.shiftKey) {
+    handled = clickAvailableLayer(layerShortcuts[event.key.toLowerCase()]);
+  }
+
+  if (handled) event.preventDefault();
+});
+
+document.querySelectorAll(".deck-option").forEach((button, index) => {
+  button.setAttribute("aria-keyshortcuts", String(index + 1));
+});
+document.querySelector("#show-all-layers").setAttribute("aria-keyshortcuts", "Space");
+document.querySelector("#zoom-in").setAttribute("aria-keyshortcuts", "+");
+document.querySelector("#zoom-out").setAttribute("aria-keyshortcuts", "-");
+document.querySelector("#reset-map").setAttribute("aria-keyshortcuts", "R");
+document.querySelector("#open-shortcuts").setAttribute("aria-keyshortcuts", "?");
+viewport.setAttribute(
+  "aria-keyshortcuts",
+  "ArrowLeft ArrowRight ArrowUp ArrowDown P \\",
+);
+Object.entries(layerShortcuts).forEach(([shortcut, layerName]) => {
+  document
+    .querySelector(`.layer-toggle[data-layer="${layerName}"]`)
+    ?.setAttribute("aria-keyshortcuts", shortcut.toUpperCase());
+});
+Object.entries(floorShortcuts).forEach(([code, layerName]) => {
+  document
+    .querySelector(`.layer-toggle[data-layer="${layerName}"]`)
+    ?.setAttribute("aria-keyshortcuts", `Shift+${code.at(-1)}`);
+});
+Object.entries(elevatedShortcuts).forEach(([code, layerName]) => {
+  document
+    .querySelector(`.layer-toggle[data-layer="${layerName}"]`)
+    ?.setAttribute("aria-keyshortcuts", `Control+Shift+${code.at(-1)}`);
 });
 
 viewport.addEventListener(

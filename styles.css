@@ -1137,6 +1137,63 @@ a {
   padding: 34px;
 }
 
+.shortcuts-dialog-content {
+  position: relative;
+  padding: 34px;
+}
+
+.shortcuts-dialog-content h2 {
+  margin: 0 0 20px;
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.shortcuts-dialog-content h3 {
+  margin: 24px 0 10px;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.shortcut-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.shortcut-list > div {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.8fr) 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.shortcut-list dt,
+.shortcut-list dd {
+  margin: 0;
+}
+
+.shortcut-list dd,
+.shortcut-letters {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
+.shortcuts-dialog kbd {
+  display: inline-block;
+  min-width: 24px;
+  padding: 2px 6px;
+  border: 1px solid var(--line);
+  border-bottom-color: rgba(118, 215, 255, 0.45);
+  border-radius: 5px;
+  background: rgba(118, 215, 255, 0.08);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.72rem;
+  text-align: center;
+}
+
 .dialog-close {
   position: absolute;
   top: 14px;

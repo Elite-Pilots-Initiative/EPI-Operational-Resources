@@ -295,6 +295,10 @@
               pinch to zoom <span aria-hidden="true">&#8226;</span> Double-click
               to center map on that location
             </p>
+            <button class="about-cta" type="button" id="open-shortcuts">
+              Keyboard shortcuts
+              <span aria-hidden="true">?</span>
+            </button>
             <button class="about-cta" type="button" id="open-about">
               About the Elite Pilots Initiative squadron
               <span aria-hidden="true">&#8599;</span>
@@ -406,6 +410,55 @@
         </footer>
       </section>
     </main>
+    <dialog
+      class="about-dialog shortcuts-dialog"
+      id="shortcuts-dialog"
+      aria-labelledby="shortcuts-title"
+    >
+      <div class="shortcuts-dialog-content">
+        <button
+          class="dialog-close"
+          type="button"
+          id="close-shortcuts"
+          aria-label="Close keyboard shortcuts"
+        >
+          &#10005;
+        </button>
+        <div>
+          <p class="eyebrow">Map controls</p>
+          <h2 id="shortcuts-title">Keyboard shortcuts</h2>
+          <dl class="shortcut-list">
+            <div><dt><kbd>1</kbd>–<kbd>4</kbd></dt><dd>Select deck</dd></div>
+            <div><dt><kbd>Shift</kbd> + <kbd>0</kbd>–<kbd>3</kbd></dt><dd>Toggle floor</dd></div>
+            <div><dt><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>1</kbd>–<kbd>3</kbd></dt><dd>Toggle elevated layer</dd></div>
+            <div><dt><kbd>Space</kbd></dt><dd>Show all layers</dd></div>
+            <div><dt><kbd>+</kbd> / <kbd>−</kbd></dt><dd>Zoom in or out</dd></div>
+            <div>
+              <dt><kbd>Arrow keys</kbd></dt>
+              <dd>Pan map: <span id="keyboard-pan-mode">Move map</span></dd>
+            </div>
+            <div><dt><kbd>\</kbd></dt><dd>Invert arrow-key direction</dd></div>
+            <div><dt><kbd>R</kbd></dt><dd>Reset view</dd></div>
+            <div><dt><kbd>P</kbd></dt><dd>Toggle orientation</dd></div>
+            <div><dt><kbd>?</kbd></dt><dd>Open this guide</dd></div>
+          </dl>
+          <h3>Layer shortcuts</h3>
+          <p class="shortcut-letters">
+            <kbd>A</kbd> Architecture · <kbd>C</kbd> Consumables ·
+            <kbd>T</kbd> Text · <kbd>E</kbd> Energy Ports ·
+            <kbd>X</kbd> Ammo Boxes · <kbd>B</kbd> Batteries ·
+            <kbd>G</kbd> Grenade Cases · <kbd>M</kbd> Medkits ·
+            <kbd>L</kbd> Labels · <kbd>H</kbd> Headers ·
+            <kbd>F</kbd> Footers
+          </p>
+          <p
+            class="map-title-sr"
+            id="keyboard-shortcut-status"
+            aria-live="polite"
+          ></p>
+        </div>
+      </div>
+    </dialog>
     <dialog
       class="about-dialog"
       id="about-dialog"
