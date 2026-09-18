@@ -106,7 +106,7 @@ let orientation = "portrait";
 let scrollbarHideTimer;
 let mapPointFrame;
 let pinnedMapPoint;
-let invertKeyboardPan = false;
+let invertKeyboardPan = true;
 const layerVisibility = Object.fromEntries(
   layerNames.map((layerName) => [
     layerName,
