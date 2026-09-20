@@ -644,8 +644,16 @@ a {
 
 /* Full-screen map workspace */
 .maps-page {
+  --map-bg: #151515;
+  --map-surface: rgba(24, 24, 24, 0.98);
+  --map-surface-strong: #000;
+  --map-surface-soft: rgba(17, 17, 17, 0.94);
+  --map-surface-translucent: rgba(0, 0, 0, 0.9);
+  --line: rgba(200, 200, 200, 0.2);
+  --text: #f2f2f2;
+  --muted: #b8b8b8;
   overflow: hidden;
-  background: #050a13;
+  background: var(--map-bg);
 }
 
 .map-app {
@@ -671,8 +679,8 @@ a {
   border-right: 1px solid var(--line);
   background: linear-gradient(
     180deg,
-    rgba(10, 18, 31, 0.98),
-    rgba(5, 11, 21, 0.98)
+    var(--map-surface),
+    var(--map-surface-strong)
   );
   z-index: 3;
 }
@@ -709,7 +717,7 @@ a {
   padding: 0;
   border: 0;
   border-left: 1px solid var(--line);
-  background: rgba(13, 21, 39, 0.72);
+  background: var(--map-surface-soft);
   color: var(--cyan);
   cursor: pointer;
   font: inherit;
@@ -748,6 +756,12 @@ a {
   font-size: 0.9rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.map-app-brand > div span,
+.layer-controls-heading .eyebrow,
+#open-about {
+  color: var(--orange);
 }
 
 .map-app-brand .brand-mark {
@@ -1082,6 +1096,11 @@ a {
   color: var(--cyan);
 }
 
+#open-about:hover,
+#open-about:focus-visible {
+  color: #ffbf66;
+}
+
 .map-sidebar-footer {
   flex: 0 0 auto;
 }
@@ -1117,15 +1136,15 @@ a {
 .about-dialog {
   width: min(560px, calc(100vw - 32px));
   padding: 0;
-  border: 1px solid rgba(118, 215, 255, 0.35);
+  border: 1px solid rgba(255, 155, 61, 0.35);
   border-radius: 16px;
-  background: #0b1423;
+  background: var(--map-surface-strong);
   color: var(--text);
   box-shadow: 0 30px 100px rgba(0, 0, 0, 0.65);
 }
 
 .about-dialog::backdrop {
-  background: rgba(2, 6, 12, 0.76);
+  background: rgba(0, 0, 0, 0.76);
   backdrop-filter: blur(5px);
 }
 
@@ -1185,9 +1204,9 @@ a {
   min-width: 24px;
   padding: 2px 6px;
   border: 1px solid var(--line);
-  border-bottom-color: rgba(118, 215, 255, 0.45);
+  border-bottom-color: rgba(255, 155, 61, 0.45);
   border-radius: 5px;
-  background: rgba(118, 215, 255, 0.08);
+  background: rgba(255, 155, 61, 0.08);
   color: var(--text);
   font: inherit;
   font-size: 0.72rem;
@@ -1210,7 +1229,7 @@ a {
 
 .dialog-close:hover,
 .dialog-close:focus-visible {
-  border-color: var(--cyan);
+  border-color: var(--orange);
   color: var(--text);
 }
 
@@ -1274,7 +1293,7 @@ a {
   min-height: 82px;
   padding: 16px 24px;
   border-bottom: 1px solid var(--line);
-  background: rgba(5, 11, 21, 0.86);
+  background: var(--map-surface);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   z-index: 2;
@@ -1334,7 +1353,7 @@ a {
   background: linear-gradient(
     100deg,
     rgba(255, 155, 61, 0.18),
-    rgba(16, 27, 45, 0.9)
+    var(--map-surface-soft)
   );
   color: var(--text);
 }
@@ -1363,7 +1382,7 @@ a {
   padding: 4px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(13, 21, 39, 0.9);
+  background: var(--map-surface-soft);
 }
 
 .orientation-option {
@@ -1389,7 +1408,7 @@ a {
   padding: 4px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(13, 21, 39, 0.9);
+  background: var(--map-surface-soft);
 }
 
 .zoom-controls button,
@@ -1437,7 +1456,7 @@ a {
   width: 100%;
   min-height: 0;
   overflow: hidden;
-  background: #070d17;
+  background: var(--map-bg);
   container-type: size;
   cursor: grab;
   touch-action: none;
@@ -1523,7 +1542,7 @@ a {
   margin: 0;
   padding: 6px 24px;
   border-top: 1px solid var(--line);
-  background: rgba(5, 11, 21, 0.86);
+  background: var(--map-surface-strong);
   color: var(--muted);
   font-size: 0.8rem;
   z-index: 2;

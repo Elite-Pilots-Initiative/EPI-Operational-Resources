@@ -638,12 +638,16 @@ function isTypingOrUsingControl(target) {
   );
 }
 
-function updateKeyboardPanMode() {
+function updateKeyboardPanMode(announce = false) {
   const mode = invertKeyboardPan ? "Move viewpoint" : "Move map";
   document.querySelector("#keyboard-pan-mode").textContent = mode;
-  document.querySelector("#keyboard-shortcut-status").textContent =
-    `Arrow keys now ${mode.toLowerCase()}`;
+  if (announce) {
+    document.querySelector("#keyboard-shortcut-status").textContent =
+      `Arrow keys now ${mode.toLowerCase()}`;
+  }
 }
+
+updateKeyboardPanMode();
 
 document.addEventListener("keydown", (event) => {
   if (
@@ -690,7 +694,7 @@ document.addEventListener("keydown", (event) => {
     handled = true;
   } else if (!event.ctrlKey && !event.shiftKey && event.key === "\\") {
     invertKeyboardPan = !invertKeyboardPan;
-    updateKeyboardPanMode();
+    updateKeyboardPanMode(true);
     handled = true;
   } else if (!event.ctrlKey && event.key === "?") {
     shortcutsDialog.showModal();
