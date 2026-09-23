@@ -8318,7 +8318,8 @@
    class="Page"
    id="deck_cargo"
    transform="matrix(0.01,0,0,0.01,-3.2359951e-5,0)"
-   style="display:inline">
+   style="display:inline"><title
+   id="title60">Cargo Deck</title>
       <defs
    class="SlideBackground"
    id="defs79" />
@@ -8332,12 +8333,14 @@
       <g
    class="Group"
    id="architecture_cargo"
-   style="display:inline">
+   style="display:inline"><title
+   id="title44">Architecture</title>
        <g
    class="com.sun.star.drawing.PolyPolygonShape"
    id="f0_cargo"
    style="display:inline"
-   transform="translate(2.5776227e-4)">
+   transform="translate(2.5776227e-4)"><title
+   id="title51">Floor 0</title>
        <g
    id="id3-06">
         <rect
@@ -25661,7 +25664,8 @@
    class="Group"
    id="f1_cargo"
    style="display:inline"
-   transform="translate(2.5776227e-4)">
+   transform="translate(2.5776227e-4)"><title
+   id="title52">Floor 1</title>
        <g
    class="com.sun.star.drawing.PolyPolygonShape"
    id="g193">
@@ -25758,7 +25762,8 @@
    class="Group"
    id="e1_cargo"
    style="display:inline"
-   transform="translate(2.5776227e-4)">
+   transform="translate(2.5776227e-4)"><title
+   id="title48">Elevated 1</title>
        <g
    class="com.sun.star.drawing.LineShape"
    id="g198">
@@ -27164,7 +27169,8 @@
    class="Group"
    id="f2_cargo"
    style="display:inline"
-   transform="translate(2.5776227e-4)">
+   transform="translate(2.5776227e-4)"><title
+   id="title53">Floor 2</title>
        <g
    class="com.sun.star.drawing.PolyPolygonShape"
    id="g82-5">
@@ -27238,7 +27244,8 @@
    class="Group"
    id="e2_cargo"
    style="display:inline"
-   transform="translate(2.5776227e-4)">
+   transform="translate(2.5776227e-4)"><title
+   id="title49">Elevated 2</title>
        <g
    class="com.sun.star.drawing.LineShape"
    id="g86-5">
@@ -28890,7 +28897,8 @@
    class="Group"
    id="f3_cargo"
    style="display:inline"
-   transform="translate(2.5776227e-4)">
+   transform="translate(2.5776227e-4)"><title
+   id="title54">Floor 3</title>
        <g
    class="com.sun.star.drawing.CustomShape"
    id="g176">
@@ -28964,7 +28972,8 @@
    class="Group"
    id="e3_cargo"
    style="display:inline"
-   transform="translate(2.5776227e-4)">
+   transform="translate(2.5776227e-4)"><title
+   id="title50">Elevated 3</title>
        <g
    class="com.sun.star.drawing.LineShape"
    id="g180">
@@ -30136,7 +30145,8 @@
       <g
    class="Group"
    id="text_cargo"
-   style="display:inline">
+   style="display:inline"><title
+   id="title40">Text</title>
        
        
        
@@ -30151,7 +30161,8 @@
       <g
    id="footers_cargo"
    transform="translate(-128880)"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title61">Footers</title><g
      class="TextShape"
      id="g3410"
      style="display:inline"
@@ -30220,7 +30231,8 @@
        </g></g><g
    id="labels_cargo"
    transform="translate(-128880)"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title65">Labels</title><g
      class="TextShape"
      id="g3417"
      style="display:inline"
@@ -30767,7 +30779,8 @@
        </g></g><g
    id="headers_cargo"
    transform="translate(-128880)"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title66">Headers</title><g
      class="TextShape"
      id="g3467"
      style="display:inline"
@@ -30929,7 +30942,8 @@
       <g
    class="Group"
    id="consumables_cargo"
-   style="display:inline">
+   style="display:inline"><title
+   id="title43">Consumables</title>
        
        
        
@@ -30969,7 +30983,8 @@
       <g
    id="medkits_cargo"
    transform="translate(-128880)"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title83">Medkits</title><g
      class="Group"
      id="g3658"
      style="display:inline"
@@ -31206,7 +31221,8 @@
        </g></g><g
    id="grenade-cases_cargo"
    transform="translate(-128880)"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title78">Grenade Cases</title><g
      class="Group"
      id="g3609"
      style="display:inline"
@@ -33265,7 +33281,8 @@
        </g></g><g
    id="energy-ports_cargo"
    transform="translate(-128880)"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title77">Energy Ports</title><g
      class="Group"
      id="g3670"
      style="display:inline"
@@ -33372,7 +33389,8 @@
        </g></g><g
    id="batteries_cargo"
    transform="translate(-128880)"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title72">Batteries</title><g
      class="Group"
      id="g3542"
      style="display:inline"
@@ -33635,7 +33653,8 @@
        </g></g><g
    id="ammo-boxes_cargo"
    transform="translate(-128880)"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title71">Ammo Boxes</title><g
      class="Group"
      id="g3620"
      style="display:inline"
@@ -34847,7 +34866,36 @@
          </g>
         </g>
        </g></g></g>
-     </g>
+     <g
+   id="ops_poi_cargo"
+   transform="matrix(100,0,0,100,-128880,0)"><title
+     id="title37">Operational Points of Interest</title><g
+     id="op_reclamation_point_cargo"><title
+       id="title86">Reclamation Point</title><g
+       id="add_consumables_reclamation_point_cargo"><title
+         id="title99">Additional Consumables</title></g><g
+       id="resources_reclamation_point_cargo"><title
+         id="title96">Resources</title></g><g
+       id="obj_reclamation_point_cargo"><title
+         id="title95">Objectives</title></g><g
+       id="nav_reclamation_point_cargo"
+       style="display:inline"><title
+         id="title93">Navigation</title><g
+         id="entry_reclamation_point_cargo"
+         transform="matrix(0.02583822,0,0,0.02583867,1491.5382,566.86068)"
+         style="display:inline;fill:#0066cc;fill-opacity:1"><title
+   id="title100">Entry Point</title>
+	<path
+   class="st0"
+   d="m 255.995,198.276 c -31.884,0 -57.724,25.84 -57.724,57.724 0,31.875 25.841,57.716 57.724,57.716 31.874,0 57.716,-25.841 57.716,-57.716 0,-31.884 -25.841,-57.724 -57.716,-57.724 z"
+   id="path23"
+   style="fill:#0066cc;fill-opacity:1" />
+	<path
+   class="st0"
+   d="M 511.13,254.868 410.124,228.04 c -5.79,-32.047 -21.284,-60.778 -43.346,-82.823 -22.044,-22.062 -50.784,-37.564 -82.83,-43.346 L 257.128,0.875 c -0.136,-0.508 -0.598,-0.87 -1.133,-0.87 -0.535,0 -0.996,0.362 -1.133,0.87 l -26.819,100.997 c -32.056,5.781 -60.796,21.284 -82.831,43.346 -22.071,22.035 -37.566,50.785 -43.346,82.832 L 0.869,254.868 C 0.363,255.003 0,255.465 0,256 c 0,0.535 0.363,0.997 0.869,1.133 l 100.998,26.819 c 5.78,32.047 21.274,60.787 43.346,82.832 22.035,22.062 50.775,37.555 82.822,43.346 l 26.828,100.997 c 0.136,0.507 0.598,0.869 1.133,0.869 0.535,0 0.996,-0.362 1.133,-0.869 L 283.957,410.13 c 32.038,-5.79 60.777,-21.284 82.821,-43.346 22.062,-22.044 37.556,-50.785 43.346,-82.822 L 511.13,257.134 c 0.508,-0.136 0.87,-0.598 0.87,-1.133 0,-0.536 -0.363,-0.998 -0.87,-1.133 z m -173.509,82.758 c -20.956,20.921 -49.687,33.796 -81.626,33.814 -31.948,-0.018 -60.669,-12.893 -81.626,-33.814 C 153.44,316.669 140.565,287.938 140.555,256 c 0.01,-31.947 12.884,-60.669 33.814,-81.626 20.957,-20.921 49.679,-33.805 81.626,-33.814 31.938,0.008 60.67,12.893 81.626,33.814 20.921,20.957 33.796,49.679 33.814,81.626 -0.018,31.938 -12.893,60.669 -33.814,81.626 z"
+   id="path24"
+   style="fill:#0066cc;fill-opacity:1" />
+</g></g></g></g></g>
 
  
  
@@ -34883,4 +34931,12 @@
  
 <metadata
    id="metadata3883"><rdf:RDF><cc:Work
-       rdf:about=""><dc:title>Operations Megaship</dc:title></cc:Work></rdf:RDF></metadata></svg>
+       rdf:about=""><dc:title>Operations Megaship</dc:title></cc:Work></rdf:RDF></metadata><style
+   type="text/css"
+   id="style1">
+	.st0{fill:#000000;}
+</style><style
+   type="text/css"
+   id="style1-4">
+	.st0{fill:#000000;}
+</style></svg>

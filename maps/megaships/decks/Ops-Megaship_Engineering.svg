@@ -6635,7 +6635,8 @@
  <g
    class="Page"
    id="deck_engineering"
-   transform="matrix(0.01,0,0,0.01,-1.1324797e-5,0)">
+   transform="matrix(0.01,0,0,0.01,-1.1324797e-5,0)"><title
+   id="title58">Engineering Deck</title>
       <defs
    class="SlideBackground"
    id="defs82" />
@@ -6645,12 +6646,14 @@
       <g
    class="Group"
    id="architecture_engineering"
-   style="display:inline">
+   style="display:inline"><title
+   id="title46">Architecture</title>
        <g
    class="com.sun.star.drawing.PolyPolygonShape"
    id="f0_engineering"
    style="display:inline"
-   transform="translate(3.2203189e-4)">
+   transform="translate(3.2203189e-4)"><title
+   id="title57">Floor 0</title>
        <g
    id="id3-0">
         <rect
@@ -7007,7 +7010,8 @@
    class="com.sun.star.drawing.PolyPolygonShape"
    id="f1_engineering"
    style="display:inline"
-   transform="translate(3.2203189e-4)">
+   transform="translate(3.2203189e-4)"><title
+   id="title56">Floor 1</title>
        <g
    id="id4-3">
         <rect
@@ -18026,7 +18030,8 @@
    class="Group"
    id="e1_engineering"
    style="display:inline"
-   transform="translate(3.2203189e-4)">
+   transform="translate(3.2203189e-4)"><title
+   id="title47">Elevated 1</title>
        
        
        
@@ -19885,8 +19890,868 @@
       
       <g
    class="Group"
+   id="text_engineering"
+   style="display:inline"><title
+   id="title38">Text</title>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+      <g
+   id="footers_engineering"
+   transform="translate(-42959.998)"><g
+     class="TextShape"
+     id="g1868"
+     style="display:inline"
+     transform="translate(42959.998)">
+        <g
+   id="id351-6">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="15722"
+   y="59157"
+   width="10519"
+   height="1662"
+   id="rect1861" />
+         <text
+   class="SVGTextShape"
+   id="text1868"><tspan
+     class="TextParagraph"
+     id="tspan1868"><tspan
+       class="TextPosition"
+       x="15972"
+       y="60222"
+       id="tspan1867"><tspan
+         font-family="Eurostile"
+         font-size="1411px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1862">E</tspan><tspan
+         font-family="Eurostile"
+         font-size="1129px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1863">NGINEERING</tspan><tspan
+         font-family="Eurostile"
+         font-size="1129px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1864"> </tspan><tspan
+         font-family="Eurostile"
+         font-size="1411px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1865">D</tspan><tspan
+         font-family="Eurostile"
+         font-size="1129px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1866">ECK</tspan></tspan></tspan></text>
+        </g>
+       </g></g><g
+   id="labels_engineering"
+   transform="translate(-42959.998)"><title
+     id="title63">Labels</title><g
+     class="TextShape"
+     id="g1810"
+     style="display:inline"
+     transform="translate(42959.998)">
+        <g
+   id="id342-1">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="19582"
+   y="10463"
+   width="2797"
+   height="650"
+   id="rect1804" />
+         <path
+   fill="#000000"
+   fill-opacity="0.502"
+   stroke="none"
+   d="m 20980,11112 h -1398 v -649 h 2796 v 649 z"
+   id="path1804" />
+         <text
+   class="SVGTextShape"
+   id="text1810"><tspan
+     class="TextParagraph"
+     id="tspan1810"><tspan
+       class="TextPosition"
+       x="19832"
+       y="10880"
+       id="tspan1809"><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1804">E</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1805">XPRESS</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1806"> </tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1807">L</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1808">IFTS</tspan></tspan></tspan></text>
+        </g>
+       </g><g
+     class="TextShape"
+     id="g1817"
+     style="display:inline"
+     transform="translate(42959.998)">
+        <g
+   id="id343-7">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="14506"
+   y="21908"
+   width="2797"
+   height="650"
+   id="rect1810" />
+         <path
+   fill="#000000"
+   fill-opacity="0.502"
+   stroke="none"
+   d="m 15904,22557 h -1398 v -649 h 2796 v 649 z"
+   id="path1810" />
+         <text
+   class="SVGTextShape"
+   id="text1817"><tspan
+     class="TextParagraph"
+     id="tspan1817"><tspan
+       class="TextPosition"
+       x="14756"
+       y="22325"
+       id="tspan1816"><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1811">E</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1812">XPRESS</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1813"> </tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1814">L</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1815">IFTS</tspan></tspan></tspan></text>
+        </g>
+       </g><g
+     class="TextShape"
+     id="g1824"
+     style="display:inline"
+     transform="translate(42959.998)">
+        <g
+   id="id344-8">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="19583"
+   y="56198"
+   width="2797"
+   height="650"
+   id="rect1817" />
+         <path
+   fill="#000000"
+   fill-opacity="0.502"
+   stroke="none"
+   d="m 20981,56847 h -1398 v -649 h 2796 v 649 z"
+   id="path1817" />
+         <text
+   class="SVGTextShape"
+   id="text1824"><tspan
+     class="TextParagraph"
+     id="tspan1824"><tspan
+       class="TextPosition"
+       x="19833"
+       y="56615"
+       id="tspan1823"><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1818">E</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1819">XPRESS</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1820"> </tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1821">L</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1822">IFTS</tspan></tspan></tspan></text>
+        </g>
+       </g><g
+     class="TextShape"
+     id="g1831"
+     style="display:inline"
+     transform="translate(42959.998)">
+        <g
+   id="id345-6">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="19752"
+   y="30798"
+   width="2457"
+   height="650"
+   id="rect1824" />
+         <path
+   fill="#000000"
+   fill-opacity="0.502"
+   stroke="none"
+   d="m 20980,31447 h -1228 v -649 h 2456 v 649 z"
+   id="path1824" />
+         <text
+   class="SVGTextShape"
+   id="text1831"><tspan
+     class="TextParagraph"
+     id="tspan1831"><tspan
+       class="TextPosition"
+       x="20002"
+       y="31215"
+       id="tspan1830"><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1825">P</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1826">OWER</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1827"> </tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1828">P</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1829">LANT</tspan></tspan></tspan></text>
+        </g>
+       </g><g
+     class="TextShape"
+     id="g1835"
+     style="display:inline"
+     transform="translate(42959.998)">
+        <g
+   id="id346-6">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="20283"
+   y="34608"
+   width="1395"
+   height="650"
+   id="rect1831" />
+         <path
+   fill="#000000"
+   fill-opacity="0.502"
+   stroke="none"
+   d="m 20980,35257 h -697 v -649 h 1394 v 649 z"
+   id="path1831" />
+         <text
+   class="SVGTextShape"
+   id="text1835"><tspan
+     class="TextParagraph"
+     id="tspan1835"><tspan
+       class="TextPosition"
+       x="20533"
+       y="35025"
+       id="tspan1834"><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1832">D</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1833">EPOT</tspan></tspan></tspan></text>
+        </g>
+       </g><g
+     class="TextShape"
+     id="g1844"
+     style="display:inline"
+     transform="translate(42959.998)">
+        <g
+   id="id347-9">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="6785"
+   y="37204"
+   width="3008"
+   height="650"
+   id="rect1835" />
+         <path
+   fill="#000000"
+   fill-opacity="0.502"
+   stroke="none"
+   d="M 8289,37853 H 6785 v -649 h 3007 v 649 z"
+   id="path1835" />
+         <text
+   class="SVGTextShape"
+   id="text1844"><tspan
+     class="TextParagraph"
+     id="tspan1844"><tspan
+       class="TextPosition"
+       x="7035"
+       y="37621"
+       id="tspan1843"><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1836">B</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1837">REAKER</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1838"> </tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1839">R</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1840">OOM</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1841"> </tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1842">A</tspan></tspan></tspan></text>
+        </g>
+       </g><g
+     class="TextShape"
+     id="g1853"
+     style="display:inline"
+     transform="translate(42959.998)">
+        <g
+   id="id348-9">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="32185"
+   y="38604"
+   width="3008"
+   height="650"
+   id="rect1844" />
+         <path
+   fill="#000000"
+   fill-opacity="0.502"
+   stroke="none"
+   d="m 33689,39253 h -1504 v -649 h 3007 v 649 z"
+   id="path1844" />
+         <text
+   class="SVGTextShape"
+   id="text1853"><tspan
+     class="TextParagraph"
+     id="tspan1853"><tspan
+       class="TextPosition"
+       x="32435"
+       y="39021"
+       id="tspan1852"><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1845">B</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1846">REAKER</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1847"> </tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1848">R</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1849">OOM</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1850"> </tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1851">B</tspan></tspan></tspan></text>
+        </g>
+       </g><g
+     class="TextShape"
+     id="g1857"
+     style="display:inline"
+     transform="translate(42959.998)">
+        <g
+   id="id349-2">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="7403"
+   y="33338"
+   width="1735"
+   height="650"
+   id="rect1853" />
+         <path
+   fill="#000000"
+   fill-opacity="0.502"
+   stroke="none"
+   d="m 8270,33987 h -867 v -649 h 1734 v 649 z"
+   id="path1853" />
+         <text
+   class="SVGTextShape"
+   id="text1857"><tspan
+     class="TextParagraph"
+     id="tspan1857"><tspan
+       class="TextPosition"
+       x="7653"
+       y="33755"
+       id="tspan1856"><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1854">U</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1855">TILITY</tspan></tspan></tspan></text>
+        </g>
+       </g><g
+     class="TextShape"
+     id="g1861"
+     style="display:inline"
+     transform="translate(42959.998)">
+        <g
+   id="id350-6">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="32874"
+   y="33324"
+   width="1735"
+   height="650"
+   id="rect1857" />
+         <path
+   fill="#000000"
+   fill-opacity="0.502"
+   stroke="none"
+   d="m 33741,33973 h -867 v -649 h 1734 v 649 z"
+   id="path1857" />
+         <text
+   class="SVGTextShape"
+   id="text1861"><tspan
+     class="TextParagraph"
+     id="tspan1861"><tspan
+       class="TextPosition"
+       x="33124"
+       y="33741"
+       id="tspan1860"><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1858">U</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1859">TILITY</tspan></tspan></tspan></text>
+        </g>
+       </g></g><g
+   id="headers_engineering"
+   transform="translate(-42959.998)"><title
+     id="title68">Headers</title><g
+     class="TextShape"
+     id="g1871"
+     style="display:inline"
+     transform="translate(42959.998)">
+        <g
+   id="id352-5">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="18233"
+   y="318"
+   width="5390"
+   height="1281"
+   id="rect1868" />
+         <text
+   class="SVGTextShape"
+   id="text1871"><tspan
+     class="TextParagraph"
+     id="tspan1871"><tspan
+       class="TextPosition"
+       x="18483"
+       y="1010"
+       id="tspan1870"><tspan
+         font-family="'Euro Caps'"
+         font-size="635px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1869">Elite Dangerous</tspan></tspan></tspan></text>
+        </g>
+       </g><g
+     class="TextShape"
+     id="g1881"
+     style="display:inline"
+     transform="translate(42959.998)">
+        <g
+   id="id353-8">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="12564"
+   y="763"
+   width="16836"
+   height="1979"
+   id="rect1871" />
+         <text
+   class="SVGTextShape"
+   id="text1881"><tspan
+     class="TextParagraph"
+     id="tspan1881"><tspan
+       class="TextPosition"
+       x="12814"
+       y="2306"
+       id="tspan1880"><tspan
+         font-family="'Century Gothic', sans-serif"
+         font-size="1411px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1872">O</tspan><tspan
+         font-family="'Century Gothic', sans-serif"
+         font-size="1129px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1873">PERATIONS</tspan><tspan
+         font-family="'Century Gothic', sans-serif"
+         font-size="1129px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1874"> </tspan><tspan
+         font-family="'Century Gothic', sans-serif"
+         font-size="1411px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1875">M</tspan><tspan
+         font-family="'Century Gothic', sans-serif"
+         font-size="1129px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1876">EGASHIP</tspan><tspan
+         font-family="'Century Gothic', sans-serif"
+         font-size="1129px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1877"> </tspan><tspan
+         font-family="'Century Gothic', sans-serif"
+         font-size="1411px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1878">M</tspan><tspan
+         font-family="'Century Gothic', sans-serif"
+         font-size="1129px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1879">AP</tspan></tspan></tspan></text>
+        </g>
+       </g><g
+     class="TextShape"
+     id="g1884"
+     style="display:inline"
+     transform="translate(42959.998)">
+        <g
+   id="id354-4">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="15636"
+   y="2551"
+   width="10643"
+   height="816"
+   id="rect1881" />
+         <text
+   class="SVGTextShape"
+   id="text1884"><tspan
+     class="TextParagraph"
+     id="tspan1884"><tspan
+       class="TextPosition"
+       x="15886"
+       y="3112"
+       id="tspan1883"><tspan
+         font-family="Telegrama"
+         font-size="564px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan1882">MADE BY CMDR INDY NOVASCEND</tspan></tspan></tspan></text>
+        </g>
+       </g></g></g><g
+   class="Group"
    id="consumables_engineering"
-   style="display:inline">
+   style="display:inline"
+   transform="translate(3.2203189e-4)"><title
+   id="title41">Consumables</title>
        
        
        
@@ -19922,7 +20787,8 @@
       <g
    id="medkits_engineering"
    transform="translate(-42959.998)"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title81">Medkits</title><g
      class="Group"
      id="g2017-3"
      style="display:inline"
@@ -20055,7 +20921,8 @@
        </g></g><g
    id="grenade-cases_engineering"
    transform="translate(-42959.998)"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title80">Grenade Cases</title><g
      class="Group"
      id="g2030-0"
      style="display:inline"
@@ -21857,7 +22724,8 @@
        </g></g><g
    id="energy-ports_engineering"
    transform="translate(-42959.998)"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title75">Energy Ports</title><g
      class="Group"
      id="g1980-0"
      style="display:inline"
@@ -22016,7 +22884,8 @@
        </g></g><g
    id="batteries_engineering"
    transform="translate(-42959.998)"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title74">Batteries</title><g
      class="Group"
      id="g2001"
      style="display:inline"
@@ -22253,7 +23122,8 @@
        </g></g><g
    id="ammo-boxes_engineering"
    transform="translate(-42959.998)"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title69">Ammo Boxes</title><g
      class="Group"
      id="g2052"
      style="display:inline"
@@ -23118,863 +23988,258 @@
    id="path1892-6" />
          </g>
         </g>
-       </g></g></g><g
-   class="Group"
-   id="text_engineering"
-   style="display:inline">
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-      <g
-   id="footers_engineering"
-   transform="translate(-42959.998)"><g
-     class="TextShape"
-     id="g1868"
-     style="display:inline"
-     transform="translate(42959.998)">
-        <g
-   id="id351-6">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="15722"
-   y="59157"
-   width="10519"
-   height="1662"
-   id="rect1861" />
-         <text
-   class="SVGTextShape"
-   id="text1868"><tspan
-     class="TextParagraph"
-     id="tspan1868"><tspan
-       class="TextPosition"
-       x="15972"
-       y="60222"
-       id="tspan1867"><tspan
-         font-family="Eurostile"
-         font-size="1411px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1862">E</tspan><tspan
-         font-family="Eurostile"
-         font-size="1129px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1863">NGINEERING</tspan><tspan
-         font-family="Eurostile"
-         font-size="1129px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1864"> </tspan><tspan
-         font-family="Eurostile"
-         font-size="1411px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1865">D</tspan><tspan
-         font-family="Eurostile"
-         font-size="1129px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1866">ECK</tspan></tspan></tspan></text>
-        </g>
-       </g></g><g
-   id="labels_engineering"
-   transform="translate(-42959.998)"><g
-     class="TextShape"
-     id="g1810"
-     style="display:inline"
-     transform="translate(42959.998)">
-        <g
-   id="id342-1">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="19582"
-   y="10463"
-   width="2797"
-   height="650"
-   id="rect1804" />
-         <path
-   fill="#000000"
-   fill-opacity="0.502"
-   stroke="none"
-   d="m 20980,11112 h -1398 v -649 h 2796 v 649 z"
-   id="path1804" />
-         <text
-   class="SVGTextShape"
-   id="text1810"><tspan
-     class="TextParagraph"
-     id="tspan1810"><tspan
-       class="TextPosition"
-       x="19832"
-       y="10880"
-       id="tspan1809"><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1804">E</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1805">XPRESS</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1806"> </tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1807">L</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1808">IFTS</tspan></tspan></tspan></text>
-        </g>
-       </g><g
-     class="TextShape"
-     id="g1817"
-     style="display:inline"
-     transform="translate(42959.998)">
-        <g
-   id="id343-7">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="14506"
-   y="21908"
-   width="2797"
-   height="650"
-   id="rect1810" />
-         <path
-   fill="#000000"
-   fill-opacity="0.502"
-   stroke="none"
-   d="m 15904,22557 h -1398 v -649 h 2796 v 649 z"
-   id="path1810" />
-         <text
-   class="SVGTextShape"
-   id="text1817"><tspan
-     class="TextParagraph"
-     id="tspan1817"><tspan
-       class="TextPosition"
-       x="14756"
-       y="22325"
-       id="tspan1816"><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1811">E</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1812">XPRESS</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1813"> </tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1814">L</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1815">IFTS</tspan></tspan></tspan></text>
-        </g>
-       </g><g
-     class="TextShape"
-     id="g1824"
-     style="display:inline"
-     transform="translate(42959.998)">
-        <g
-   id="id344-8">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="19583"
-   y="56198"
-   width="2797"
-   height="650"
-   id="rect1817" />
-         <path
-   fill="#000000"
-   fill-opacity="0.502"
-   stroke="none"
-   d="m 20981,56847 h -1398 v -649 h 2796 v 649 z"
-   id="path1817" />
-         <text
-   class="SVGTextShape"
-   id="text1824"><tspan
-     class="TextParagraph"
-     id="tspan1824"><tspan
-       class="TextPosition"
-       x="19833"
-       y="56615"
-       id="tspan1823"><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1818">E</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1819">XPRESS</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1820"> </tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1821">L</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1822">IFTS</tspan></tspan></tspan></text>
-        </g>
-       </g><g
-     class="TextShape"
-     id="g1831"
-     style="display:inline"
-     transform="translate(42959.998)">
-        <g
-   id="id345-6">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="19752"
-   y="30798"
-   width="2457"
-   height="650"
-   id="rect1824" />
-         <path
-   fill="#000000"
-   fill-opacity="0.502"
-   stroke="none"
-   d="m 20980,31447 h -1228 v -649 h 2456 v 649 z"
-   id="path1824" />
-         <text
-   class="SVGTextShape"
-   id="text1831"><tspan
-     class="TextParagraph"
-     id="tspan1831"><tspan
-       class="TextPosition"
-       x="20002"
-       y="31215"
-       id="tspan1830"><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1825">P</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1826">OWER</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1827"> </tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1828">P</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1829">LANT</tspan></tspan></tspan></text>
-        </g>
-       </g><g
-     class="TextShape"
-     id="g1835"
-     style="display:inline"
-     transform="translate(42959.998)">
-        <g
-   id="id346-6">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="20283"
-   y="34608"
-   width="1395"
-   height="650"
-   id="rect1831" />
-         <path
-   fill="#000000"
-   fill-opacity="0.502"
-   stroke="none"
-   d="m 20980,35257 h -697 v -649 h 1394 v 649 z"
-   id="path1831" />
-         <text
-   class="SVGTextShape"
-   id="text1835"><tspan
-     class="TextParagraph"
-     id="tspan1835"><tspan
-       class="TextPosition"
-       x="20533"
-       y="35025"
-       id="tspan1834"><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1832">D</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1833">EPOT</tspan></tspan></tspan></text>
-        </g>
-       </g><g
-     class="TextShape"
-     id="g1844"
-     style="display:inline"
-     transform="translate(42959.998)">
-        <g
-   id="id347-9">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="6785"
-   y="37204"
-   width="3008"
-   height="650"
-   id="rect1835" />
-         <path
-   fill="#000000"
-   fill-opacity="0.502"
-   stroke="none"
-   d="M 8289,37853 H 6785 v -649 h 3007 v 649 z"
-   id="path1835" />
-         <text
-   class="SVGTextShape"
-   id="text1844"><tspan
-     class="TextParagraph"
-     id="tspan1844"><tspan
-       class="TextPosition"
-       x="7035"
-       y="37621"
-       id="tspan1843"><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1836">B</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1837">REAKER</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1838"> </tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1839">R</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1840">OOM</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1841"> </tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1842">A</tspan></tspan></tspan></text>
-        </g>
-       </g><g
-     class="TextShape"
-     id="g1853"
-     style="display:inline"
-     transform="translate(42959.998)">
-        <g
-   id="id348-9">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="32185"
-   y="38604"
-   width="3008"
-   height="650"
-   id="rect1844" />
-         <path
-   fill="#000000"
-   fill-opacity="0.502"
-   stroke="none"
-   d="m 33689,39253 h -1504 v -649 h 3007 v 649 z"
-   id="path1844" />
-         <text
-   class="SVGTextShape"
-   id="text1853"><tspan
-     class="TextParagraph"
-     id="tspan1853"><tspan
-       class="TextPosition"
-       x="32435"
-       y="39021"
-       id="tspan1852"><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1845">B</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1846">REAKER</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1847"> </tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1848">R</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1849">OOM</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1850"> </tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1851">B</tspan></tspan></tspan></text>
-        </g>
-       </g><g
-     class="TextShape"
-     id="g1857"
-     style="display:inline"
-     transform="translate(42959.998)">
-        <g
-   id="id349-2">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="7403"
-   y="33338"
-   width="1735"
-   height="650"
-   id="rect1853" />
-         <path
-   fill="#000000"
-   fill-opacity="0.502"
-   stroke="none"
-   d="m 8270,33987 h -867 v -649 h 1734 v 649 z"
-   id="path1853" />
-         <text
-   class="SVGTextShape"
-   id="text1857"><tspan
-     class="TextParagraph"
-     id="tspan1857"><tspan
-       class="TextPosition"
-       x="7653"
-       y="33755"
-       id="tspan1856"><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1854">U</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1855">TILITY</tspan></tspan></tspan></text>
-        </g>
-       </g><g
-     class="TextShape"
-     id="g1861"
-     style="display:inline"
-     transform="translate(42959.998)">
-        <g
-   id="id350-6">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="32874"
-   y="33324"
-   width="1735"
-   height="650"
-   id="rect1857" />
-         <path
-   fill="#000000"
-   fill-opacity="0.502"
-   stroke="none"
-   d="m 33741,33973 h -867 v -649 h 1734 v 649 z"
-   id="path1857" />
-         <text
-   class="SVGTextShape"
-   id="text1861"><tspan
-     class="TextParagraph"
-     id="tspan1861"><tspan
-       class="TextPosition"
-       x="33124"
-       y="33741"
-       id="tspan1860"><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1858">U</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1859">TILITY</tspan></tspan></tspan></text>
-        </g>
-       </g></g><g
-   id="headers_engineering"
-   transform="translate(-42959.998)"><g
-     class="TextShape"
-     id="g1871"
-     style="display:inline"
-     transform="translate(42959.998)">
-        <g
-   id="id352-5">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="18233"
-   y="318"
-   width="5390"
-   height="1281"
-   id="rect1868" />
-         <text
-   class="SVGTextShape"
-   id="text1871"><tspan
-     class="TextParagraph"
-     id="tspan1871"><tspan
-       class="TextPosition"
-       x="18483"
-       y="1010"
-       id="tspan1870"><tspan
-         font-family="'Euro Caps'"
-         font-size="635px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1869">Elite Dangerous</tspan></tspan></tspan></text>
-        </g>
-       </g><g
-     class="TextShape"
-     id="g1881"
-     style="display:inline"
-     transform="translate(42959.998)">
-        <g
-   id="id353-8">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="12564"
-   y="763"
-   width="16836"
-   height="1979"
-   id="rect1871" />
-         <text
-   class="SVGTextShape"
-   id="text1881"><tspan
-     class="TextParagraph"
-     id="tspan1881"><tspan
-       class="TextPosition"
-       x="12814"
-       y="2306"
-       id="tspan1880"><tspan
-         font-family="'Century Gothic', sans-serif"
-         font-size="1411px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1872">O</tspan><tspan
-         font-family="'Century Gothic', sans-serif"
-         font-size="1129px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1873">PERATIONS</tspan><tspan
-         font-family="'Century Gothic', sans-serif"
-         font-size="1129px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1874"> </tspan><tspan
-         font-family="'Century Gothic', sans-serif"
-         font-size="1411px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1875">M</tspan><tspan
-         font-family="'Century Gothic', sans-serif"
-         font-size="1129px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1876">EGASHIP</tspan><tspan
-         font-family="'Century Gothic', sans-serif"
-         font-size="1129px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1877"> </tspan><tspan
-         font-family="'Century Gothic', sans-serif"
-         font-size="1411px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1878">M</tspan><tspan
-         font-family="'Century Gothic', sans-serif"
-         font-size="1129px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1879">AP</tspan></tspan></tspan></text>
-        </g>
-       </g><g
-     class="TextShape"
-     id="g1884"
-     style="display:inline"
-     transform="translate(42959.998)">
-        <g
-   id="id354-4">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="15636"
-   y="2551"
-   width="10643"
-   height="816"
-   id="rect1881" />
-         <text
-   class="SVGTextShape"
-   id="text1884"><tspan
-     class="TextParagraph"
-     id="tspan1884"><tspan
-       class="TextPosition"
-       x="15886"
-       y="3112"
-       id="tspan1883"><tspan
-         font-family="Telegrama"
-         font-size="564px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan1882">MADE BY CMDR INDY NOVASCEND</tspan></tspan></tspan></text>
-        </g>
        </g></g></g>
-     </g>
+     <g
+   id="ops_poi_engineering"
+   transform="matrix(100,0,0,100,-42959.998,0)"><title
+     id="title35">Operational Points of Interest</title><g
+     id="op_tactical_takedown_engineering"><title
+       id="title88">Tactical Takedown</title><g
+       id="add_consumables_tactical_takedown_engineering"><title
+         id="title116">Additional Consumables</title><g
+         id="add_batteries_tactical_takedown_engineering"
+         transform="scale(0.01)"
+         style="display:inline"><title
+           id="title117">Batteries</title><g
+           class="Group"
+           id="g24"
+           style="display:inline"
+           transform="translate(42404.156,-653.93132)">
+        <g
+   class="com.sun.star.drawing.PolyPolygonShape"
+   id="g23">
+         <g
+   id="g21">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="29935"
+   y="43537"
+   width="220"
+   height="320"
+   id="rect20" />
+          <path
+   fill="#ffbf00"
+   stroke="none"
+   d="m 30001,43569 h -36 -2 -2 -2 l -1,1 h -2 -2 l -2,1 -1,1 h -2 l -2,1 -1,1 -1,1 -2,1 -1,1 -1,1 -1,1 -1,2 -1,1 v 1 l -1,2 v 1 l -1,1 v 2 1 244 1 1 l 1,2 v 1 l 1,2 v 1 l 1,1 1,1 1,2 1,1 1,1 2,1 1,1 1,1 h 2 l 2,1 1,1 h 2 l 2,1 h 2 l 1,1 h 2 2 2 160 2 2 2 l 1,-1 h 2 l 2,-1 h 2 l 1,-1 2,-1 h 2 l 1,-1 1,-1 2,-1 1,-1 1,-1 1,-2 1,-1 1,-1 v -1 l 1,-2 v -1 l 1,-1 v -2 -1 -244 -1 -2 l -1,-1 v -1 l -1,-2 v -1 l -1,-1 -1,-2 -1,-1 -1,-1 -1,-1 -2,-1 -1,-1 -1,-1 -2,-1 h -2 l -1,-1 -2,-1 h -2 -2 l -1,-1 h -2 -2 -2 -36 v -32 h -88 z m 66,135 h 43 l -87,119 v -87 h -43 l 87,-119 z"
+   id="path20" />
+         </g>
+        </g>
+       </g></g></g><g
+       id="resources_tactical_takedown_engineering"><title
+         id="title115">Resources</title><g
+         id="res_tactical_takedown_engineering_4"
+         transform="matrix(0.0103353,0,0,0.0103353,636.75931,470.75928)"
+         style="fill:#0066cc;fill-opacity:1"><title
+   id="title118">Power Regulator</title>
+	<path
+   class="st0"
+   d="m 502.325,307.303 -39.006,-30.805 c -6.215,-4.908 -9.665,-12.429 -9.668,-20.348 0,-0.084 0,-0.168 0,-0.252 -0.014,-7.936 3.44,-15.478 9.667,-20.396 l 39.007,-30.806 c 8.933,-7.055 12.093,-19.185 7.737,-29.701 l -17.134,-41.366 c -4.356,-10.516 -15.167,-16.86 -26.472,-15.532 l -49.366,5.8 c -7.881,0.926 -15.656,-1.966 -21.258,-7.586 -0.059,-0.06 -0.118,-0.119 -0.177,-0.178 -5.597,-5.602 -8.476,-13.36 -7.552,-21.225 l 5.799,-49.363 C 395.23,34.24 388.887,23.429 378.371,19.073 L 337.004,1.939 C 326.488,-2.417 314.358,0.743 307.303,9.675 L 276.498,48.68 c -4.908,6.215 -12.43,9.665 -20.349,9.668 -0.084,0 -0.168,0 -0.252,0 -7.935,0.014 -15.477,-3.44 -20.395,-9.667 L 204.697,9.675 C 197.642,0.742 185.512,-2.417 174.995,1.939 L 133.63,19.072 c -10.516,4.356 -16.86,15.167 -15.532,26.473 l 5.799,49.366 c 0.926,7.881 -1.964,15.656 -7.585,21.257 -0.059,0.059 -0.118,0.118 -0.178,0.178 -5.602,5.598 -13.36,8.477 -21.226,7.552 L 45.545,118.099 C 34.24,116.771 23.429,123.114 19.073,133.63 L 1.939,174.996 c -4.356,10.516 -1.196,22.646 7.736,29.701 l 39.006,30.805 c 6.215,4.908 9.665,12.429 9.668,20.348 0,0.084 0,0.167 0,0.251 0.014,7.935 -3.44,15.477 -9.667,20.395 L 9.675,307.303 c -8.933,7.055 -12.092,19.185 -7.736,29.701 l 17.134,41.365 c 4.356,10.516 15.168,16.86 26.472,15.532 l 49.366,-5.799 c 7.882,-0.926 15.656,1.965 21.258,7.586 0.059,0.059 0.118,0.119 0.178,0.178 5.597,5.603 8.476,13.36 7.552,21.226 l -5.799,49.364 c -1.328,11.305 5.015,22.116 15.532,26.472 l 41.366,17.134 c 10.516,4.356 22.646,1.196 29.701,-7.736 l 30.804,-39.005 c 4.908,-6.215 12.43,-9.665 20.348,-9.669 0.084,0 0.168,0 0.251,0 7.936,-0.014 15.478,3.44 20.396,9.667 l 30.806,39.007 c 7.055,8.933 19.185,12.093 29.701,7.736 l 41.366,-17.134 c 10.516,-4.356 16.86,-15.168 15.532,-26.472 l -5.8,-49.366 c -0.926,-7.881 1.965,-15.656 7.586,-21.257 0.059,-0.059 0.119,-0.119 0.178,-0.178 5.602,-5.597 13.36,-8.476 21.225,-7.552 l 49.364,5.799 c 11.305,1.328 22.117,-5.015 26.472,-15.531 l 17.134,-41.365 c 4.356,-10.518 1.196,-22.648 -7.737,-29.703 z m -221.033,22.395 c -39.68,16.436 -85.172,-2.407 -101.607,-42.087 -16.436,-39.68 2.407,-85.171 42.087,-101.608 39.68,-16.436 85.172,2.407 101.608,42.088 16.435,39.68 -2.408,85.171 -42.088,101.607 z"
+   id="path5"
+   style="fill:#0066cc;fill-opacity:1" />
+</g><g
+         id="res_tactical_takedown_engineering_3"
+         transform="matrix(0.0103353,0,0,0.0103353,778.98937,336.70336)"
+         style="fill:#0066cc;fill-opacity:1"><title
+   id="title119">Power Regulator</title>
+	<path
+   class="st0"
+   d="m 502.325,307.303 -39.006,-30.805 c -6.215,-4.908 -9.665,-12.429 -9.668,-20.348 0,-0.084 0,-0.168 0,-0.252 -0.014,-7.936 3.44,-15.478 9.667,-20.396 l 39.007,-30.806 c 8.933,-7.055 12.093,-19.185 7.737,-29.701 l -17.134,-41.366 c -4.356,-10.516 -15.167,-16.86 -26.472,-15.532 l -49.366,5.8 c -7.881,0.926 -15.656,-1.966 -21.258,-7.586 -0.059,-0.06 -0.118,-0.119 -0.177,-0.178 -5.597,-5.602 -8.476,-13.36 -7.552,-21.225 l 5.799,-49.363 C 395.23,34.24 388.887,23.429 378.371,19.073 L 337.004,1.939 C 326.488,-2.417 314.358,0.743 307.303,9.675 L 276.498,48.68 c -4.908,6.215 -12.43,9.665 -20.349,9.668 -0.084,0 -0.168,0 -0.252,0 -7.935,0.014 -15.477,-3.44 -20.395,-9.667 L 204.697,9.675 C 197.642,0.742 185.512,-2.417 174.995,1.939 L 133.63,19.072 c -10.516,4.356 -16.86,15.167 -15.532,26.473 l 5.799,49.366 c 0.926,7.881 -1.964,15.656 -7.585,21.257 -0.059,0.059 -0.118,0.118 -0.178,0.178 -5.602,5.598 -13.36,8.477 -21.226,7.552 L 45.545,118.099 C 34.24,116.771 23.429,123.114 19.073,133.63 L 1.939,174.996 c -4.356,10.516 -1.196,22.646 7.736,29.701 l 39.006,30.805 c 6.215,4.908 9.665,12.429 9.668,20.348 0,0.084 0,0.167 0,0.251 0.014,7.935 -3.44,15.477 -9.667,20.395 L 9.675,307.303 c -8.933,7.055 -12.092,19.185 -7.736,29.701 l 17.134,41.365 c 4.356,10.516 15.168,16.86 26.472,15.532 l 49.366,-5.799 c 7.882,-0.926 15.656,1.965 21.258,7.586 0.059,0.059 0.118,0.119 0.178,0.178 5.597,5.603 8.476,13.36 7.552,21.226 l -5.799,49.364 c -1.328,11.305 5.015,22.116 15.532,26.472 l 41.366,17.134 c 10.516,4.356 22.646,1.196 29.701,-7.736 l 30.804,-39.005 c 4.908,-6.215 12.43,-9.665 20.348,-9.669 0.084,0 0.168,0 0.251,0 7.936,-0.014 15.478,3.44 20.396,9.667 l 30.806,39.007 c 7.055,8.933 19.185,12.093 29.701,7.736 l 41.366,-17.134 c 10.516,-4.356 16.86,-15.168 15.532,-26.472 l -5.8,-49.366 c -0.926,-7.881 1.965,-15.656 7.586,-21.257 0.059,-0.059 0.119,-0.119 0.178,-0.178 5.602,-5.597 13.36,-8.476 21.225,-7.552 l 49.364,5.799 c 11.305,1.328 22.117,-5.015 26.472,-15.531 l 17.134,-41.365 c 4.356,-10.518 1.196,-22.648 -7.737,-29.703 z m -221.033,22.395 c -39.68,16.436 -85.172,-2.407 -101.607,-42.087 -16.436,-39.68 2.407,-85.171 42.087,-101.608 39.68,-16.436 85.172,2.407 101.608,42.088 16.435,39.68 -2.408,85.171 -42.088,101.607 z"
+   id="path4"
+   style="fill:#0066cc;fill-opacity:1" />
+</g><g
+         id="res_tactical_takedown_engineering_2"
+         transform="matrix(0.0103353,0,0,0.0103353,509.24269,381.49765)"
+         style="fill:#0066cc;fill-opacity:1"><title
+   id="title120">Power Regulator</title>
+	<path
+   class="st0"
+   d="m 502.325,307.303 -39.006,-30.805 c -6.215,-4.908 -9.665,-12.429 -9.668,-20.348 0,-0.084 0,-0.168 0,-0.252 -0.014,-7.936 3.44,-15.478 9.667,-20.396 l 39.007,-30.806 c 8.933,-7.055 12.093,-19.185 7.737,-29.701 l -17.134,-41.366 c -4.356,-10.516 -15.167,-16.86 -26.472,-15.532 l -49.366,5.8 c -7.881,0.926 -15.656,-1.966 -21.258,-7.586 -0.059,-0.06 -0.118,-0.119 -0.177,-0.178 -5.597,-5.602 -8.476,-13.36 -7.552,-21.225 l 5.799,-49.363 C 395.23,34.24 388.887,23.429 378.371,19.073 L 337.004,1.939 C 326.488,-2.417 314.358,0.743 307.303,9.675 L 276.498,48.68 c -4.908,6.215 -12.43,9.665 -20.349,9.668 -0.084,0 -0.168,0 -0.252,0 -7.935,0.014 -15.477,-3.44 -20.395,-9.667 L 204.697,9.675 C 197.642,0.742 185.512,-2.417 174.995,1.939 L 133.63,19.072 c -10.516,4.356 -16.86,15.167 -15.532,26.473 l 5.799,49.366 c 0.926,7.881 -1.964,15.656 -7.585,21.257 -0.059,0.059 -0.118,0.118 -0.178,0.178 -5.602,5.598 -13.36,8.477 -21.226,7.552 L 45.545,118.099 C 34.24,116.771 23.429,123.114 19.073,133.63 L 1.939,174.996 c -4.356,10.516 -1.196,22.646 7.736,29.701 l 39.006,30.805 c 6.215,4.908 9.665,12.429 9.668,20.348 0,0.084 0,0.167 0,0.251 0.014,7.935 -3.44,15.477 -9.667,20.395 L 9.675,307.303 c -8.933,7.055 -12.092,19.185 -7.736,29.701 l 17.134,41.365 c 4.356,10.516 15.168,16.86 26.472,15.532 l 49.366,-5.799 c 7.882,-0.926 15.656,1.965 21.258,7.586 0.059,0.059 0.118,0.119 0.178,0.178 5.597,5.603 8.476,13.36 7.552,21.226 l -5.799,49.364 c -1.328,11.305 5.015,22.116 15.532,26.472 l 41.366,17.134 c 10.516,4.356 22.646,1.196 29.701,-7.736 l 30.804,-39.005 c 4.908,-6.215 12.43,-9.665 20.348,-9.669 0.084,0 0.168,0 0.251,0 7.936,-0.014 15.478,3.44 20.396,9.667 l 30.806,39.007 c 7.055,8.933 19.185,12.093 29.701,7.736 l 41.366,-17.134 c 10.516,-4.356 16.86,-15.168 15.532,-26.472 l -5.8,-49.366 c -0.926,-7.881 1.965,-15.656 7.586,-21.257 0.059,-0.059 0.119,-0.119 0.178,-0.178 5.602,-5.597 13.36,-8.476 21.225,-7.552 l 49.364,5.799 c 11.305,1.328 22.117,-5.015 26.472,-15.531 l 17.134,-41.365 c 4.356,-10.518 1.196,-22.648 -7.737,-29.703 z m -221.033,22.395 c -39.68,16.436 -85.172,-2.407 -101.607,-42.087 -16.436,-39.68 2.407,-85.171 42.087,-101.608 39.68,-16.436 85.172,2.407 101.608,42.088 16.435,39.68 -2.408,85.171 -42.088,101.607 z"
+   id="path3"
+   style="fill:#0066cc;fill-opacity:1" />
+</g><g
+         id="res_tactical_takedown_engineering_1"
+         transform="matrix(0.0103353,0,0,0.0103353,648.85704,399.48077)"
+         style="fill:#0066cc;fill-opacity:1"><title
+   id="title121">Power Regulator</title>
+	<path
+   class="st0"
+   d="m 502.325,307.303 -39.006,-30.805 c -6.215,-4.908 -9.665,-12.429 -9.668,-20.348 0,-0.084 0,-0.168 0,-0.252 -0.014,-7.936 3.44,-15.478 9.667,-20.396 l 39.007,-30.806 c 8.933,-7.055 12.093,-19.185 7.737,-29.701 l -17.134,-41.366 c -4.356,-10.516 -15.167,-16.86 -26.472,-15.532 l -49.366,5.8 c -7.881,0.926 -15.656,-1.966 -21.258,-7.586 -0.059,-0.06 -0.118,-0.119 -0.177,-0.178 -5.597,-5.602 -8.476,-13.36 -7.552,-21.225 l 5.799,-49.363 C 395.23,34.24 388.887,23.429 378.371,19.073 L 337.004,1.939 C 326.488,-2.417 314.358,0.743 307.303,9.675 L 276.498,48.68 c -4.908,6.215 -12.43,9.665 -20.349,9.668 -0.084,0 -0.168,0 -0.252,0 -7.935,0.014 -15.477,-3.44 -20.395,-9.667 L 204.697,9.675 C 197.642,0.742 185.512,-2.417 174.995,1.939 L 133.63,19.072 c -10.516,4.356 -16.86,15.167 -15.532,26.473 l 5.799,49.366 c 0.926,7.881 -1.964,15.656 -7.585,21.257 -0.059,0.059 -0.118,0.118 -0.178,0.178 -5.602,5.598 -13.36,8.477 -21.226,7.552 L 45.545,118.099 C 34.24,116.771 23.429,123.114 19.073,133.63 L 1.939,174.996 c -4.356,10.516 -1.196,22.646 7.736,29.701 l 39.006,30.805 c 6.215,4.908 9.665,12.429 9.668,20.348 0,0.084 0,0.167 0,0.251 0.014,7.935 -3.44,15.477 -9.667,20.395 L 9.675,307.303 c -8.933,7.055 -12.092,19.185 -7.736,29.701 l 17.134,41.365 c 4.356,10.516 15.168,16.86 26.472,15.532 l 49.366,-5.799 c 7.882,-0.926 15.656,1.965 21.258,7.586 0.059,0.059 0.118,0.119 0.178,0.178 5.597,5.603 8.476,13.36 7.552,21.226 l -5.799,49.364 c -1.328,11.305 5.015,22.116 15.532,26.472 l 41.366,17.134 c 10.516,4.356 22.646,1.196 29.701,-7.736 l 30.804,-39.005 c 4.908,-6.215 12.43,-9.665 20.348,-9.669 0.084,0 0.168,0 0.251,0 7.936,-0.014 15.478,3.44 20.396,9.667 l 30.806,39.007 c 7.055,8.933 19.185,12.093 29.701,7.736 l 41.366,-17.134 c 10.516,-4.356 16.86,-15.168 15.532,-26.472 l -5.8,-49.366 c -0.926,-7.881 1.965,-15.656 7.586,-21.257 0.059,-0.059 0.119,-0.119 0.178,-0.178 5.602,-5.597 13.36,-8.476 21.225,-7.552 l 49.364,5.799 c 11.305,1.328 22.117,-5.015 26.472,-15.531 l 17.134,-41.365 c 4.356,-10.518 1.196,-22.648 -7.737,-29.703 z m -221.033,22.395 c -39.68,16.436 -85.172,-2.407 -101.607,-42.087 -16.436,-39.68 2.407,-85.171 42.087,-101.608 39.68,-16.436 85.172,2.407 101.608,42.088 16.435,39.68 -2.408,85.171 -42.088,101.607 z"
+   id="path1-5"
+   style="fill:#0066cc;fill-opacity:1" />
+</g></g><g
+       id="obj_tactical_takedown_engineering"><title
+         id="title114">Objectives</title><g
+         style="fill:#0066cc;fill-opacity:1"
+         id="poi_tactical_takedown_engineering_5"
+         transform="matrix(0.23385481,0,0,0.23385481,682.25779,284.75289)"><title
+           id="title130">Reactor Console and Switch</title><path
+           d="M 16,4.686 4.686,16 16,27.314 27.314,16 Z M 10.343,16 16,10.343 21.657,16 16,21.657 Z"
+           id="path10"
+           style="fill:#0066cc;fill-opacity:1" /></g><g
+         style="fill:#0066cc;fill-opacity:1"
+         id="poi_tactical_takedown_engineering_4"
+         transform="matrix(0.23385481,0,0,0.23385481,657.73537,263.17316)"><title
+           id="title129">Regulator Housing</title><path
+           d="M 16,4.686 4.686,16 16,27.314 27.314,16 Z M 10.343,16 16,10.343 21.657,16 16,21.657 Z"
+           id="path9"
+           style="fill:#0066cc;fill-opacity:1" /></g><g
+         style="fill:#0066cc;fill-opacity:1"
+         id="poi_tactical_takedown_engineering_3"
+         transform="matrix(0.23385481,0,0,0.23385481,657.73537,314.50272)"><title
+           id="title128">Regulator Housing</title><path
+           d="M 16,4.686 4.686,16 16,27.314 27.314,16 Z M 10.343,16 16,10.343 21.657,16 16,21.657 Z"
+           id="path8"
+           style="fill:#0066cc;fill-opacity:1" /></g><g
+         style="fill:#0066cc;fill-opacity:1"
+         id="poi_tactical_takedown_engineering_2"
+         transform="matrix(0.23385481,0,0,0.23385481,613.28509,314.50272)"><title
+           id="title127">Regulator Housing</title><path
+           d="M 16,4.686 4.686,16 16,27.314 27.314,16 Z M 10.343,16 16,10.343 21.657,16 16,21.657 Z"
+           id="path7"
+           style="fill:#0066cc;fill-opacity:1" /></g><g
+         style="fill:#0066cc;fill-opacity:1"
+         id="poi_tactical_takedown_engineering_1"
+         transform="matrix(0.23385481,0,0,0.23385481,613.28508,263.17323)"><title
+           id="title126">Regulator Housing</title><path
+           d="M 16,4.686 4.686,16 16,27.314 27.314,16 Z M 10.343,16 16,10.343 21.657,16 16,21.657 Z"
+           id="path6"
+           style="fill:#0066cc;fill-opacity:1" /></g><g
+         style="fill:#0066cc;fill-opacity:1"
+         id="poi_tactical_takedown_engineering_b2"
+         transform="matrix(0.23385481,0,0,0.23385481,766.48514,391.82622)"><title
+           id="title125">Breaker B2</title><path
+           d="M 16,4.686 4.686,16 16,27.314 27.314,16 Z M 10.343,16 16,10.343 21.657,16 16,21.657 Z"
+           id="path2477"
+           style="fill:#0066cc;fill-opacity:1" /></g><g
+         style="fill:#0066cc;fill-opacity:1"
+         id="poi_tactical_takedown_engineering_b1"
+         transform="matrix(0.23385481,0,0,0.23385481,766.48514,417.03081)"><title
+           id="title124">Breaker B1</title><path
+           d="M 16,4.686 4.686,16 16,27.314 27.314,16 Z M 10.343,16 16,10.343 21.657,16 16,21.657 Z"
+           id="path2478"
+           style="fill:#0066cc;fill-opacity:1" /></g><g
+         style="fill:#0066cc;fill-opacity:1"
+         id="poi_tactical_takedown_engineering_a2"
+         transform="matrix(0.23385481,0,0,0.23385481,504.54599,401.15571)"><title
+           id="title123">Breaker A2</title><path
+           d="M 16,4.686 4.686,16 16,27.314 27.314,16 Z M 10.343,16 16,10.343 21.657,16 16,21.657 Z"
+           id="path2480"
+           style="fill:#0066cc;fill-opacity:1" /></g><g
+         style="fill:#0066cc;fill-opacity:1"
+         id="poi_tactical_takedown_engineering_a1"
+         transform="matrix(0.23385481,0,0,0.23385481,504.54599,427.08504)"><title
+           id="title122">Breaker A1</title><path
+           d="M 16,4.686 4.686,16 16,27.314 27.314,16 Z M 10.343,16 16,10.343 21.657,16 16,21.657 Z"
+           id="path2479"
+           style="fill:#0066cc;fill-opacity:1" /></g></g><g
+       id="nav_tactical_takedown_engineering"><title
+         id="title91">Navigation</title></g></g><g
+     id="op_reclamation_point_engineering"
+     style="display:inline"><title
+       id="title87">Reclamation Point</title><g
+       id="add_consumables_reclamation_point_engineering"><title
+         id="title113">Additional Consumables</title></g><g
+       id="resources_reclamation_point_engineering"><title
+         id="title112">Resources</title></g><g
+       id="obj_reclamation_point_engineering"><title
+         id="title111">Objectives</title></g><g
+       id="nav_reclamation_point_engineering"><title
+         id="title90">Navigation</title></g></g><g
+     id="op_biohazard_takedown_engineering"><title
+       id="title84">Biohazard Takedown</title><g
+       id="add_consumables_biohazard_takedown_engineering"><title
+         id="title110">Additional Consumables</title></g><g
+       id="resources_biohazard_takedown_engineering"><title
+         id="title108">Resources</title></g><g
+       id="obj_biohazard_takedown_engineering"><title
+         id="title109">Objectives</title><g
+         style="fill:#0066cc;fill-opacity:1"
+         id="poi_biohazard_takedown_engineering_1"
+         transform="matrix(0.23385481,0,0,0.23385481,635.1918,272.32827)"><title
+           id="title107">Likely target location</title><path
+           d="M 16,4.686 4.686,16 16,27.314 27.314,16 Z M 10.343,16 16,10.343 21.657,16 16,21.657 Z"
+           id="path58"
+           style="fill:#0066cc;fill-opacity:1" /></g><g
+         style="fill:#0066cc;fill-opacity:1"
+         id="poi_biohazard_takedown_engineering_2"
+         transform="matrix(0.23385481,0,0,0.23385481,546.11826,346.02602)"><title
+           id="title106">Potential target location</title><path
+           d="M 16,4.686 4.686,16 16,27.314 27.314,16 Z M 10.343,16 16,10.343 21.657,16 16,21.657 Z"
+           id="path60"
+           style="fill:#0066cc;fill-opacity:1" /></g><g
+         style="fill:#0066cc;fill-opacity:1"
+         id="poi_biohazard_takedown_engineering_3"
+         transform="matrix(0.23385481,0,0,0.23385481,723.73513,346.02611)"><title
+           id="title105">Potential target location</title><path
+           d="M 16,4.686 4.686,16 16,27.314 27.314,16 Z M 10.343,16 16,10.343 21.657,16 16,21.657 Z"
+           id="path61"
+           style="fill:#0066cc;fill-opacity:1" /></g></g><g
+       id="nav_biohazard_takedown_engineering"><title
+         id="title89">Navigation</title><g
+         id="barricades_biohazard_takedown_engineering"><title
+           id="title104">Barricades</title><g
+           class="com.sun.star.drawing.CustomShape"
+           id="g1118"
+           style="display:inline"
+           transform="matrix(0.00996329,0,0,0.01106728,616.55157,-144.01758)">
+        <g
+   id="g1117">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="8888"
+   y="40649"
+   width="320"
+   height="955"
+   id="rect1116"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="#ff860d"
+   stroke="none"
+   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
+   id="path1116"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="none"
+   stroke="#ff860d"
+   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
+   id="path1117"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+        </g>
+       </g><g
+           class="com.sun.star.drawing.CustomShape"
+           id="g1131"
+           style="display:inline"
+           transform="matrix(0.00996329,0,0,0.01106728,481.37147,-143.84486)">
+        <g
+   id="g1119">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="8888"
+   y="40649"
+   width="320"
+   height="955"
+   id="rect1118"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="#ff860d"
+   stroke="none"
+   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
+   id="path1118"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="none"
+   stroke="#ff860d"
+   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
+   id="path1119"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+        </g>
+       </g></g></g></g></g></g>
 
  
  
@@ -23988,4 +24253,12 @@
  
 <metadata
    id="metadata3883"><rdf:RDF><cc:Work
-       rdf:about=""><dc:title>Operations Megaship</dc:title></cc:Work></rdf:RDF></metadata></svg>
+       rdf:about=""><dc:title>Operations Megaship</dc:title></cc:Work></rdf:RDF></metadata><style
+   type="text/css"
+   id="style1">
+	.st0{fill:#000000;}
+</style><style
+   type="text/css"
+   id="style1-4">
+	.st0{fill:#000000;}
+</style></svg>

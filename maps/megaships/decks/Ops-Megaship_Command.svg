@@ -6772,7 +6772,8 @@
  <g
    class="Page"
    id="g2270"
-   transform="matrix(0.01,0,0,0.01,1.4767682e-6,0)">
+   transform="matrix(0.01,0,0,0.01,1.4767682e-6,0)"><title
+   id="title6">Command Deck</title>
       <defs
    class="SlideBackground"
    id="defs83" />
@@ -6783,11 +6784,13 @@
       <g
    class="Group"
    id="architecture_command"
-   style="display:inline">
+   style="display:inline"><title
+   id="title31">Architecture</title>
        <g
    class="com.sun.star.drawing.PolyPolygonShape"
    id="f0_command"
-   style="display:inline">
+   style="display:inline"><title
+   id="title34">Floor 0</title>
        <g
    id="id3">
         <rect
@@ -7159,7 +7162,8 @@
        </g><g
    class="com.sun.star.drawing.PolyPolygonShape"
    id="f1_command"
-   style="display:inline">
+   style="display:inline"><title
+   id="title33">Floor 1</title>
        <g
    id="id4">
         <rect
@@ -18624,7 +18628,8 @@
        </g><g
    class="Group"
    id="e1_command"
-   style="display:inline">
+   style="display:inline"><title
+   id="title32">Elevated 1</title>
        
        
        
@@ -21202,7 +21207,892 @@
        </g></g></g>
       <g
    class="Group"
-   id="consumables_command">
+   id="text_command"
+   style="display:inline"><title
+   id="title21">Text</title>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+      <g
+   id="footers_command"
+   transform="translate(-1.4767682e-4)"><title
+     id="title24">Footers</title><g
+     class="TextShape"
+     id="g567"
+     style="display:inline"
+     transform="translate(-52.916544)">
+        <g
+   id="id28">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="16265"
+   y="59157"
+   width="9432"
+   height="1662"
+   id="rect560" />
+         <text
+   class="SVGTextShape"
+   id="text567"><tspan
+     class="TextParagraph"
+     id="tspan567"><tspan
+       class="TextPosition"
+       x="16515"
+       y="60222"
+       id="tspan566"><tspan
+         font-family="Eurostile"
+         font-size="1411px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan561">C</tspan><tspan
+         font-family="Eurostile"
+         font-size="1129px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan562">OMMAND</tspan><tspan
+         font-family="Eurostile"
+         font-size="1129px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan563"> </tspan><tspan
+         font-family="Eurostile"
+         font-size="1411px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan564">D</tspan><tspan
+         font-family="Eurostile"
+         font-size="1129px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan565">ECK</tspan></tspan></tspan></text>
+        </g>
+       </g></g><g
+   id="labels_command"
+   transform="translate(-1.4767682e-4)"
+   style="display:inline"><title
+     id="title23">Labels</title><g
+     class="TextShape"
+     id="g560"
+     style="display:inline"
+     transform="translate(1.4767682e-4)">
+        <g
+   id="id27">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="32873"
+   y="33323"
+   width="1735"
+   height="650"
+   id="rect556" />
+         <path
+   fill="#000000"
+   fill-opacity="0.502"
+   stroke="none"
+   d="m 33740,33972 h -867 v -649 h 1734 v 649 z"
+   id="path556" />
+         <text
+   class="SVGTextShape"
+   id="text560"><tspan
+     class="TextParagraph"
+     id="tspan560"><tspan
+       class="TextPosition"
+       x="33123"
+       y="33740"
+       id="tspan559"><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan557">U</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan558">TILITY</tspan></tspan></tspan></text>
+        </g>
+       </g><g
+     class="TextShape"
+     id="g556"
+     style="display:inline"
+     transform="translate(1.4767682e-4)">
+        <g
+   id="id26">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="7402"
+   y="33337"
+   width="1735"
+   height="650"
+   id="rect552" />
+         <path
+   fill="#000000"
+   fill-opacity="0.502"
+   stroke="none"
+   d="m 8269,33986 h -867 v -649 h 1734 v 649 z"
+   id="path552" />
+         <text
+   class="SVGTextShape"
+   id="text556"><tspan
+     class="TextParagraph"
+     id="tspan556"><tspan
+       class="TextPosition"
+       x="7652"
+       y="33754"
+       id="tspan555"><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan553">U</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan554">TILITY</tspan></tspan></tspan></text>
+        </g>
+       </g><g
+     class="TextShape"
+     id="g506"
+     style="display:inline"
+     transform="translate(1.4767682e-4)">
+        <g
+   id="id19">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="19582"
+   y="6653"
+   width="2797"
+   height="650"
+   id="rect499" />
+         <path
+   fill="#000000"
+   fill-opacity="0.502"
+   stroke="none"
+   d="m 20980,7302 h -1398 v -649 h 2796 v 649 z"
+   id="path499" />
+         <text
+   class="SVGTextShape"
+   id="text506"><tspan
+     class="TextParagraph"
+     id="tspan506"><tspan
+       class="TextPosition"
+       x="19832"
+       y="7070"
+       id="tspan505"><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan500">E</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan501">XPRESS</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan502"> </tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan503">L</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan504">IFTS</tspan></tspan></tspan></text>
+        </g>
+       </g><g
+     class="TextShape"
+     id="g513"
+     style="display:inline"
+     transform="translate(1.4767682e-4)">
+        <g
+   id="id20">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="14505"
+   y="21907"
+   width="2797"
+   height="650"
+   id="rect506" />
+         <path
+   fill="#000000"
+   fill-opacity="0.502"
+   stroke="none"
+   d="m 15903,22556 h -1398 v -649 h 2796 v 649 z"
+   id="path506" />
+         <text
+   class="SVGTextShape"
+   id="text513"><tspan
+     class="TextParagraph"
+     id="tspan513"><tspan
+       class="TextPosition"
+       x="14755"
+       y="22324"
+       id="tspan512"><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan507">E</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan508">XPRESS</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan509"> </tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan510">L</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan511">IFTS</tspan></tspan></tspan></text>
+        </g>
+       </g><g
+     class="TextShape"
+     id="g520"
+     style="display:inline"
+     transform="translate(1.4767682e-4)">
+        <g
+   id="id21">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="19582"
+   y="56197"
+   width="2797"
+   height="650"
+   id="rect513" />
+         <path
+   fill="#000000"
+   fill-opacity="0.502"
+   stroke="none"
+   d="m 20980,56846 h -1398 v -649 h 2796 v 649 z"
+   id="path513" />
+         <text
+   class="SVGTextShape"
+   id="text520"><tspan
+     class="TextParagraph"
+     id="tspan520"><tspan
+       class="TextPosition"
+       x="19832"
+       y="56614"
+       id="tspan519"><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan514">E</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan515">XPRESS</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan516"> </tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan517">L</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan518">IFTS</tspan></tspan></tspan></text>
+        </g>
+       </g><g
+     class="TextShape"
+     id="g527"
+     style="display:inline"
+     transform="translate(211.66682)">
+        <g
+   id="id22">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="19497"
+   y="30797"
+   width="2967"
+   height="650"
+   id="rect520" />
+         <path
+   fill="#000000"
+   fill-opacity="0.502"
+   stroke="none"
+   d="m 20980,31446 h -1483 v -649 h 2966 v 649 z"
+   id="path520" />
+         <text
+   class="SVGTextShape"
+   id="text527"><tspan
+     class="TextParagraph"
+     id="tspan527"><tspan
+       class="TextPosition"
+       x="19747"
+       y="31214"
+       id="tspan526"><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan521">C</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan522">ONTROL</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan523"> </tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan524">R</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan525">OOM</tspan></tspan></tspan></text>
+        </g>
+       </g><g
+     class="TextShape"
+     id="g534"
+     style="display:inline"
+     transform="translate(1.4767682e-4)">
+        <g
+   id="id23">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="19582"
+   y="34608"
+   width="2797"
+   height="650"
+   id="rect527" />
+         <path
+   fill="#000000"
+   fill-opacity="0.502"
+   stroke="none"
+   d="m 20980,35257 h -1398 v -649 h 2796 v 649 z"
+   id="path527" />
+         <text
+   class="SVGTextShape"
+   id="text534"><tspan
+     class="TextParagraph"
+     id="tspan534"><tspan
+       class="TextPosition"
+       x="19832"
+       y="35025"
+       id="tspan533"><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan528">B</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan529">RIEFING</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan530"> </tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan531">R</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan532">OOM</tspan></tspan></tspan></text>
+        </g>
+       </g><g
+     class="TextShape"
+     id="g543"
+     style="display:inline"
+     transform="translate(1.4767682e-4)">
+        <g
+   id="id24">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="6785"
+   y="38303"
+   width="2838"
+   height="650"
+   id="rect534" />
+         <path
+   fill="#000000"
+   fill-opacity="0.502"
+   stroke="none"
+   d="M 8204,38952 H 6785 v -649 h 2837 v 649 z"
+   id="path534" />
+         <text
+   class="SVGTextShape"
+   id="text543"><tspan
+     class="TextParagraph"
+     id="tspan543"><tspan
+       class="TextPosition"
+       x="7035"
+       y="38720"
+       id="tspan542"><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan535">S</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan536">ERVER</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan537"> </tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan538">R</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan539">OOM</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan540"> </tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan541">A</tspan></tspan></tspan></text>
+        </g>
+       </g><g
+     class="TextShape"
+     id="g552"
+     style="display:inline"
+     transform="translate(1.4767682e-4)">
+        <g
+   id="id25">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="32285"
+   y="38303"
+   width="2838"
+   height="650"
+   id="rect543" />
+         <path
+   fill="#000000"
+   fill-opacity="0.502"
+   stroke="none"
+   d="m 33704,38952 h -1419 v -649 h 2837 v 649 z"
+   id="path543" />
+         <text
+   class="SVGTextShape"
+   id="text552"><tspan
+     class="TextParagraph"
+     id="tspan552"><tspan
+       class="TextPosition"
+       x="32535"
+       y="38720"
+       id="tspan551"><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan544">S</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan545">ERVER</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan546"> </tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan547">R</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan548">OOM</tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="282px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan549"> </tspan><tspan
+         font-family="'Liberation Mono', monospace"
+         font-size="353px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ff860d"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan550">B</tspan></tspan></tspan></text>
+        </g>
+       </g></g><g
+   id="headers_command"
+   transform="translate(-1.4767682e-4)"><title
+     id="title22">Headers</title><g
+     class="TextShape"
+     id="g486"
+     style="display:inline"
+     transform="translate(1.4767682e-4)">
+        <g
+   id="id16">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="18232"
+   y="318"
+   width="5390"
+   height="1281"
+   id="rect484" />
+         <text
+   class="SVGTextShape"
+   id="text486"><tspan
+     class="TextParagraph"
+     id="tspan486"><tspan
+       class="TextPosition"
+       x="18482"
+       y="1010"
+       id="tspan485"><tspan
+         font-family="'Euro Caps'"
+         font-size="635px"
+         font-weight="400"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan484">Elite Dangerous</tspan></tspan></tspan></text>
+        </g>
+       </g><g
+     class="TextShape"
+     id="g496"
+     style="display:inline"
+     transform="translate(1.4767682e-4)">
+        <g
+   id="id17">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="12563"
+   y="763"
+   width="16836"
+   height="1979"
+   id="rect486" />
+         <text
+   class="SVGTextShape"
+   id="text496"><tspan
+     class="TextParagraph"
+     id="tspan496"><tspan
+       class="TextPosition"
+       x="12813"
+       y="2306"
+       id="tspan495"><tspan
+         font-family="'Century Gothic', sans-serif"
+         font-size="1411px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan487">O</tspan><tspan
+         font-family="'Century Gothic', sans-serif"
+         font-size="1129px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan488">PERATIONS</tspan><tspan
+         font-family="'Century Gothic', sans-serif"
+         font-size="1129px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan489"> </tspan><tspan
+         font-family="'Century Gothic', sans-serif"
+         font-size="1411px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan490">M</tspan><tspan
+         font-family="'Century Gothic', sans-serif"
+         font-size="1129px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan491">EGASHIP</tspan><tspan
+         font-family="'Century Gothic', sans-serif"
+         font-size="1129px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan492"> </tspan><tspan
+         font-family="'Century Gothic', sans-serif"
+         font-size="1411px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan493">M</tspan><tspan
+         font-family="'Century Gothic', sans-serif"
+         font-size="1129px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan494">AP</tspan></tspan></tspan></text>
+        </g>
+       </g><g
+     class="TextShape"
+     id="g499"
+     style="display:inline"
+     transform="translate(1.4767682e-4)">
+        <g
+   id="id18">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="15635"
+   y="2551"
+   width="10643"
+   height="816"
+   id="rect496" />
+         <text
+   class="SVGTextShape"
+   id="text499"><tspan
+     class="TextParagraph"
+     id="tspan499"><tspan
+       class="TextPosition"
+       x="15885"
+       y="3112"
+       id="tspan498"><tspan
+         font-family="Telegrama"
+         font-size="564px"
+         font-weight="700"
+         lengthAdjust="spacingAndGlyphs"
+         fill="#ffffff"
+         stroke="none"
+         style="white-space:pre"
+         id="tspan497">MADE BY CMDR INDY NOVASCEND</tspan></tspan></tspan></text>
+        </g>
+       </g></g></g><g
+   class="Group"
+   id="consumables_command"><title
+   id="title25">Consumables</title>
        
        
        
@@ -21227,7 +22117,8 @@
        
       <g
    id="medkits_command"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title30">Medkits</title><g
      class="Group"
      id="g2209">
         <g
@@ -21301,7 +22192,8 @@
         </g>
        </g></g><g
    id="grenade-cases_command"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title29">Grenade Cases</title><g
      class="Group"
      id="g2248">
         <g
@@ -22578,7 +23470,8 @@
         </g>
        </g></g><g
    id="energy-ports_command"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title28">Energy Ports</title><g
      class="Group"
      id="g2268">
         <g
@@ -22724,7 +23617,8 @@
         </g>
        </g></g><g
    id="batteries_command"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title27">Batteries</title><g
      class="Group"
      id="g2256">
         <g
@@ -22822,7 +23716,8 @@
         </g>
        </g></g><g
    id="ammo-boxes_command"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title26">Ammo Boxes</title><g
      class="Group"
      id="g2163">
         <g
@@ -23506,888 +24401,1395 @@
    id="path2179" />
          </g>
         </g>
-       </g></g></g><g
-   class="Group"
-   id="text_command"
-   style="display:inline">
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-      <g
-   id="footers_command"
-   transform="translate(-1.4767682e-4)"><g
-     class="TextShape"
-     id="g567"
-     style="display:inline"
-     transform="translate(-52.916544)">
-        <g
-   id="id28">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="16265"
-   y="59157"
-   width="9432"
-   height="1662"
-   id="rect560" />
-         <text
-   class="SVGTextShape"
-   id="text567"><tspan
-     class="TextParagraph"
-     id="tspan567"><tspan
-       class="TextPosition"
-       x="16515"
-       y="60222"
-       id="tspan566"><tspan
-         font-family="Eurostile"
-         font-size="1411px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan561">C</tspan><tspan
-         font-family="Eurostile"
-         font-size="1129px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan562">OMMAND</tspan><tspan
-         font-family="Eurostile"
-         font-size="1129px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan563"> </tspan><tspan
-         font-family="Eurostile"
-         font-size="1411px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan564">D</tspan><tspan
-         font-family="Eurostile"
-         font-size="1129px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan565">ECK</tspan></tspan></tspan></text>
-        </g>
-       </g></g><g
-   id="labels_command"
-   transform="translate(-1.4767682e-4)"
-   style="display:inline"><g
-     class="TextShape"
-     id="g560"
-     style="display:inline"
-     transform="translate(1.4767682e-4)">
-        <g
-   id="id27">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="32873"
-   y="33323"
-   width="1735"
-   height="650"
-   id="rect556" />
-         <path
-   fill="#000000"
-   fill-opacity="0.502"
-   stroke="none"
-   d="m 33740,33972 h -867 v -649 h 1734 v 649 z"
-   id="path556" />
-         <text
-   class="SVGTextShape"
-   id="text560"><tspan
-     class="TextParagraph"
-     id="tspan560"><tspan
-       class="TextPosition"
-       x="33123"
-       y="33740"
-       id="tspan559"><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan557">U</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan558">TILITY</tspan></tspan></tspan></text>
-        </g>
-       </g><g
-     class="TextShape"
-     id="g556"
-     style="display:inline"
-     transform="translate(1.4767682e-4)">
-        <g
-   id="id26">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="7402"
-   y="33337"
-   width="1735"
-   height="650"
-   id="rect552" />
-         <path
-   fill="#000000"
-   fill-opacity="0.502"
-   stroke="none"
-   d="m 8269,33986 h -867 v -649 h 1734 v 649 z"
-   id="path552" />
-         <text
-   class="SVGTextShape"
-   id="text556"><tspan
-     class="TextParagraph"
-     id="tspan556"><tspan
-       class="TextPosition"
-       x="7652"
-       y="33754"
-       id="tspan555"><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan553">U</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan554">TILITY</tspan></tspan></tspan></text>
-        </g>
-       </g><g
-     class="TextShape"
-     id="g506"
-     style="display:inline"
-     transform="translate(1.4767682e-4)">
-        <g
-   id="id19">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="19582"
-   y="6653"
-   width="2797"
-   height="650"
-   id="rect499" />
-         <path
-   fill="#000000"
-   fill-opacity="0.502"
-   stroke="none"
-   d="m 20980,7302 h -1398 v -649 h 2796 v 649 z"
-   id="path499" />
-         <text
-   class="SVGTextShape"
-   id="text506"><tspan
-     class="TextParagraph"
-     id="tspan506"><tspan
-       class="TextPosition"
-       x="19832"
-       y="7070"
-       id="tspan505"><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan500">E</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan501">XPRESS</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan502"> </tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan503">L</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan504">IFTS</tspan></tspan></tspan></text>
-        </g>
-       </g><g
-     class="TextShape"
-     id="g513"
-     style="display:inline"
-     transform="translate(1.4767682e-4)">
-        <g
-   id="id20">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="14505"
-   y="21907"
-   width="2797"
-   height="650"
-   id="rect506" />
-         <path
-   fill="#000000"
-   fill-opacity="0.502"
-   stroke="none"
-   d="m 15903,22556 h -1398 v -649 h 2796 v 649 z"
-   id="path506" />
-         <text
-   class="SVGTextShape"
-   id="text513"><tspan
-     class="TextParagraph"
-     id="tspan513"><tspan
-       class="TextPosition"
-       x="14755"
-       y="22324"
-       id="tspan512"><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan507">E</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan508">XPRESS</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan509"> </tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan510">L</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan511">IFTS</tspan></tspan></tspan></text>
-        </g>
-       </g><g
-     class="TextShape"
-     id="g520"
-     style="display:inline"
-     transform="translate(1.4767682e-4)">
-        <g
-   id="id21">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="19582"
-   y="56197"
-   width="2797"
-   height="650"
-   id="rect513" />
-         <path
-   fill="#000000"
-   fill-opacity="0.502"
-   stroke="none"
-   d="m 20980,56846 h -1398 v -649 h 2796 v 649 z"
-   id="path513" />
-         <text
-   class="SVGTextShape"
-   id="text520"><tspan
-     class="TextParagraph"
-     id="tspan520"><tspan
-       class="TextPosition"
-       x="19832"
-       y="56614"
-       id="tspan519"><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan514">E</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan515">XPRESS</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan516"> </tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan517">L</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan518">IFTS</tspan></tspan></tspan></text>
-        </g>
-       </g><g
-     class="TextShape"
-     id="g527"
-     style="display:inline"
-     transform="translate(211.66682)">
-        <g
-   id="id22">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="19497"
-   y="30797"
-   width="2967"
-   height="650"
-   id="rect520" />
-         <path
-   fill="#000000"
-   fill-opacity="0.502"
-   stroke="none"
-   d="m 20980,31446 h -1483 v -649 h 2966 v 649 z"
-   id="path520" />
-         <text
-   class="SVGTextShape"
-   id="text527"><tspan
-     class="TextParagraph"
-     id="tspan527"><tspan
-       class="TextPosition"
-       x="19747"
-       y="31214"
-       id="tspan526"><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan521">C</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan522">ONTROL</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan523"> </tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan524">R</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan525">OOM</tspan></tspan></tspan></text>
-        </g>
-       </g><g
-     class="TextShape"
-     id="g534"
-     style="display:inline"
-     transform="translate(1.4767682e-4)">
-        <g
-   id="id23">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="19582"
-   y="34608"
-   width="2797"
-   height="650"
-   id="rect527" />
-         <path
-   fill="#000000"
-   fill-opacity="0.502"
-   stroke="none"
-   d="m 20980,35257 h -1398 v -649 h 2796 v 649 z"
-   id="path527" />
-         <text
-   class="SVGTextShape"
-   id="text534"><tspan
-     class="TextParagraph"
-     id="tspan534"><tspan
-       class="TextPosition"
-       x="19832"
-       y="35025"
-       id="tspan533"><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan528">B</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan529">RIEFING</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan530"> </tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan531">R</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan532">OOM</tspan></tspan></tspan></text>
-        </g>
-       </g><g
-     class="TextShape"
-     id="g543"
-     style="display:inline"
-     transform="translate(1.4767682e-4)">
-        <g
-   id="id24">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="6785"
-   y="38303"
-   width="2838"
-   height="650"
-   id="rect534" />
-         <path
-   fill="#000000"
-   fill-opacity="0.502"
-   stroke="none"
-   d="M 8204,38952 H 6785 v -649 h 2837 v 649 z"
-   id="path534" />
-         <text
-   class="SVGTextShape"
-   id="text543"><tspan
-     class="TextParagraph"
-     id="tspan543"><tspan
-       class="TextPosition"
-       x="7035"
-       y="38720"
-       id="tspan542"><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan535">S</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan536">ERVER</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan537"> </tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan538">R</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan539">OOM</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan540"> </tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan541">A</tspan></tspan></tspan></text>
-        </g>
-       </g><g
-     class="TextShape"
-     id="g552"
-     style="display:inline"
-     transform="translate(1.4767682e-4)">
-        <g
-   id="id25">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="32285"
-   y="38303"
-   width="2838"
-   height="650"
-   id="rect543" />
-         <path
-   fill="#000000"
-   fill-opacity="0.502"
-   stroke="none"
-   d="m 33704,38952 h -1419 v -649 h 2837 v 649 z"
-   id="path543" />
-         <text
-   class="SVGTextShape"
-   id="text552"><tspan
-     class="TextParagraph"
-     id="tspan552"><tspan
-       class="TextPosition"
-       x="32535"
-       y="38720"
-       id="tspan551"><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan544">S</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan545">ERVER</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan546"> </tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan547">R</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan548">OOM</tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="282px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan549"> </tspan><tspan
-         font-family="'Liberation Mono', monospace"
-         font-size="353px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ff860d"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan550">B</tspan></tspan></tspan></text>
-        </g>
-       </g></g><g
-   id="headers_command"
-   transform="translate(-1.4767682e-4)"><g
-     class="TextShape"
-     id="g486"
-     style="display:inline"
-     transform="translate(1.4767682e-4)">
-        <g
-   id="id16">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="18232"
-   y="318"
-   width="5390"
-   height="1281"
-   id="rect484" />
-         <text
-   class="SVGTextShape"
-   id="text486"><tspan
-     class="TextParagraph"
-     id="tspan486"><tspan
-       class="TextPosition"
-       x="18482"
-       y="1010"
-       id="tspan485"><tspan
-         font-family="'Euro Caps'"
-         font-size="635px"
-         font-weight="400"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan484">Elite Dangerous</tspan></tspan></tspan></text>
-        </g>
-       </g><g
-     class="TextShape"
-     id="g496"
-     style="display:inline"
-     transform="translate(1.4767682e-4)">
-        <g
-   id="id17">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="12563"
-   y="763"
-   width="16836"
-   height="1979"
-   id="rect486" />
-         <text
-   class="SVGTextShape"
-   id="text496"><tspan
-     class="TextParagraph"
-     id="tspan496"><tspan
-       class="TextPosition"
-       x="12813"
-       y="2306"
-       id="tspan495"><tspan
-         font-family="'Century Gothic', sans-serif"
-         font-size="1411px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan487">O</tspan><tspan
-         font-family="'Century Gothic', sans-serif"
-         font-size="1129px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan488">PERATIONS</tspan><tspan
-         font-family="'Century Gothic', sans-serif"
-         font-size="1129px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan489"> </tspan><tspan
-         font-family="'Century Gothic', sans-serif"
-         font-size="1411px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan490">M</tspan><tspan
-         font-family="'Century Gothic', sans-serif"
-         font-size="1129px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan491">EGASHIP</tspan><tspan
-         font-family="'Century Gothic', sans-serif"
-         font-size="1129px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan492"> </tspan><tspan
-         font-family="'Century Gothic', sans-serif"
-         font-size="1411px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan493">M</tspan><tspan
-         font-family="'Century Gothic', sans-serif"
-         font-size="1129px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan494">AP</tspan></tspan></tspan></text>
-        </g>
-       </g><g
-     class="TextShape"
-     id="g499"
-     style="display:inline"
-     transform="translate(1.4767682e-4)">
-        <g
-   id="id18">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="15635"
-   y="2551"
-   width="10643"
-   height="816"
-   id="rect496" />
-         <text
-   class="SVGTextShape"
-   id="text499"><tspan
-     class="TextParagraph"
-     id="tspan499"><tspan
-       class="TextPosition"
-       x="15885"
-       y="3112"
-       id="tspan498"><tspan
-         font-family="Telegrama"
-         font-size="564px"
-         font-weight="700"
-         lengthAdjust="spacingAndGlyphs"
-         fill="#ffffff"
-         stroke="none"
-         style="white-space:pre"
-         id="tspan497">MADE BY CMDR INDY NOVASCEND</tspan></tspan></tspan></text>
-        </g>
        </g></g></g>
-     </g>
+     <g
+   id="ops_poi_command"
+   transform="matrix(100,0,0,100,-1.4767682e-4,0)"><title
+     id="title5">Operational Points of Interest</title><g
+     id="op_tactical_takedown_command"><title
+       id="title10">Tactical Takedown</title><g
+       id="add_consumables_tactical_takedown_command"><title
+         id="title14">Additional Consumables</title><g
+         id="add_medkits_tactical_takedown_command"><title
+           id="title20">Medkits</title><g
+           class="Group"
+           id="g30"
+           style="display:inline"
+           transform="matrix(0.01,0,0,0.01,97.101108,-26.618451)">
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g29">
+         <g
+   id="g28">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="12282"
+   y="30163"
+   width="419"
+   height="319"
+   id="rect26" />
+          <path
+   fill="#00a933"
+   stroke="none"
+   d="m 12282,30197 c 0,83 0,166 0,249 0,19 16,34 35,34 11,0 23,0 35,0 0,-106 0,-211 0,-317 -12,0 -24,0 -35,0 -19,0 -35,15 -35,34 z m 93,283 c 77,0 154,0 231,0 0,-106 0,-211 0,-317 -77,0 -154,0 -231,0 0,106 0,211 0,317 z m 46,-175 c 0,-4 3,-6 6,-6 13,0 27,0 40,0 0,-13 0,-27 0,-40 0,-3 3,-5 6,-5 12,0 23,0 35,0 3,0 6,2 6,5 0,13 0,27 0,40 13,0 27,0 40,0 3,0 6,2 6,6 0,11 0,22 0,33 0,4 -3,6 -6,6 -13,0 -27,0 -40,0 0,13 0,27 0,40 0,3 -3,5 -6,5 -12,0 -23,0 -35,0 -3,0 -6,-2 -6,-5 0,-13 0,-27 0,-40 -13,0 -27,0 -40,0 -3,0 -6,-2 -6,-6 0,-11 0,-22 0,-33 z m 243,-142 c -11,0 -23,0 -35,0 0,106 0,211 0,317 12,0 24,0 35,0 19,0 35,-15 35,-34 0,-83 0,-166 0,-249 0,-19 -16,-34 -35,-34 z"
+   id="path28" />
+         </g>
+        </g>
+       </g><g
+           class="Group"
+           id="g34"
+           style="display:inline"
+           transform="matrix(0.01,0,0,0.01,99.901202,25.284795)">
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g32">
+         <g
+   id="g31">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="12282"
+   y="30163"
+   width="419"
+   height="319"
+   id="rect30" />
+          <path
+   fill="#00a933"
+   stroke="none"
+   d="m 12282,30197 c 0,83 0,166 0,249 0,19 16,34 35,34 11,0 23,0 35,0 0,-106 0,-211 0,-317 -12,0 -24,0 -35,0 -19,0 -35,15 -35,34 z m 93,283 c 77,0 154,0 231,0 0,-106 0,-211 0,-317 -77,0 -154,0 -231,0 0,106 0,211 0,317 z m 46,-175 c 0,-4 3,-6 6,-6 13,0 27,0 40,0 0,-13 0,-27 0,-40 0,-3 3,-5 6,-5 12,0 23,0 35,0 3,0 6,2 6,5 0,13 0,27 0,40 13,0 27,0 40,0 3,0 6,2 6,6 0,11 0,22 0,33 0,4 -3,6 -6,6 -13,0 -27,0 -40,0 0,13 0,27 0,40 0,3 -3,5 -6,5 -12,0 -23,0 -35,0 -3,0 -6,-2 -6,-5 0,-13 0,-27 0,-40 -13,0 -27,0 -40,0 -3,0 -6,-2 -6,-6 0,-11 0,-22 0,-33 z m 243,-142 c -11,0 -23,0 -35,0 0,106 0,211 0,317 12,0 24,0 35,0 19,0 35,-15 35,-34 0,-83 0,-166 0,-249 0,-19 -16,-34 -35,-34 z"
+   id="path30" />
+         </g>
+        </g>
+       </g><g
+           class="Group"
+           id="g57"
+           style="display:inline"
+           transform="matrix(0.01,0,0,0.01,43.301848,-59.797785)">
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g56">
+         <g
+   id="g55">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="12282"
+   y="30163"
+   width="419"
+   height="319"
+   id="rect54" />
+          <path
+   fill="#00a933"
+   stroke="none"
+   d="m 12282,30197 c 0,83 0,166 0,249 0,19 16,34 35,34 11,0 23,0 35,0 0,-106 0,-211 0,-317 -12,0 -24,0 -35,0 -19,0 -35,15 -35,34 z m 93,283 c 77,0 154,0 231,0 0,-106 0,-211 0,-317 -77,0 -154,0 -231,0 0,106 0,211 0,317 z m 46,-175 c 0,-4 3,-6 6,-6 13,0 27,0 40,0 0,-13 0,-27 0,-40 0,-3 3,-5 6,-5 12,0 23,0 35,0 3,0 6,2 6,5 0,13 0,27 0,40 13,0 27,0 40,0 3,0 6,2 6,6 0,11 0,22 0,33 0,4 -3,6 -6,6 -13,0 -27,0 -40,0 0,13 0,27 0,40 0,3 -3,5 -6,5 -12,0 -23,0 -35,0 -3,0 -6,-2 -6,-5 0,-13 0,-27 0,-40 -13,0 -27,0 -40,0 -3,0 -6,-2 -6,-6 0,-11 0,-22 0,-33 z m 243,-142 c -11,0 -23,0 -35,0 0,106 0,211 0,317 12,0 24,0 35,0 19,0 35,-15 35,-34 0,-83 0,-166 0,-249 0,-19 -16,-34 -35,-34 z"
+   id="path54" />
+         </g>
+        </g>
+       </g></g><g
+         id="add_grenade-cases_tactical_takedown_command"
+         style="display:inline"
+         transform="matrix(0.01,0,0,0.01,1.4767682e-6,0)"><title
+           id="title19">Grenade Cases</title><g
+           class="Group"
+           id="g1761"
+           transform="translate(2165.1511,3424.3189)">
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1671">
+         <g
+   id="g1670">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="20319"
+   y="28375"
+   width="221"
+   height="269"
+   id="rect1167" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 20391,28449 c 18,-6 37,-13 55,-19 31,0 62,0 93,0 0,-15 0,-31 0,-47 0,-4 -5,-8 -11,-8 -24,0 -48,0 -72,0 -4,0 -8,2 -9,6 -16,0 -32,0 -48,0 -4,0 -8,1 -11,4 -2,3 -4,5 -8,9 -106,124 -35,166 -53,249 7,0 14,0 21,0 -40,-139 28,-129 43,-194 z m 26,-53 c 6,0 10,4 10,8 0,4 -4,8 -10,8 -5,0 -9,-4 -9,-8 0,-4 4,-8 9,-8 z"
+   id="path1669" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1678">
+         <g
+   id="g1677">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="20370"
+   y="28543"
+   width="63"
+   height="66"
+   id="rect1671" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 20431,28600 c 0,-16 0,-32 0,-49 0,-2 -1,-4 -3,-6 -2,-1 -5,-2 -7,-2 -13,0 -26,0 -39,0 -3,0 -6,2 -7,4 -1,11 -5,19 -5,33 0,10 2,16 4,24 0,2 3,4 6,4 13,0 27,0 40,0 6,0 11,-3 11,-8 z"
+   id="path1671" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1738">
+         <g
+   id="g1737">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="20553"
+   y="28543"
+   width="63"
+   height="66"
+   id="rect1678" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 20603,28543 c -13,0 -26,0 -40,0 -2,0 -5,1 -7,2 -2,2 -3,4 -3,6 0,17 0,33 0,49 0,5 5,8 11,8 14,0 27,0 41,0 3,0 6,-2 6,-4 2,-8 4,-14 4,-24 0,-14 -4,-22 -6,-33 0,-2 -3,-4 -6,-4 z"
+   id="path1736" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1740">
+         <g
+   id="g1739">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="20448"
+   y="28468"
+   width="89"
+   height="65"
+   id="rect1738" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 20458,28532 c 23,0 45,0 67,0 3,0 6,-1 8,-3 2,-1 3,-4 3,-6 -1,-16 -3,-31 -4,-47 0,-5 -5,-8 -10,-8 -20,0 -40,0 -60,0 -5,0 -10,3 -10,8 -2,16 -3,31 -4,47 0,2 1,5 3,6 2,2 5,3 7,3 z"
+   id="path1738" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1744">
+         <g
+   id="g1743">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="20545"
+   y="28468"
+   width="56"
+   height="65"
+   id="rect1740" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 20562,28532 c 10,0 21,0 31,0 3,0 5,-1 6,-3 1,-1 1,-3 0,-5 -14,-18 -31,-40 -41,-56 -3,0 -5,0 -7,0 -2,0 -3,1 -4,2 -2,1 -2,2 -2,4 2,17 4,33 6,50 1,5 5,8 11,8 z"
+   id="path1740" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1746">
+         <g
+   id="g1745">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="20447"
+   y="28543"
+   width="92"
+   height="66"
+   id="rect1744" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 20525,28543 c -22,0 -44,0 -65,0 -7,0 -13,4 -13,10 0,15 0,30 0,45 0,3 1,5 4,7 2,2 5,3 9,3 21,0 43,0 65,0 3,0 7,-1 9,-3 2,-2 4,-4 4,-7 0,-15 0,-30 -1,-45 0,-6 -5,-10 -12,-10 z"
+   id="path1744" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1748">
+         <g
+   id="g1747">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="20385"
+   y="28468"
+   width="55"
+   height="65"
+   id="rect1746" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 20433,28468 c -2,0 -4,0 -6,0 -10,16 -27,38 -41,56 -1,2 -1,4 0,5 1,2 3,3 5,3 11,0 21,0 31,0 6,0 10,-3 11,-8 2,-17 4,-33 6,-50 0,-2 0,-3 -2,-4 -1,-1 -2,-2 -4,-2 z"
+   id="path1746" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1750">
+         <g
+   id="g1749">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="20546"
+   y="28619"
+   width="58"
+   height="67"
+   id="rect1748" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 20596,28619 c -11,0 -22,0 -33,0 -6,0 -10,3 -11,8 -2,19 -2,36 -6,58 h 1 c 6,-2 16,-9 27,-19 12,-11 18,-26 28,-39 1,-2 1,-4 0,-5 -1,-2 -3,-3 -6,-3 z"
+   id="path1748" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1752">
+         <g
+   id="g1751">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="20448"
+   y="28619"
+   width="90"
+   height="74"
+   id="rect1750" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 20527,28619 c -23,0 -46,0 -69,0 -2,0 -5,1 -7,3 -2,1 -3,4 -3,6 1,19 3,38 4,57 0,2 2,4 5,5 12,0 21,2 36,2 14,0 23,-1 35,-2 3,-1 5,-2 5,-5 1,-19 3,-38 4,-57 0,-2 -1,-5 -3,-6 -2,-2 -5,-3 -7,-3 z"
+   id="path1750" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1754">
+         <g
+   id="g1753">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="20382"
+   y="28619"
+   width="57"
+   height="67"
+   id="rect1752" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 20421,28619 c -11,0 -22,0 -33,0 -2,0 -4,1 -5,2 -1,2 -1,4 0,6 8,12 14,25 25,36 12,12 24,20 29,22 1,0 1,0 1,0 -4,-22 -4,-39 -6,-58 -1,-5 -5,-8 -11,-8 z"
+   id="path1752" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1756">
+         <g
+   id="g1755">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="20441"
+   y="28439"
+   width="105"
+   height="21"
+   id="rect1754" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 20543,28444 c -1,-3 -3,-5 -6,-5 -30,0 -59,0 -88,0 -3,0 -6,2 -6,5 -1,5 0,5 -2,15 35,0 69,0 104,0 -3,-10 -2,-10 -2,-15 z"
+   id="path1754" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1760">
+         <g
+   id="g1757">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="20550"
+   y="28403"
+   width="90"
+   height="73"
+   id="rect1756" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 20634,28426 c -3,-7 -9,-12 -16,-16 -7,-4 -15,-6 -24,-6 -6,0 -12,1 -17,3 -8,2 -15,7 -20,13 -4,5 -7,12 -7,19 0,5 1,10 3,14 4,6 9,12 16,16 7,3 16,6 25,6 6,0 12,-1 17,-3 8,-3 15,-7 19,-13 5,-6 8,-12 8,-20 0,-5 -1,-9 -4,-13 z m -12,23 c -2,4 -6,8 -11,11 -5,2 -11,4 -17,4 -4,0 -8,-1 -12,-2 -6,-2 -10,-5 -14,-9 -3,-4 -5,-9 -5,-14 0,-3 1,-6 3,-9 2,-5 6,-8 11,-11 5,-3 11,-4 17,-4 4,0 8,0 12,2 5,1 10,5 13,9 4,3 5,8 5,13 0,4 0,7 -2,10 z"
+   id="path1756" />
+         </g>
+        </g>
+       </g><g
+           class="Group"
+           id="g1825"
+           transform="translate(-3334.7097,375.74193)">
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1763">
+         <g
+   id="g1762">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21271"
+   y="28457"
+   width="221"
+   height="270"
+   id="rect1761" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21343,28532 c 18,-6 37,-13 55,-19 31,0 62,0 93,0 0,-15 0,-31 0,-47 0,-4 -5,-8 -11,-8 -24,0 -48,0 -72,0 -4,0 -8,2 -9,6 -16,0 -32,0 -48,0 -4,0 -8,1 -11,4 -2,3 -4,5 -8,9 -106,124 -35,166 -53,249 7,0 14,0 21,0 -40,-139 28,-129 43,-194 z m 26,-53 c 6,0 10,4 10,8 0,4 -4,8 -10,8 -5,0 -9,-4 -9,-8 0,-4 4,-8 9,-8 z"
+   id="path1761" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1769">
+         <g
+   id="g1767">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21322"
+   y="28626"
+   width="62"
+   height="67"
+   id="rect1763" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21383,28683 c 0,-16 0,-32 0,-49 0,-2 -1,-4 -3,-6 -2,-1 -5,-2 -7,-2 -13,0 -26,0 -39,0 -3,0 -6,2 -7,4 -1,11 -5,19 -5,33 0,10 2,16 4,24 0,2 3,4 6,4 13,0 27,0 40,0 6,0 11,-3 11,-8 z"
+   id="path1763" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1771">
+         <g
+   id="g1770">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21505"
+   y="28626"
+   width="63"
+   height="67"
+   id="rect1769" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21555,28626 c -13,0 -26,0 -40,0 -2,0 -5,1 -7,2 -2,2 -3,4 -3,6 0,17 0,33 0,49 0,5 5,8 11,8 14,0 27,0 41,0 3,0 6,-2 6,-4 2,-8 4,-14 4,-24 0,-14 -4,-22 -6,-33 0,-2 -3,-4 -6,-4 z"
+   id="path1770" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1773">
+         <g
+   id="g1772">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21400"
+   y="28551"
+   width="89"
+   height="65"
+   id="rect1771" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21410,28615 c 23,0 45,0 67,0 3,0 6,-1 8,-3 2,-1 3,-4 3,-6 -1,-16 -3,-31 -4,-47 0,-5 -5,-8 -10,-8 -20,0 -40,0 -60,0 -5,0 -10,3 -10,8 -2,16 -3,31 -4,47 0,2 1,5 3,6 2,2 5,3 7,3 z"
+   id="path1771" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1777">
+         <g
+   id="g1774">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21497"
+   y="28551"
+   width="56"
+   height="65"
+   id="rect1773" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21514,28615 c 10,0 21,0 31,0 3,0 5,-1 6,-3 1,-1 1,-3 0,-5 -14,-18 -31,-40 -41,-56 -3,0 -5,0 -7,0 -2,0 -3,1 -4,2 -2,1 -2,2 -2,4 2,17 4,33 6,50 1,5 5,8 11,8 z"
+   id="path1773" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1794">
+         <g
+   id="g1778">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21399"
+   y="28626"
+   width="92"
+   height="66"
+   id="rect1777" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21477,28626 c -22,0 -44,0 -65,0 -7,0 -13,4 -13,10 0,15 0,30 0,45 0,3 1,5 4,7 2,2 5,3 9,3 21,0 43,0 65,0 3,0 7,-1 9,-3 2,-2 4,-4 4,-7 0,-15 0,-30 -1,-45 0,-6 -5,-10 -12,-10 z"
+   id="path1777" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1806">
+         <g
+   id="g1805">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21337"
+   y="28551"
+   width="55"
+   height="65"
+   id="rect1794" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21385,28551 c -2,0 -4,0 -6,0 -10,16 -27,38 -41,56 -1,2 -1,4 0,5 1,2 3,3 5,3 11,0 21,0 31,0 6,0 10,-3 11,-8 2,-17 4,-33 6,-50 0,-2 0,-3 -2,-4 -1,-1 -2,-2 -4,-2 z"
+   id="path1805" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1808">
+         <g
+   id="g1807">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21497"
+   y="28702"
+   width="59"
+   height="67"
+   id="rect1806" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21548,28702 c -11,0 -22,0 -33,0 -6,0 -10,3 -11,8 -2,19 -2,36 -6,58 h 1 c 6,-2 16,-9 27,-19 12,-11 18,-26 28,-39 1,-2 1,-4 0,-5 -1,-2 -3,-3 -6,-3 z"
+   id="path1806" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1816">
+         <g
+   id="g1809">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21400"
+   y="28701"
+   width="90"
+   height="75"
+   id="rect1808" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21479,28702 c -23,0 -46,0 -69,0 -2,0 -5,1 -7,3 -2,1 -3,4 -3,6 1,19 3,38 4,57 0,2 2,4 5,5 12,0 21,2 36,2 14,0 23,-1 35,-2 3,-1 5,-2 5,-5 1,-19 3,-38 4,-57 0,-2 -1,-5 -3,-6 -2,-2 -5,-3 -7,-3 z"
+   id="path1808" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1819">
+         <g
+   id="g1818">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21334"
+   y="28702"
+   width="57"
+   height="67"
+   id="rect1816" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21373,28702 c -11,0 -22,0 -33,0 -2,0 -4,1 -5,2 -1,2 -1,4 0,6 8,12 14,25 25,36 12,12 24,20 29,22 1,0 1,0 1,0 -4,-22 -4,-39 -6,-58 -1,-5 -5,-8 -11,-8 z"
+   id="path1816" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1821">
+         <g
+   id="g1820">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21393"
+   y="28522"
+   width="105"
+   height="21"
+   id="rect1819" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21495,28527 c -1,-3 -3,-5 -6,-5 -30,0 -59,0 -88,0 -3,0 -6,2 -6,5 -1,5 0,5 -2,15 35,0 69,0 104,0 -3,-10 -2,-10 -2,-15 z"
+   id="path1819" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1823">
+         <g
+   id="g1822">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21502"
+   y="28487"
+   width="89"
+   height="72"
+   id="rect1821" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 21586,28509 c -3,-7 -9,-12 -16,-16 -7,-4 -15,-6 -24,-6 -6,0 -12,1 -17,3 -8,2 -15,7 -20,13 -4,5 -7,12 -7,19 0,5 1,10 3,14 4,6 9,12 16,16 7,3 16,6 25,6 6,0 12,-1 17,-3 8,-3 15,-7 19,-13 5,-6 8,-12 8,-20 0,-5 -1,-9 -4,-13 z m -12,23 c -2,4 -6,8 -11,11 -5,2 -11,4 -17,4 -4,0 -8,-1 -12,-2 -6,-2 -10,-5 -14,-9 -3,-4 -5,-9 -5,-14 0,-3 1,-6 3,-9 2,-5 6,-8 11,-11 5,-3 11,-4 17,-4 4,0 8,0 12,2 5,1 10,5 13,9 4,3 5,8 5,13 0,4 0,7 -2,10 z"
+   id="path1821" />
+         </g>
+        </g>
+       </g><g
+           class="Group"
+           id="g1862"
+           transform="translate(-15334.968,-5448.258)">
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1827">
+         <g
+   id="g1826">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="34924"
+   y="30480"
+   width="220"
+   height="269"
+   id="rect1825" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 34995,30554 c 18,-6 37,-13 55,-19 31,0 62,0 93,0 0,-15 0,-31 0,-47 0,-4 -5,-8 -11,-8 -24,0 -48,0 -72,0 -4,0 -8,2 -9,6 -16,0 -32,0 -48,0 -4,0 -8,1 -11,4 -2,3 -4,5 -8,9 -106,124 -35,166 -53,249 7,0 14,0 21,0 -40,-139 28,-129 43,-194 z m 26,-53 c 6,0 10,4 10,8 0,4 -4,8 -10,8 -5,0 -9,-4 -9,-8 0,-4 4,-8 9,-8 z"
+   id="path1825" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1829">
+         <g
+   id="g1828">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="34974"
+   y="30648"
+   width="62"
+   height="66"
+   id="rect1827" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 35035,30705 c 0,-16 0,-32 0,-49 0,-2 -1,-4 -3,-6 -2,-1 -5,-2 -7,-2 -13,0 -26,0 -39,0 -3,0 -6,2 -7,4 -1,11 -5,19 -5,33 0,10 2,16 4,24 0,2 3,4 6,4 13,0 27,0 40,0 6,0 11,-3 11,-8 z"
+   id="path1827" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1833">
+         <g
+   id="g1830">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="35157"
+   y="30648"
+   width="63"
+   height="66"
+   id="rect1829" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 35207,30648 c -13,0 -26,0 -40,0 -2,0 -5,1 -7,2 -2,2 -3,4 -3,6 0,17 0,33 0,49 0,5 5,8 11,8 14,0 27,0 41,0 3,0 6,-2 6,-4 2,-8 4,-14 4,-24 0,-14 -4,-22 -6,-33 0,-2 -3,-4 -6,-4 z"
+   id="path1829" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1836">
+         <g
+   id="g1834">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="35052"
+   y="30573"
+   width="89"
+   height="65"
+   id="rect1833" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 35062,30637 c 23,0 45,0 67,0 3,0 6,-1 8,-3 2,-1 3,-4 3,-6 -1,-16 -3,-31 -4,-47 0,-5 -5,-8 -10,-8 -20,0 -40,0 -60,0 -5,0 -10,3 -10,8 -2,16 -3,31 -4,47 0,2 1,5 3,6 2,2 5,3 7,3 z"
+   id="path1833" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1838">
+         <g
+   id="g1837">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="35149"
+   y="30573"
+   width="56"
+   height="65"
+   id="rect1836" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 35166,30637 c 10,0 21,0 31,0 3,0 5,-1 6,-3 1,-1 1,-3 0,-5 -14,-18 -31,-40 -41,-56 -3,0 -5,0 -7,0 -2,0 -3,1 -4,2 -2,1 -2,2 -2,4 2,17 4,33 6,50 1,5 5,8 11,8 z"
+   id="path1836" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1840">
+         <g
+   id="g1839">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="35051"
+   y="30648"
+   width="93"
+   height="66"
+   id="rect1838" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 35129,30648 c -22,0 -44,0 -65,0 -7,0 -13,4 -13,10 0,15 0,30 0,45 0,3 1,5 4,7 2,2 5,3 9,3 21,0 43,0 65,0 3,0 7,-1 9,-3 2,-2 4,-4 4,-7 0,-15 0,-30 -1,-45 0,-6 -5,-10 -12,-10 z"
+   id="path1838" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1842">
+         <g
+   id="g1841">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="34989"
+   y="30573"
+   width="55"
+   height="65"
+   id="rect1840" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 35037,30573 c -2,0 -4,0 -6,0 -10,16 -27,38 -41,56 -1,2 -1,4 0,5 1,2 3,3 5,3 11,0 21,0 31,0 6,0 10,-3 11,-8 2,-17 4,-33 6,-50 0,-2 0,-3 -2,-4 -1,-1 -2,-2 -4,-2 z"
+   id="path1840" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1845">
+         <g
+   id="g1843">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="35150"
+   y="30724"
+   width="58"
+   height="67"
+   id="rect1842" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 35200,30724 c -11,0 -22,0 -33,0 -6,0 -10,3 -11,8 -2,19 -2,36 -6,58 h 1 c 6,-2 16,-9 27,-19 12,-11 18,-26 28,-39 1,-2 1,-4 0,-5 -1,-2 -3,-3 -6,-3 z"
+   id="path1842" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1847">
+         <g
+   id="g1846">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="35052"
+   y="30724"
+   width="90"
+   height="74"
+   id="rect1845" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 35131,30724 c -23,0 -46,0 -69,0 -2,0 -5,1 -7,3 -2,1 -3,4 -3,6 1,19 3,38 4,57 0,2 2,4 5,5 12,0 21,2 36,2 14,0 23,-1 35,-2 3,-1 5,-2 5,-5 1,-19 3,-38 4,-57 0,-2 -1,-5 -3,-6 -2,-2 -5,-3 -7,-3 z"
+   id="path1845" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1851">
+         <g
+   id="g1850">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="34986"
+   y="30724"
+   width="57"
+   height="67"
+   id="rect1847" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 35025,30724 c -11,0 -22,0 -33,0 -2,0 -4,1 -5,2 -1,2 -1,4 0,6 8,12 14,25 25,36 12,12 24,20 29,22 1,0 1,0 1,0 -4,-22 -4,-39 -6,-58 -1,-5 -5,-8 -11,-8 z"
+   id="path1847" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1854">
+         <g
+   id="g1852">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="35045"
+   y="30544"
+   width="105"
+   height="21"
+   id="rect1851" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 35147,30549 c -1,-3 -3,-5 -6,-5 -30,0 -59,0 -88,0 -3,0 -6,2 -6,5 -1,5 0,5 -2,15 35,0 69,0 104,0 -3,-10 -2,-10 -2,-15 z"
+   id="path1851" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1856">
+         <g
+   id="g1855">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="35154"
+   y="30509"
+   width="90"
+   height="72"
+   id="rect1854" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 35238,30531 c -3,-7 -9,-12 -16,-16 -7,-4 -15,-6 -24,-6 -6,0 -12,1 -17,3 -8,2 -15,7 -20,13 -4,5 -7,12 -7,19 0,5 1,10 3,14 4,6 9,12 16,16 7,3 16,6 25,6 6,0 12,-1 17,-3 8,-3 15,-7 19,-13 5,-6 8,-12 8,-20 0,-5 -1,-9 -4,-13 z m -12,23 c -2,4 -6,8 -11,11 -5,2 -11,4 -17,4 -4,0 -8,-1 -12,-2 -6,-2 -10,-5 -14,-9 -3,-4 -5,-9 -5,-14 0,-3 1,-6 3,-9 2,-5 6,-8 11,-11 5,-3 11,-4 17,-4 4,0 8,0 12,2 5,1 10,5 13,9 4,3 5,8 5,13 0,4 0,7 -2,10 z"
+   id="path1854" />
+         </g>
+        </g>
+       </g><g
+           class="Group"
+           id="g2129"
+           transform="translate(18200,-3076.3871)">
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1864">
+         <g
+   id="g1863">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="8037"
+   y="30580"
+   width="220"
+   height="270"
+   id="rect1862" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 8108,30654 c 18,-6 37,-13 55,-19 31,0 62,0 93,0 0,-15 0,-31 0,-47 0,-4 -5,-8 -11,-8 -24,0 -48,0 -72,0 -4,0 -8,2 -9,6 -16,0 -32,0 -48,0 -4,0 -8,1 -11,4 -2,3 -4,5 -8,9 -106,124 -35,166 -53,249 7,0 14,0 21,0 -40,-139 28,-129 43,-194 z m 26,-53 c 6,0 10,4 10,8 0,4 -4,8 -10,8 -5,0 -9,-4 -9,-8 0,-4 4,-8 9,-8 z"
+   id="path1862" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1866">
+         <g
+   id="g1865">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="8087"
+   y="30748"
+   width="62"
+   height="66"
+   id="rect1864" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 8148,30805 c 0,-16 0,-32 0,-49 0,-2 -1,-4 -3,-6 -2,-1 -5,-2 -7,-2 -13,0 -26,0 -39,0 -3,0 -6,2 -7,4 -1,11 -5,19 -5,33 0,10 2,16 4,24 0,2 3,4 6,4 13,0 27,0 40,0 6,0 11,-3 11,-8 z"
+   id="path1864" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1869">
+         <g
+   id="g1867">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="8270"
+   y="30748"
+   width="63"
+   height="66"
+   id="rect1866" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 8320,30748 c -13,0 -26,0 -40,0 -2,0 -5,1 -7,2 -2,2 -3,4 -3,6 0,17 0,33 0,49 0,5 5,8 11,8 14,0 27,0 41,0 3,0 6,-2 6,-4 2,-8 4,-14 4,-24 0,-14 -4,-22 -6,-33 0,-2 -3,-4 -6,-4 z"
+   id="path1866" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1872">
+         <g
+   id="g1870">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="8165"
+   y="30673"
+   width="89"
+   height="65"
+   id="rect1869" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 8175,30737 c 23,0 45,0 67,0 3,0 6,-1 8,-3 2,-1 3,-4 3,-6 -1,-16 -3,-31 -4,-47 0,-5 -5,-8 -10,-8 -20,0 -40,0 -60,0 -5,0 -10,3 -10,8 -2,16 -3,31 -4,47 0,2 1,5 3,6 2,2 5,3 7,3 z"
+   id="path1869" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1874">
+         <g
+   id="g1873">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="8262"
+   y="30673"
+   width="56"
+   height="65"
+   id="rect1872" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 8279,30737 c 10,0 21,0 31,0 3,0 5,-1 6,-3 1,-1 1,-3 0,-5 -14,-18 -31,-40 -41,-56 -3,0 -5,0 -7,0 -2,0 -3,1 -4,2 -2,1 -2,2 -2,4 2,17 4,33 6,50 1,5 5,8 11,8 z"
+   id="path1872" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1878">
+         <g
+   id="g1875">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="8164"
+   y="30748"
+   width="92"
+   height="66"
+   id="rect1874" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 8242,30748 c -22,0 -44,0 -65,0 -7,0 -13,4 -13,10 0,15 0,30 0,45 0,3 1,5 4,7 2,2 5,3 9,3 21,0 43,0 65,0 3,0 7,-1 9,-3 2,-2 4,-4 4,-7 0,-15 0,-30 -1,-45 0,-6 -5,-10 -12,-10 z"
+   id="path1874" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1880">
+         <g
+   id="g1879">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="8102"
+   y="30673"
+   width="55"
+   height="65"
+   id="rect1878" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 8150,30673 c -2,0 -4,0 -6,0 -10,16 -27,38 -41,56 -1,2 -1,4 0,5 1,2 3,3 5,3 11,0 21,0 31,0 6,0 10,-3 11,-8 2,-17 4,-33 6,-50 0,-2 0,-3 -2,-4 -1,-1 -2,-2 -4,-2 z"
+   id="path1878" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g1883">
+         <g
+   id="g1882">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="8263"
+   y="30824"
+   width="58"
+   height="67"
+   id="rect1880" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 8313,30824 c -11,0 -22,0 -33,0 -6,0 -10,3 -11,8 -2,19 -2,36 -6,58 h 1 c 6,-2 16,-9 27,-19 12,-11 18,-26 28,-39 1,-2 1,-4 0,-5 -1,-2 -3,-3 -6,-3 z"
+   id="path1880" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g2062">
+         <g
+   id="g1885">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="8165"
+   y="30824"
+   width="90"
+   height="74"
+   id="rect1883" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 8244,30824 c -23,0 -46,0 -69,0 -2,0 -5,1 -7,3 -2,1 -3,4 -3,6 1,19 3,38 4,57 0,2 2,4 5,5 12,0 21,2 36,2 14,0 23,-1 35,-2 3,-1 5,-2 5,-5 1,-19 3,-38 4,-57 0,-2 -1,-5 -3,-6 -2,-2 -5,-3 -7,-3 z"
+   id="path1883" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g2123">
+         <g
+   id="g2122">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="8098"
+   y="30824"
+   width="58"
+   height="68"
+   id="rect2062" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 8138,30824 c -11,0 -22,0 -33,0 -2,0 -4,1 -5,2 -1,2 -1,4 0,6 8,12 14,25 25,36 12,12 24,20 29,22 1,0 1,0 1,0 -4,-22 -4,-39 -6,-58 -1,-5 -5,-8 -11,-8 z"
+   id="path2122" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g2125">
+         <g
+   id="g2124">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="8158"
+   y="30644"
+   width="105"
+   height="21"
+   id="rect2123" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 8260,30649 c -1,-3 -3,-5 -6,-5 -30,0 -59,0 -88,0 -3,0 -6,2 -6,5 -1,5 0,5 -2,15 35,0 69,0 104,0 -3,-10 -2,-10 -2,-15 z"
+   id="path2123" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g2128">
+         <g
+   id="g2126">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="8267"
+   y="30609"
+   width="90"
+   height="72"
+   id="rect2125" />
+          <path
+   fill="#ff0000"
+   stroke="none"
+   d="m 8351,30631 c -3,-7 -9,-12 -16,-16 -7,-4 -15,-6 -24,-6 -6,0 -12,1 -17,3 -8,2 -15,7 -20,13 -4,5 -7,12 -7,19 0,5 1,10 3,14 4,6 9,12 16,16 7,3 16,6 25,6 6,0 12,-1 17,-3 8,-3 15,-7 19,-13 5,-6 8,-12 8,-20 0,-5 -1,-9 -4,-13 z m -12,23 c -2,4 -6,8 -11,11 -5,2 -11,4 -17,4 -4,0 -8,-1 -12,-2 -6,-2 -10,-5 -14,-9 -3,-4 -5,-9 -5,-14 0,-3 1,-6 3,-9 2,-5 6,-8 11,-11 5,-3 11,-4 17,-4 4,0 8,0 12,2 5,1 10,5 13,9 4,3 5,8 5,13 0,4 0,7 -2,10 z"
+   id="path2125" />
+         </g>
+        </g>
+       </g></g><g
+         id="add_batteries_tactical_takedown_command"
+         style="display:inline"
+         transform="matrix(0.01,0,0,0.01,1.4767682e-6,0)"><title
+           id="title18">Batteries</title><g
+           class="Group"
+           id="g1164"
+           transform="translate(1569.4352,19323.671)">
+        <g
+   class="com.sun.star.drawing.PolyPolygonShape"
+   id="g1163">
+         <g
+   id="g1162">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="21371"
+   y="13335"
+   width="220"
+   height="320"
+   id="rect1161" />
+          <path
+   fill="#ffbf00"
+   stroke="none"
+   d="m 21437,13367 h -36 -2 -2 -2 l -1,1 h -2 -2 l -2,1 -1,1 h -2 l -2,1 -1,1 -1,1 -2,1 -1,1 -1,1 -1,1 -1,2 -1,1 v 1 l -1,2 v 1 l -1,1 v 2 1 244 1 1 l 1,2 v 1 l 1,2 v 1 l 1,1 1,1 1,2 1,1 1,1 2,1 1,1 1,1 h 2 l 2,1 1,1 h 2 l 2,1 h 2 l 1,1 h 2 2 2 160 2 2 2 l 1,-1 h 2 l 2,-1 h 2 l 1,-1 2,-1 h 2 l 1,-1 1,-1 2,-1 1,-1 1,-1 1,-2 1,-1 1,-1 v -1 l 1,-2 v -1 l 1,-1 v -2 -1 -244 -1 -2 l -1,-1 v -1 l -1,-2 v -1 l -1,-1 -1,-2 -1,-1 -1,-1 -1,-1 -2,-1 -1,-1 -1,-1 -2,-1 h -2 l -1,-1 -2,-1 h -2 -2 l -1,-1 h -2 -2 -2 -36 v -32 h -88 z m 66,135 h 43 l -87,119 v -87 h -43 l 87,-119 z"
+   id="path1161" />
+         </g>
+        </g>
+       </g></g><g
+         id="add_ammo_tactical_takedown_command"><title
+           id="title17">Ammo Boxes</title><g
+           class="Group"
+           id="g54"
+           style="display:inline"
+           transform="matrix(0.01,0,0,0.01,102.91218,22.869373)">
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g36">
+         <g
+   id="g35">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="11755"
+   y="30822"
+   width="71"
+   height="305"
+   id="rect34" />
+          <path
+   fill="#ffffff"
+   stroke="none"
+   d="m 11765,30905 c 1,0 3,0 4,0 0,-25 5,-49 13,-72 0,-3 1,-5 2,-7 1,-3 3,-4 6,-4 3,0 6,2 6,4 1,2 2,4 2,7 9,23 13,47 13,72 1,0 3,0 4,0 0,14 0,27 0,41 3,9 7,18 10,26 0,51 0,103 0,154 -23,0 -47,0 -70,0 0,-52 0,-103 0,-154 3,-9 7,-18 10,-26 0,-14 0,-28 0,-41 z"
+   id="path34" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g38">
+         <g
+   id="g37">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="11755"
+   y="31131"
+   width="71"
+   height="10"
+   id="rect36" />
+          <path
+   fill="#ffffff"
+   stroke="none"
+   d="m 11825,31131 c -23,0 -47,0 -70,0 0,3 0,6 0,9 23,0 47,0 70,0 0,-3 0,-6 0,-9 z"
+   id="path36" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g41">
+         <g
+   id="g40">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="11673"
+   y="30822"
+   width="72"
+   height="305"
+   id="rect38" />
+          <path
+   fill="#ffffff"
+   stroke="none"
+   d="m 11684,30905 c 1,0 2,0 3,0 1,-25 5,-49 13,-72 1,-3 2,-5 3,-7 0,-3 3,-4 6,-4 2,0 5,2 6,4 1,2 1,4 2,7 8,23 12,47 13,72 1,0 2,0 3,0 0,14 0,27 0,41 4,9 7,18 11,26 0,51 0,103 0,154 -24,0 -47,0 -71,0 0,-52 0,-103 0,-154 3,-9 7,-18 10,-26 1,-14 1,-28 1,-41 z"
+   id="path38" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g43">
+         <g
+   id="g42">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="11672"
+   y="31131"
+   width="72"
+   height="10"
+   id="rect41" />
+          <path
+   fill="#ffffff"
+   stroke="none"
+   d="m 11673,31131 c 0,3 0,6 0,9 23,0 47,0 70,0 0,-3 0,-6 0,-9 -23,0 -47,0 -70,0 z"
+   id="path41" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g46">
+         <g
+   id="g45">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="11589"
+   y="30822"
+   width="71"
+   height="305"
+   id="rect43" />
+          <path
+   fill="#ffffff"
+   stroke="none"
+   d="m 11599,30905 c 1,0 3,0 4,0 0,-25 5,-49 13,-72 0,-3 1,-5 2,-7 1,-3 3,-4 6,-4 3,0 6,2 6,4 1,2 2,4 2,7 9,23 13,47 13,72 1,0 3,0 4,0 0,14 0,27 0,41 3,9 7,18 10,26 0,51 0,103 0,154 -23,0 -47,0 -70,0 0,-52 0,-103 0,-154 3,-9 7,-18 10,-26 0,-14 0,-28 0,-41 z"
+   id="path43" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g48">
+         <g
+   id="g47">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="11589"
+   y="31131"
+   width="71"
+   height="10"
+   id="rect46" />
+          <path
+   fill="#ffffff"
+   stroke="none"
+   d="m 11659,31131 c -23,0 -47,0 -70,0 0,3 0,6 0,9 23,0 47,0 70,0 0,-3 0,-6 0,-9 z"
+   id="path46" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g51">
+         <g
+   id="g50">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="11507"
+   y="30822"
+   width="72"
+   height="305"
+   id="rect48" />
+          <path
+   fill="#ffffff"
+   stroke="none"
+   d="m 11518,30905 c 1,0 2,0 3,0 1,-25 5,-49 13,-72 1,-3 2,-5 3,-7 0,-3 3,-4 6,-4 2,0 5,2 6,4 1,2 1,4 2,7 8,23 12,47 13,72 1,0 2,0 3,0 0,14 0,27 0,41 4,9 7,18 11,26 0,51 0,103 0,154 -24,0 -47,0 -71,0 0,-52 0,-103 0,-154 3,-9 7,-18 10,-26 1,-14 1,-28 1,-41 z"
+   id="path48" />
+         </g>
+        </g>
+        <g
+   class="com.sun.star.drawing.ClosedBezierShape"
+   id="g53">
+         <g
+   id="g52">
+          <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="11507"
+   y="31131"
+   width="72"
+   height="11"
+   id="rect51" />
+          <path
+   fill="#ffffff"
+   stroke="none"
+   d="m 11578,31131 c -24,0 -47,0 -71,0 0,3 0,6 0,9 24,0 47,0 71,0 0,-3 0,-6 0,-9 z"
+   id="path51" />
+         </g>
+        </g>
+       </g></g></g><g
+       id="resources_tactical_takedown_command"><title
+         id="title13">Resources</title></g><g
+       id="obj_tactical_takedown_command"><title
+         id="title12">Objectives</title><g
+         style="fill:#0066cc;fill-opacity:1"
+         id="poi_tactical_takedown_command"
+         transform="matrix(0.23385481,0,0,0.23385481,205.73011,277.23261)"><title
+           id="title16">Download Panel</title><path
+           d="M 16,4.686 4.686,16 16,27.314 27.314,16 Z M 10.343,16 16,10.343 21.657,16 16,21.657 Z"
+           id="path1-8"
+           style="fill:#0066cc;fill-opacity:1" /></g></g><g
+       id="nav_tactical_takedown_command"><title
+         id="title11">Navigation</title><g
+         id="entry_tactical_takedown_command"
+         transform="matrix(0.02583822,0,0,0.02583867,202.62288,567.39088)"
+         style="fill:#0066cc;fill-opacity:1"><title
+   id="title15">Entry Point</title>
+	<path
+   class="st0"
+   d="m 255.995,198.276 c -31.884,0 -57.724,25.84 -57.724,57.724 0,31.875 25.841,57.716 57.724,57.716 31.874,0 57.716,-25.841 57.716,-57.716 0,-31.884 -25.841,-57.724 -57.716,-57.724 z"
+   id="path25"
+   style="fill:#0066cc;fill-opacity:1" />
+	<path
+   class="st0"
+   d="M 511.13,254.868 410.124,228.04 c -5.79,-32.047 -21.284,-60.778 -43.346,-82.823 -22.044,-22.062 -50.784,-37.564 -82.83,-43.346 L 257.128,0.875 c -0.136,-0.508 -0.598,-0.87 -1.133,-0.87 -0.535,0 -0.996,0.362 -1.133,0.87 l -26.819,100.997 c -32.056,5.781 -60.796,21.284 -82.831,43.346 -22.071,22.035 -37.566,50.785 -43.346,82.832 L 0.869,254.868 C 0.363,255.003 0,255.465 0,256 c 0,0.535 0.363,0.997 0.869,1.133 l 100.998,26.819 c 5.78,32.047 21.274,60.787 43.346,82.832 22.035,22.062 50.775,37.555 82.822,43.346 l 26.828,100.997 c 0.136,0.507 0.598,0.869 1.133,0.869 0.535,0 0.996,-0.362 1.133,-0.869 L 283.957,410.13 c 32.038,-5.79 60.777,-21.284 82.821,-43.346 22.062,-22.044 37.556,-50.785 43.346,-82.822 L 511.13,257.134 c 0.508,-0.136 0.87,-0.598 0.87,-1.133 0,-0.536 -0.363,-0.998 -0.87,-1.133 z m -173.509,82.758 c -20.956,20.921 -49.687,33.796 -81.626,33.814 -31.948,-0.018 -60.669,-12.893 -81.626,-33.814 C 153.44,316.669 140.565,287.938 140.555,256 c 0.01,-31.947 12.884,-60.669 33.814,-81.626 20.957,-20.921 49.679,-33.805 81.626,-33.814 31.938,0.008 60.67,12.893 81.626,33.814 20.921,20.957 33.796,49.679 33.814,81.626 -0.018,31.938 -12.893,60.669 -33.814,81.626 z"
+   id="path26"
+   style="fill:#0066cc;fill-opacity:1" />
+</g></g></g><g
+     id="op_biohazard_takedown_command"><title
+       id="title1">Biohazard Takedown</title><g
+       id="add_consumables_biohazard_takedown_command"><title
+         id="title9">Additional Consumables</title></g><g
+       id="resources_biohazard_takedown_command"><title
+         id="title8">Resources</title></g><g
+       id="obj_biohazard_takedown_command"><title
+         id="title7">Objectives</title><g
+         style="fill:#0066cc;fill-opacity:1"
+         id="poi_biohazard_takedown_command"
+         transform="matrix(0.23385481,0,0,0.23385481,200.95831,370.9454)"><title
+           id="title2">Download Panel</title><path
+           d="M 16,4.686 4.686,16 16,27.314 27.314,16 Z M 10.343,16 16,10.343 21.657,16 16,21.657 Z"
+           id="path57"
+           style="fill:#0066cc;fill-opacity:1" /></g></g><g
+       id="nav_biohazard_takedown_command"><title
+         id="title4">Navigation</title><g
+         id="entry_biohazard_takedown_command"
+         transform="matrix(0.02583822,0,0,0.02583867,202.62288,567.39088)"
+         style="fill:#0066cc;fill-opacity:1"><title
+   id="title3">Entry Point</title>
+	<path
+   class="st0"
+   d="m 255.995,198.276 c -31.884,0 -57.724,25.84 -57.724,57.724 0,31.875 25.841,57.716 57.724,57.716 31.874,0 57.716,-25.841 57.716,-57.716 0,-31.884 -25.841,-57.724 -57.716,-57.724 z"
+   id="path1"
+   style="fill:#0066cc;fill-opacity:1" />
+	<path
+   class="st0"
+   d="M 511.13,254.868 410.124,228.04 c -5.79,-32.047 -21.284,-60.778 -43.346,-82.823 -22.044,-22.062 -50.784,-37.564 -82.83,-43.346 L 257.128,0.875 c -0.136,-0.508 -0.598,-0.87 -1.133,-0.87 -0.535,0 -0.996,0.362 -1.133,0.87 l -26.819,100.997 c -32.056,5.781 -60.796,21.284 -82.831,43.346 -22.071,22.035 -37.566,50.785 -43.346,82.832 L 0.869,254.868 C 0.363,255.003 0,255.465 0,256 c 0,0.535 0.363,0.997 0.869,1.133 l 100.998,26.819 c 5.78,32.047 21.274,60.787 43.346,82.832 22.035,22.062 50.775,37.555 82.822,43.346 l 26.828,100.997 c 0.136,0.507 0.598,0.869 1.133,0.869 0.535,0 0.996,-0.362 1.133,-0.869 L 283.957,410.13 c 32.038,-5.79 60.777,-21.284 82.821,-43.346 22.062,-22.044 37.556,-50.785 43.346,-82.822 L 511.13,257.134 c 0.508,-0.136 0.87,-0.598 0.87,-1.133 0,-0.536 -0.363,-0.998 -0.87,-1.133 z m -173.509,82.758 c -20.956,20.921 -49.687,33.796 -81.626,33.814 -31.948,-0.018 -60.669,-12.893 -81.626,-33.814 C 153.44,316.669 140.565,287.938 140.555,256 c 0.01,-31.947 12.884,-60.669 33.814,-81.626 20.957,-20.921 49.679,-33.805 81.626,-33.814 31.938,0.008 60.67,12.893 81.626,33.814 20.921,20.957 33.796,49.679 33.814,81.626 -0.018,31.938 -12.893,60.669 -33.814,81.626 z"
+   id="path2-4"
+   style="fill:#0066cc;fill-opacity:1" />
+</g></g></g></g></g>
 <metadata
    id="metadata3883"><rdf:RDF><cc:Work
-       rdf:about=""><dc:title>Operations Megaship</dc:title></cc:Work></rdf:RDF></metadata></svg>
+       rdf:about=""><dc:title>Operations Megaship</dc:title></cc:Work></rdf:RDF></metadata><style
+   type="text/css"
+   id="style1">
+	.st0{fill:#000000;}
+</style><style
+   type="text/css"
+   id="style1-4">
+	.st0{fill:#000000;}
+</style></svg>
