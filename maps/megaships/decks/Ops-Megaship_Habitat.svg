@@ -7115,7 +7115,8 @@
  <g
    class="Page"
    id="deck_habitat"
-   transform="matrix(0.01,0,0,0.01,8.675203e-6,0)">
+   transform="matrix(0.01,0,0,0.01,8.675203e-6,0)"><title
+   id="title59">Habitat Deck</title>
       <defs
    class="SlideBackground"
    id="defs83-9" />
@@ -7123,12 +7124,14 @@
       <g
    class="Group"
    id="architecture_habitat"
-   style="display:inline">
+   style="display:inline"><title
+   id="title45">Architecture</title>
        <g
    class="com.sun.star.drawing.PolyPolygonShape"
    id="f0_habitat"
    style="display:inline"
-   transform="translate(2.8989709e-4)">
+   transform="translate(2.8989709e-4)"><title
+   id="title55">Floor 0</title>
        <g
    id="id3-3">
         <rect
@@ -22299,7 +22302,8 @@
       <g
    class="Group"
    id="text_habitat"
-   style="display:inline">
+   style="display:inline"><title
+   id="title39">Text</title>
        
        
        
@@ -22318,7 +22322,8 @@
       <g
    id="footers_habitat"
    style="display:inline"
-   transform="translate(-85919.999)"><g
+   transform="translate(-85919.999)"><title
+     id="title62">Footers</title><g
      class="TextShape"
      id="g2204-1"
      style="display:inline"
@@ -22387,7 +22392,8 @@
        </g></g><g
    id="labels_habitat"
    style="display:inline"
-   transform="translate(-85919.999)"><g
+   transform="translate(-85919.999)"><title
+     id="title64">Labels</title><g
      class="TextShape"
      id="g2127"
      style="display:inline"
@@ -23169,7 +23175,8 @@
        </g></g><g
    id="headers_habitat"
    style="display:inline"
-   transform="translate(-85919.999)"><g
+   transform="translate(-85919.999)"><title
+     id="title67">Headers</title><g
      class="TextShape"
      id="g2207-2"
      style="display:inline"
@@ -23331,7 +23338,8 @@
       <g
    class="Group"
    id="consumables_habitat"
-   style="display:inline">
+   style="display:inline"><title
+   id="title42">Consumables</title>
        
        
        
@@ -23381,7 +23389,8 @@
       <g
    id="medkits_habitat"
    transform="translate(-85919.999)"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title82">Medkits</title><g
      class="Group"
      id="g2247-8"
      style="display:inline"
@@ -23826,7 +23835,8 @@
        </g></g><g
    id="grenade-cases_habitat"
    transform="translate(-85919.999)"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title79">Grenade Cases</title><g
      class="Group"
      id="g2318"
      style="display:inline"
@@ -26142,7 +26152,8 @@
        </g></g><g
    id="energy-ports_habitat"
    transform="translate(-85919.999)"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title76">Energy Ports</title><g
      class="Group"
      id="g2279"
      style="display:inline"
@@ -26327,7 +26338,8 @@
        </g></g><g
    id="batteries_habitat"
    transform="translate(-85919.999)"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title73">Batteries</title><g
      class="Group"
      id="g2293"
      style="display:inline"
@@ -26512,7 +26524,8 @@
        </g></g><g
    id="ammo-boxes_habitat"
    transform="translate(-85919.999)"
-   style="display:inline"><g
+   style="display:inline"><title
+     id="title70">Ammo Boxes</title><g
      class="Group"
      id="g2418"
      style="display:inline"
@@ -27551,7 +27564,126 @@
          </g>
         </g>
        </g></g></g>
-     </g>
+     <g
+   id="ops_poi_habitat"
+   transform="matrix(100,0,0,100,-85919.999,0)"><title
+     id="title36">Operational Points of Interest</title><g
+     id="op_biohazard_takedown_habitat"><title
+       id="title85">Biohazard Takedown</title><g
+       id="add_consumables_biohazard_takedown_habitat"><title
+         id="title98">Additional Consumables</title></g><g
+       id="resources_biohazard_takedown_habitat"><title
+         id="title97">Resources</title></g><g
+       id="obj_biohazard_takedown_habitat"><title
+         id="title94">Objectives</title><g
+         style="fill:#0066cc;fill-opacity:1"
+         id="poi_biohazard_takedown_habitat_1"
+         transform="matrix(0.23385481,0,0,0.23385481,937.40558,217.71779)"><title
+           id="title103">Target holdout</title><path
+           d="M 16,4.686 4.686,16 16,27.314 27.314,16 Z M 10.343,16 16,10.343 21.657,16 16,21.657 Z"
+           id="path62"
+           style="fill:#0066cc;fill-opacity:1" /></g><g
+         style="fill:#0066cc;fill-opacity:1"
+         id="poi_biohazard_takedown_habitat_2"
+         transform="matrix(0.23385481,0,0,0.23385481,1191.3712,397.45546)"><title
+           id="title102">Target holdout</title><path
+           d="M 16,4.686 4.686,16 16,27.314 27.314,16 Z M 10.343,16 16,10.343 21.657,16 16,21.657 Z"
+           id="path63"
+           style="fill:#0066cc;fill-opacity:1" /></g></g><g
+       id="nav_biohazard_takedown_habitat"><title
+         id="title92">Navigation</title><g
+         id="barricades_biohazard_takedown_habitat"><title
+           id="title101">Barricades</title><g
+           class="com.sun.star.drawing.CustomShape"
+           id="g1115"
+           style="display:inline"
+           transform="matrix(0.00996329,0,0,0.01106728,1088.8742,-16.835159)">
+        <g
+   id="g1114">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="8888"
+   y="40649"
+   width="320"
+   height="955"
+   id="rect69"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="#ff860d"
+   stroke="none"
+   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
+   id="path1113"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="none"
+   stroke="#ff860d"
+   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
+   id="path1114"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+        </g>
+       </g><g
+           class="com.sun.star.drawing.CustomShape"
+           id="g1137"
+           style="display:inline"
+           transform="matrix(0.00996329,0,0,0.01106728,1088.8742,-105.52135)">
+        <g
+   id="g1136">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="8888"
+   y="40649"
+   width="320"
+   height="955"
+   id="rect1131"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="#ff860d"
+   stroke="none"
+   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
+   id="path1131"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="none"
+   stroke="#ff860d"
+   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
+   id="path1133"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+        </g>
+       </g><g
+           class="com.sun.star.drawing.CustomShape"
+           id="g1139"
+           style="display:inline"
+           transform="matrix(0.00996329,0,0,0.01106728,868.328,-233.24386)">
+        <g
+   id="g1138">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="8888"
+   y="40649"
+   width="320"
+   height="955"
+   id="rect1137"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="#ff860d"
+   stroke="none"
+   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
+   id="path1137"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="none"
+   stroke="#ff860d"
+   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
+   id="path1138"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+        </g>
+       </g></g></g></g></g></g>
 
  
  
@@ -27565,4 +27697,12 @@
  
 <metadata
    id="metadata3883"><rdf:RDF><cc:Work
-       rdf:about=""><dc:title>Operations Megaship</dc:title></cc:Work></rdf:RDF></metadata></svg>
+       rdf:about=""><dc:title>Operations Megaship</dc:title></cc:Work></rdf:RDF></metadata><style
+   type="text/css"
+   id="style1">
+	.st0{fill:#000000;}
+</style><style
+   type="text/css"
+   id="style1-4">
+	.st0{fill:#000000;}
+</style></svg>

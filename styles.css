@@ -1027,6 +1027,50 @@ a {
   color: #ff9b3d;
   background: #ff9b3d;
 }
+.operations-layer-swatch {
+  color: var(--swatch-color);
+  background: var(--swatch-color);
+}
+
+.operations-branch {
+  border-top: 1px solid rgba(200, 200, 200, 0.08);
+  padding: 3px 0;
+}
+
+.operations-branch-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+}
+
+.operations-branch-heading > .layer-disclosure {
+  min-width: 0;
+  padding-left: 7px;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 600;
+}
+
+.operations-depth-2 > .operations-branch-heading > .layer-disclosure {
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.operations-poi-toggle.is-visible {
+  border-color: #8a5cff;
+  background: rgba(138, 92, 255, 0.2);
+}
+
+.operations-poi-toggle:not(.is-visible) {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.operations-poi-toggle:not(.is-visible) .operations-layer-swatch {
+  border: 1px solid #8a5cff;
+  background: transparent;
+  box-shadow: none;
+}
 .energy-swatch {
   color: #ffff00;
   background: #ffff00;
@@ -1054,10 +1098,6 @@ a {
 .labels-swatch {
   color: #76d7ff;
   background: #76d7ff;
-}
-.headers-swatch {
-  color: #ffcf79;
-  background: #ffcf79;
 }
 
 .map-sidebar-note {

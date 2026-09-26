@@ -66,8 +66,6 @@ const layerNames = [
   "medkits",
   "text",
   "labels",
-  "headers",
-  "footers",
 ];
 const layerChildren = {
   architecture: ["f0", "f1", "e1", "f2", "e2", "f3", "e3"],
@@ -78,7 +76,7 @@ const layerChildren = {
     "grenade-cases",
     "medkits",
   ],
-  text: ["labels", "headers", "footers"],
+  text: ["labels"],
 };
 
 const viewport = document.querySelector("#map-viewport");
@@ -91,6 +89,7 @@ const mapApp = document.querySelector(".map-app");
 const sidebarContent = document.querySelector("#map-sidebar-content");
 const sidebarToggle = document.querySelector("#map-sidebar-toggle");
 const layerControls = document.querySelector(".layer-controls");
+const operationsPoiTree = document.querySelector("#operations-poi-tree");
 const baseMapScale = 1.5;
 let scale = 1;
 let offsetX = 0;
@@ -107,12 +106,221 @@ let scrollbarHideTimer;
 let mapPointFrame;
 let pinnedMapPoint;
 let invertKeyboardPan = true;
+let operationsLayers = [];
+const operationsLayerVisibility = new Map();
 const layerVisibility = Object.fromEntries(
   layerNames.map((layerName) => [
     layerName,
-    !["headers", "footers"].includes(layerName),
+    true,
   ]),
 );
+
+const sidebarCollator = new Intl.Collator(undefined, {
+  numeric: true,
+  sensitivity: "base",
+});
+
+function sortSidebarChildren(containerSelector, childSelector, getLabel) {
+  const container = document.querySelector(containerSelector);
+  [...container.querySelectorAll(childSelector)]
+    .sort((first, second) =>
+      sidebarCollator.compare(getLabel(first), getLabel(second)),
+    )
+    .forEach((child) => container.append(child));
+}
+
+sortSidebarChildren(
+  "#architecture-layers",
+  ":scope > .layer-subgroup",
+  (group) => group.querySelector(".layer-disclosure span:last-child").textContent,
+);
+sortSidebarChildren(
+  "#consumable-layers",
+  ":scope > .layer-toggle",
+  (button) => button.textContent.trim(),
+);
+
+function getDirectTitle(group) {
+  return (
+    [...group.children]
+      .find((child) => child.localName === "title")
+      ?.textContent.trim() || ""
+  );
+}
+
+function hasRenderableContent(group) {
+  return Boolean(
+    group?.querySelector(
+      "path, rect, circle, ellipse, line, polyline, polygon, text, use, image",
+    ),
+  );
+}
+
+function getOperationsStateKey(id, depth) {
+  return depth >= 3
+    ? id
+    : id.replace(new RegExp(`_${activeMap}(?=_|$)`), "");
+}
+
+function getOperationsChildren(group) {
+  return [...group.children]
+    .filter(
+      (child) =>
+        child.localName === "g" &&
+        getDirectTitle(child) &&
+        hasRenderableContent(child),
+    )
+    .sort((first, second) => {
+      const titleOrder = sidebarCollator.compare(
+        getDirectTitle(first),
+        getDirectTitle(second),
+      );
+      return titleOrder || sidebarCollator.compare(first.id, second.id);
+    });
+}
+
+function getOperationsSwatchColor(group, depth) {
+  if (depth === 0) return "#8a5cff";
+  if (depth < 3) return "#0066cc";
+  if (group.id.startsWith("add_medkits_")) return "#00a933";
+  if (group.id.startsWith("add_grenade-cases_")) return "#ff0000";
+  if (group.id.startsWith("add_batteries_")) return "#ffbf00";
+  if (group.id.startsWith("add_ammo_")) return "#ffffff";
+  const styledElement = group.querySelector('[style*="fill:#"]');
+  return styledElement
+    ?.getAttribute("style")
+    ?.match(/(?:^|;)fill:(#[0-9a-f]{6})/i)?.[1] || "#0066cc";
+}
+
+function createOperationsToggle(group, label, depth, showLabel = true) {
+  const key = getOperationsStateKey(group.id, depth);
+  if (!operationsLayerVisibility.has(key)) {
+    operationsLayerVisibility.set(key, depth !== 0);
+  }
+  const button = document.createElement("button");
+  button.className = "layer-toggle operations-layer-toggle";
+  if (depth === 0) {
+    button.classList.add("layer-parent", "operations-poi-toggle");
+  }
+  button.type = "button";
+  button.dataset.operationsKey = key;
+  button.dataset.operationsLabel = label;
+  const swatch = document.createElement("span");
+  swatch.className = "layer-swatch operations-layer-swatch";
+  swatch.style.setProperty("--swatch-color", getOperationsSwatchColor(group, depth));
+  button.append(swatch);
+  if (showLabel) button.append(document.createTextNode(label));
+  button.addEventListener("click", () => {
+    operationsLayerVisibility.set(
+      key,
+      !operationsLayerVisibility.get(key),
+    );
+    applyOperationsVisibility();
+  });
+  return button;
+}
+
+function createOperationsDisclosure(label, controlsId) {
+  const button = document.createElement("button");
+  button.className = "layer-disclosure";
+  button.type = "button";
+  button.setAttribute("aria-expanded", "true");
+  button.setAttribute("aria-controls", controlsId);
+  const arrow = document.createElement("span");
+  arrow.setAttribute("aria-hidden", "true");
+  arrow.textContent = "▼";
+  const text = document.createElement("span");
+  text.textContent = label;
+  button.append(arrow, text);
+  button.addEventListener("click", () => {
+    const expanded = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", String(!expanded));
+    document.querySelector(`#${controlsId}`).hidden = expanded;
+  });
+  return button;
+}
+
+function createOperationsBranch(group, label, depth, parentKey = null) {
+  const key = getOperationsStateKey(group.id, depth);
+  const children = getOperationsChildren(group);
+  operationsLayers.push({ element: group, key, parentKey });
+
+  if (children.length === 0) {
+    return createOperationsToggle(group, label, depth);
+  }
+
+  const branch = document.createElement("div");
+  branch.className =
+    depth === 0
+      ? "layer-group operations-poi-group"
+      : `layer-subgroup operations-branch operations-depth-${depth}`;
+  const heading = document.createElement("div");
+  heading.className = "layer-group-heading operations-branch-heading";
+  const controlsId = `${group.id}-controls`;
+  heading.append(
+    createOperationsDisclosure(label, controlsId),
+    createOperationsToggle(group, label, depth, false),
+  );
+  const childContainer = document.createElement("div");
+  childContainer.className = "layer-children";
+  childContainer.id = controlsId;
+
+  const titleTotals = new Map();
+  children.forEach((child) => {
+    const childTitle = getDirectTitle(child);
+    titleTotals.set(childTitle, (titleTotals.get(childTitle) || 0) + 1);
+  });
+  const titleCounts = new Map();
+  children.forEach((child) => {
+    const childTitle = getDirectTitle(child);
+    const nextCount = (titleCounts.get(childTitle) || 0) + 1;
+    titleCounts.set(childTitle, nextCount);
+    const childLabel =
+      titleTotals.get(childTitle) > 1
+        ? `${childTitle} ${nextCount}`
+        : childTitle;
+    childContainer.append(
+      createOperationsBranch(child, childLabel, depth + 1, key),
+    );
+  });
+  branch.append(heading, childContainer);
+  return branch;
+}
+
+function applyOperationsVisibility() {
+  const effectiveVisibility = new Map();
+  operationsLayers.forEach(({ element, key, parentKey }) => {
+    const visible = operationsLayerVisibility.get(key) !== false;
+    const parentVisible = parentKey
+      ? effectiveVisibility.get(parentKey) !== false
+      : true;
+    const effective = visible && parentVisible;
+    effectiveVisibility.set(key, effective);
+    element.style.display = effective ? "" : "none";
+  });
+  operationsPoiTree
+    .querySelectorAll("[data-operations-key]")
+    .forEach((button) => {
+      const visible =
+        operationsLayerVisibility.get(button.dataset.operationsKey) !== false;
+      button.classList.toggle("is-visible", visible);
+      button.setAttribute("aria-pressed", String(visible));
+      button.setAttribute(
+        "aria-label",
+        `${visible ? "Hide" : "Show"} ${button.dataset.operationsLabel}`,
+      );
+    });
+}
+
+function buildOperationsPoiTree(svg) {
+  operationsLayers = [];
+  operationsPoiTree.replaceChildren();
+  const root = svg.querySelector(`#ops_poi_${activeMap}`);
+  if (!root || !hasRenderableContent(root)) return;
+  const label = getDirectTitle(root) || "Operations Points of Interest";
+  operationsPoiTree.append(createOperationsBranch(root, label, 0));
+  applyOperationsVisibility();
+}
 
 function getMapPointAtReticle() {
   const svg = image.querySelector("svg");
@@ -198,8 +406,6 @@ layerControls.addEventListener(
 
 const uprightLayerNames = [
   "labels",
-  "headers",
-  "footers",
   "energy-ports",
   "ammo-boxes",
   "batteries",
@@ -207,7 +413,28 @@ const uprightLayerNames = [
   "medkits",
 ];
 
-const overlapAvoidanceLayerNames = ["labels", "headers", "footers"];
+const overlapAvoidanceLayerNames = ["labels"];
+
+const missionConsumableSelectors = [
+  '[id^="add_energy-ports_"]',
+  '[id^="add_ammo_"]',
+  '[id^="add_batteries_"]',
+  '[id^="add_grenade-cases_"]',
+  '[id^="add_medkits_"]',
+];
+
+function getUprightObjects(svg) {
+  const standardObjects = uprightLayerNames.flatMap((layerName) => {
+    const group = svg.querySelector(`#${layerName}_${activeMap}`);
+    return group ? [...group.querySelectorAll(":scope > g")] : [];
+  });
+  const missionObjects = missionConsumableSelectors.flatMap((selector) =>
+    [...svg.querySelectorAll(selector)].flatMap((group) => [
+      ...group.querySelectorAll(":scope > g"),
+    ]),
+  );
+  return [...new Set([...standardObjects, ...missionObjects])];
+}
 
 function syncOffsetsToMapSize() {
   const styles = getComputedStyle(image);
@@ -304,17 +531,13 @@ function centerMap() {
 function applyOrientation() {
   const svg = image.querySelector("svg");
   if (!svg) return;
-  uprightLayerNames.forEach((layerName) => {
-    const group = svg.querySelector(`#${layerName}_${activeMap}`);
-    if (!group) return;
-    group.querySelectorAll(":scope > g").forEach((object) => {
-      const baseTransform =
-        object.dataset.baseTransform ?? object.getAttribute("transform") ?? "";
-      object.dataset.baseTransform = baseTransform;
-      object.dataset.uprightOffsetX = "0";
-      object.dataset.uprightOffsetY = "0";
-      setUprightTransform(object);
-    });
+  getUprightObjects(svg).forEach((object) => {
+    const baseTransform =
+      object.dataset.baseTransform ?? object.getAttribute("transform") ?? "";
+    object.dataset.baseTransform = baseTransform;
+    object.dataset.uprightOffsetX = "0";
+    object.dataset.uprightOffsetY = "0";
+    setUprightTransform(object);
   });
   image.classList.toggle("is-landscape", orientation === "landscape");
 }
@@ -379,90 +602,35 @@ function avoidUprightOverlaps(svg) {
   });
 }
 
-function moveHeadersAndFootersAwayFromArchitecture(svg) {
-  const architecture = svg.querySelector(`#architecture_${activeMap}`);
-  if (!architecture || architecture.style.display === "none") return;
-  const architectureBox = architecture.getBoundingClientRect();
-  const drawingScale = getDrawingScreenScale(svg);
-  const candidates = ["headers", "footers"].flatMap((layerName) => {
-    const group = svg.querySelector(`#${layerName}_${activeMap}`);
-    return group ? [...group.querySelectorAll(":scope > g")] : [];
-  });
-
-  candidates.forEach((object) => {
-    for (let attempt = 0; attempt < 8; attempt += 1) {
-      const box = object.getBoundingClientRect();
-      const overlaps =
-        box.left < architectureBox.right &&
-        box.right > architectureBox.left &&
-        box.top < architectureBox.bottom &&
-        box.bottom > architectureBox.top;
-      if (!overlaps) break;
-
-      const escapeMoves = [
-        {
-          distance: Math.abs(architectureBox.left - box.right),
-          x: architectureBox.left - box.right - 12,
-          y: 0,
-        },
-        {
-          distance: Math.abs(architectureBox.right - box.left),
-          x: architectureBox.right - box.left + 12,
-          y: 0,
-        },
-        {
-          distance: Math.abs(architectureBox.top - box.bottom),
-          x: 0,
-          y: architectureBox.top - box.bottom - 12,
-        },
-        {
-          distance: Math.abs(architectureBox.bottom - box.top),
-          x: 0,
-          y: architectureBox.bottom - box.top + 12,
-        },
-      ];
-      const move = escapeMoves.sort(
-        (first, second) => first.distance - second.distance,
-      )[0];
-      if (orientation === "landscape") {
-        object.dataset.uprightOffsetX = String(
-          Number(object.dataset.uprightOffsetX ?? 0) + move.y / drawingScale.x,
-        );
-        object.dataset.uprightOffsetY = String(
-          Number(object.dataset.uprightOffsetY ?? 0) - move.x / drawingScale.y,
-        );
-      } else {
-        object.dataset.uprightOffsetX = String(
-          Number(object.dataset.uprightOffsetX ?? 0) + move.x / drawingScale.x,
-        );
-        object.dataset.uprightOffsetY = String(
-          Number(object.dataset.uprightOffsetY ?? 0) + move.y / drawingScale.y,
-        );
-      }
-      setUprightTransform(object);
-    }
-  });
-}
-
 function refreshUprightLayout() {
   renderMap();
   const svg = image.querySelector("svg");
   avoidUprightOverlaps(svg);
-  moveHeadersAndFootersAwayFromArchitecture(svg);
+}
+
+function hasLayerContent(layerName) {
+  const group = image.querySelector(`#${layerName}_${activeMap}`);
+  return Boolean(
+    group?.querySelector(
+      "path, rect, circle, ellipse, line, polyline, polygon, text, use, image",
+    ),
+  );
 }
 
 function updateLayerAvailability() {
-  document.querySelectorAll(".layer-toggle").forEach((button) => {
+  document.querySelectorAll(".layer-toggle[data-layer]").forEach((button) => {
     const layerName = button.dataset.layer;
-    button.hidden = !image.querySelector(`#${layerName}_${activeMap}`);
+    button.hidden = !hasLayerContent(layerName);
   });
 
-  document.querySelectorAll(".layer-group").forEach((group) => {
+  document.querySelectorAll(".layer-group[data-layer-group]").forEach((group) => {
     const layerName = group.dataset.layerGroup;
-    group.hidden = !image.querySelector(`#${layerName}_${activeMap}`);
+    group.hidden = !hasLayerContent(layerName);
   });
 
-  document.querySelectorAll(".layer-subgroup").forEach((subgroup) => {
+  document
+    .querySelectorAll(".layer-subgroup:not(.operations-branch)")
+    .forEach((subgroup) => {
     const children = subgroup.querySelector(":scope > .layer-children");
     const visibleChildren = children.querySelectorAll(
       ":scope > .layer-toggle:not([hidden])",
@@ -476,7 +644,7 @@ function updateLayerAvailability() {
       disclosure.setAttribute("aria-expanded", "true");
       children.hidden = false;
     }
-  });
+    });
 }
 
 async function loadMap(mapKey) {
@@ -489,6 +657,8 @@ async function loadMap(mapKey) {
   ).documentElement;
   svg.removeAttribute("width");
   svg.removeAttribute("height");
+  svg.querySelector(`#headers_${mapKey}`)?.remove();
+  svg.querySelector(`#footers_${mapKey}`)?.remove();
   svg.setAttribute("aria-label", `${map.title} megaship map`);
   svg.setAttribute("draggable", "false");
   const viewBox = svg.viewBox.baseVal;
@@ -499,6 +669,7 @@ async function loadMap(mapKey) {
   image.replaceChildren(svg);
   image.setAttribute("aria-label", `${map.title} megaship map`);
   activeMap = mapKey;
+  buildOperationsPoiTree(svg);
   updateLayerAvailability();
   applyLayerVisibility();
   applyOrientation();
@@ -535,7 +706,7 @@ document.querySelectorAll(".deck-option").forEach((button) => {
   });
 });
 
-document.querySelectorAll(".layer-toggle").forEach((button) => {
+document.querySelectorAll(".layer-toggle[data-layer]").forEach((button) => {
   button.addEventListener("click", () => {
     const layerName = button.dataset.layer;
     layerVisibility[layerName] = !layerVisibility[layerName];
@@ -558,11 +729,15 @@ document.querySelector("#show-all-layers").addEventListener("click", () => {
   layerNames.forEach((layerName) => {
     layerVisibility[layerName] = true;
   });
-  document.querySelectorAll(".layer-toggle").forEach((button) => {
+  document.querySelectorAll(".layer-toggle[data-layer]").forEach((button) => {
     button.classList.add("is-visible");
     button.setAttribute("aria-pressed", "true");
   });
+  operationsLayerVisibility.forEach((value, key) => {
+    operationsLayerVisibility.set(key, true);
+  });
   applyLayerVisibility();
+  applyOperationsVisibility();
 });
 
 document.querySelectorAll(".orientation-option").forEach((button) => {
@@ -600,9 +775,7 @@ const layerShortcuts = {
   b: "batteries",
   c: "consumables",
   e: "energy-ports",
-  f: "footers",
   g: "grenade-cases",
-  h: "headers",
   l: "labels",
   m: "medkits",
   t: "text",
