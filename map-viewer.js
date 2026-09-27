@@ -27,6 +27,64 @@ if (!window.EPI_CONFIG?.routes?.home) {
     .forEach((link) => link.remove());
 }
 
+const missionControls = document.querySelector("#mission-controls");
+const missionSelector = document.querySelector("#mission-selector");
+const sidebarStyleButtons = document.querySelectorAll(".sidebar-style-option");
+let simplifiedSidebar = localStorage.getItem("simplifiedSidebar") === "true";
+
+function updateSidebarStyleButtons() {
+  sidebarStyleButtons.forEach((button) => {
+    const selected =
+      (button.dataset.sidebarStyle === "simplified") === simplifiedSidebar;
+    button.classList.toggle("is-active", selected);
+    button.setAttribute("aria-pressed", String(selected));
+  });
+}
+
+function resetSidebarItemStates() {
+  localStorage.removeItem(layerStateStorageKey);
+  localStorage.removeItem(disclosureStorageKey);
+  Object.keys(layerVisibility).forEach(
+    (layerName) => (layerVisibility[layerName] = true),
+  );
+  operationsLayerVisibility.clear();
+  conditionalConsumableState.clear();
+  document.querySelectorAll(".layer-toggle[data-layer]").forEach((button) => {
+    button.classList.add("is-visible");
+    button.setAttribute("aria-pressed", "true");
+  });
+}
+
+sidebarStyleButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const next = button.dataset.sidebarStyle === "simplified";
+    if (next === simplifiedSidebar) return;
+    simplifiedSidebar = next;
+    localStorage.setItem("simplifiedSidebar", String(simplifiedSidebar));
+    resetSidebarItemStates();
+    updateSidebarStyleButtons();
+    applySimplifiedMode();
+  });
+});
+updateSidebarStyleButtons();
+
+let operationsMetadata = null;
+fetch("maps/megaships/operations-metadata.json")
+  .then((response) => (response.ok ? response.json() : null))
+  .then((metadata) => {
+    operationsMetadata = metadata;
+    if (!metadata && simplifiedSidebar) {
+      console.warn(
+        "Operations metadata unavailable; falling back to the full sidebar.",
+      );
+    }
+    applySimplifiedMode();
+  })
+  .catch(() => {
+    operationsMetadata = null;
+    applySimplifiedMode();
+  });
+
 const aboutDialog = document.querySelector("#about-dialog");
 document
   .querySelector("#open-about")
@@ -51,6 +109,8 @@ shortcutsDialog.addEventListener("click", (event) => {
 
 const layerNames = [
   "architecture",
+  "floors",
+  "elevated",
   "f0",
   "f1",
   "e1",
@@ -67,16 +127,22 @@ const layerNames = [
   "text",
   "labels",
 ];
-const layerChildren = {
-  architecture: ["f0", "f1", "e1", "f2", "e2", "f3", "e3"],
-  consumables: [
-    "energy-ports",
-    "ammo-boxes",
-    "batteries",
-    "grenade-cases",
-    "medkits",
-  ],
-  text: ["labels"],
+const layerParents = {
+  f0: "floors",
+  f1: "floors",
+  f2: "floors",
+  f3: "floors",
+  e1: "elevated",
+  e2: "elevated",
+  e3: "elevated",
+  floors: "architecture",
+  elevated: "architecture",
+  "energy-ports": "consumables",
+  "ammo-boxes": "consumables",
+  batteries: "consumables",
+  "grenade-cases": "consumables",
+  medkits: "consumables",
+  labels: "text",
 };
 
 const viewport = document.querySelector("#map-viewport");
@@ -107,6 +173,11 @@ let mapPointFrame;
 let pinnedMapPoint;
 let invertKeyboardPan = true;
 let operationsLayers = [];
+let selectedMission = null;
+const missionStorageKey = "selectedMission";
+let conditionalConsumableBindings = [];
+let conditionalToggles = [];
+const conditionalConsumableState = new Map();
 const operationsLayerVisibility = new Map();
 const layerVisibility = Object.fromEntries(
   layerNames.map((layerName) => [
@@ -114,6 +185,115 @@ const layerVisibility = Object.fromEntries(
     true,
   ]),
 );
+
+const layerStateStorageKey = "layerStates";
+
+function persistLayerStates() {
+  localStorage.setItem(
+    layerStateStorageKey,
+    JSON.stringify({
+      layers: layerVisibility,
+      operations: Object.fromEntries(operationsLayerVisibility),
+      conditional: Object.fromEntries(conditionalConsumableState),
+    }),
+  );
+}
+
+function restoreLayerStates() {
+  let stored;
+  try {
+    stored = JSON.parse(localStorage.getItem(layerStateStorageKey) || "null");
+  } catch {
+    return;
+  }
+  if (!stored || typeof stored !== "object") return;
+  layerNames.forEach((layerName) => {
+    if (typeof stored.layers?.[layerName] === "boolean") {
+      layerVisibility[layerName] = stored.layers[layerName];
+    }
+  });
+  Object.entries(stored.operations || {}).forEach(([key, value]) => {
+    operationsLayerVisibility.set(key, value === true);
+  });
+  Object.entries(stored.conditional || {}).forEach(([key, value]) => {
+    conditionalConsumableState.set(key, value === true);
+  });
+}
+
+restoreLayerStates();
+document.querySelectorAll(".layer-toggle[data-layer]").forEach((button) => {
+  const visible = layerVisibility[button.dataset.layer] !== false;
+  button.classList.toggle("is-visible", visible);
+  button.setAttribute("aria-pressed", String(visible));
+});
+
+const disclosureStorageKey = "disclosureStates";
+const disclosureDefaults = new Map();
+document.querySelectorAll(".layer-disclosure").forEach((button) => {
+  const controlsId = button.getAttribute("aria-controls");
+  if (controlsId) {
+    disclosureDefaults.set(
+      controlsId,
+      button.getAttribute("aria-expanded") === "true",
+    );
+  }
+});
+
+function persistDisclosureStates() {
+  let stored;
+  try {
+    stored = JSON.parse(localStorage.getItem(disclosureStorageKey) || "null");
+  } catch {
+    stored = null;
+  }
+  if (!stored || typeof stored !== "object") stored = {};
+  document.querySelectorAll(".layer-disclosure").forEach((button) => {
+    // Flattened single-child subgroups are force-expanded for display only;
+    // never let that transient state overwrite the persisted chevron state.
+    if (button.closest(".layer-subgroup.has-single-child")) return;
+    const controlsId = button.getAttribute("aria-controls");
+    if (controlsId) {
+      stored[controlsId] = button.getAttribute("aria-expanded") === "true";
+    }
+  });
+  localStorage.setItem(disclosureStorageKey, JSON.stringify(stored));
+}
+
+function getDisclosureDefaultExpanded(button) {
+  if (button.dataset.defaultExpanded !== undefined) {
+    return button.dataset.defaultExpanded === "true";
+  }
+  const controlsId = button.getAttribute("aria-controls");
+  return disclosureDefaults.get(controlsId) ?? true;
+}
+
+function restoreDisclosureStates() {
+  let stored;
+  try {
+    stored = JSON.parse(localStorage.getItem(disclosureStorageKey) || "null");
+  } catch {
+    stored = null;
+  }
+  if (!stored || typeof stored !== "object") stored = {};
+  document.querySelectorAll(".layer-disclosure").forEach((button) => {
+    if (button.closest(".layer-subgroup.has-single-child")) return;
+    const controlsId = button.getAttribute("aria-controls");
+    if (!controlsId) return;
+    const storedExpanded = stored[controlsId];
+    const expanded =
+      typeof storedExpanded === "boolean"
+        ? storedExpanded
+        : simplifiedSidebar
+          ? false
+          : getDisclosureDefaultExpanded(button);
+    button.setAttribute("aria-expanded", String(expanded));
+    const children = document.querySelector(`#${controlsId}`);
+    if (children) children.hidden = !expanded;
+  });
+}
+
+restoreDisclosureStates();
+updateHierarchyInteractivity();
 
 const sidebarCollator = new Intl.Collator(undefined, {
   numeric: true,
@@ -180,7 +360,7 @@ function getOperationsChildren(group) {
 }
 
 function getOperationsSwatchColor(group, depth) {
-  if (depth === 0) return "#8a5cff";
+  if (depth === 0) return "#0066cc";
   if (depth < 3) return "#0066cc";
   if (group.id.startsWith("add_medkits_")) return "#00a933";
   if (group.id.startsWith("add_grenade-cases_")) return "#ff0000";
@@ -192,22 +372,46 @@ function getOperationsSwatchColor(group, depth) {
     ?.match(/(?:^|;)fill:(#[0-9a-f]{6})/i)?.[1] || "#0066cc";
 }
 
-function createOperationsToggle(group, label, depth, showLabel = true) {
-  const key = getOperationsStateKey(group.id, depth);
+function createOperationsToggle(
+  group,
+  label,
+  depth,
+  showLabel = true,
+  defaultVisible = true,
+) {
+  return createOperationsToggleForKey(
+    getOperationsStateKey(group.id, depth),
+    label,
+    depth,
+    showLabel,
+    defaultVisible,
+    getOperationsSwatchColor(group, depth),
+  );
+}
+
+function createOperationsToggleForKey(
+  key,
+  label,
+  depth,
+  showLabel,
+  defaultVisible,
+  swatchColor,
+) {
   if (!operationsLayerVisibility.has(key)) {
-    operationsLayerVisibility.set(key, depth !== 0);
+    operationsLayerVisibility.set(key, defaultVisible);
   }
   const button = document.createElement("button");
   button.className = "layer-toggle operations-layer-toggle";
   if (depth === 0) {
-    button.classList.add("layer-parent", "operations-poi-toggle");
+    button.classList.add("layer-parent");
+    button.style.setProperty("--tick-color", swatchColor);
   }
   button.type = "button";
   button.dataset.operationsKey = key;
   button.dataset.operationsLabel = label;
   const swatch = document.createElement("span");
   swatch.className = "layer-swatch operations-layer-swatch";
-  swatch.style.setProperty("--swatch-color", getOperationsSwatchColor(group, depth));
+  swatch.style.setProperty("--swatch-color", swatchColor);
   button.append(swatch);
   if (showLabel) button.append(document.createTextNode(label));
   button.addEventListener("click", () => {
@@ -216,19 +420,26 @@ function createOperationsToggle(group, label, depth, showLabel = true) {
       !operationsLayerVisibility.get(key),
     );
     applyOperationsVisibility();
+    persistLayerStates();
+    updateAllButton();
   });
   return button;
 }
 
-function createOperationsDisclosure(label, controlsId) {
+function createOperationsDisclosure(
+  label,
+  controlsId,
+  defaultExpanded = !simplifiedSidebar,
+) {
   const button = document.createElement("button");
   button.className = "layer-disclosure";
   button.type = "button";
-  button.setAttribute("aria-expanded", "true");
+  button.setAttribute("aria-expanded", String(defaultExpanded));
+  button.dataset.defaultExpanded = String(defaultExpanded);
   button.setAttribute("aria-controls", controlsId);
   const arrow = document.createElement("span");
   arrow.setAttribute("aria-hidden", "true");
-  arrow.textContent = "▼";
+  arrow.textContent = "▾";
   const text = document.createElement("span");
   text.textContent = label;
   button.append(arrow, text);
@@ -236,17 +447,24 @@ function createOperationsDisclosure(label, controlsId) {
     const expanded = button.getAttribute("aria-expanded") === "true";
     button.setAttribute("aria-expanded", String(!expanded));
     document.querySelector(`#${controlsId}`).hidden = expanded;
+    persistDisclosureStates();
   });
   return button;
 }
 
-function createOperationsBranch(group, label, depth, parentKey = null) {
+function createOperationsBranch(
+  group,
+  label,
+  depth,
+  parentKey = null,
+  defaultVisible = true,
+) {
   const key = getOperationsStateKey(group.id, depth);
   const children = getOperationsChildren(group);
   operationsLayers.push({ element: group, key, parentKey });
 
   if (children.length === 0) {
-    return createOperationsToggle(group, label, depth);
+    return createOperationsToggle(group, label, depth, true, defaultVisible);
   }
 
   const branch = document.createElement("div");
@@ -256,22 +474,28 @@ function createOperationsBranch(group, label, depth, parentKey = null) {
       : `layer-subgroup operations-branch operations-depth-${depth}`;
   const heading = document.createElement("div");
   heading.className = "layer-group-heading operations-branch-heading";
-  const controlsId = `${group.id}-controls`;
+  const controlsId = `${getOperationsStateKey(group.id, depth)}-controls`;
   heading.append(
     createOperationsDisclosure(label, controlsId),
-    createOperationsToggle(group, label, depth, false),
+    createOperationsToggle(group, label, depth, false, defaultVisible),
   );
   const childContainer = document.createElement("div");
   childContainer.className = "layer-children";
   childContainer.id = controlsId;
 
+  appendOperationsChildren(children, childContainer, depth + 1, key);
+  branch.append(heading, childContainer);
+  return branch;
+}
+
+function appendOperationsChildren(childGroups, container, depth, parentKey) {
   const titleTotals = new Map();
-  children.forEach((child) => {
+  childGroups.forEach((child) => {
     const childTitle = getDirectTitle(child);
     titleTotals.set(childTitle, (titleTotals.get(childTitle) || 0) + 1);
   });
   const titleCounts = new Map();
-  children.forEach((child) => {
+  childGroups.forEach((child) => {
     const childTitle = getDirectTitle(child);
     const nextCount = (titleCounts.get(childTitle) || 0) + 1;
     titleCounts.set(childTitle, nextCount);
@@ -279,10 +503,44 @@ function createOperationsBranch(group, label, depth, parentKey = null) {
       titleTotals.get(childTitle) > 1
         ? `${childTitle} ${nextCount}`
         : childTitle;
-    childContainer.append(
-      createOperationsBranch(child, childLabel, depth + 1, key),
+    container.append(
+      createOperationsBranch(child, childLabel, depth, parentKey),
     );
   });
+}
+
+// Sidebar branch for several same-named SVG groups (one per mission) whose
+// individual nodes are hidden: the tick controls all of them at once.
+function createMergedOperationsBranch(title, groups, depth, parentKey) {
+  const key = `merged_${title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+  groups.forEach((group) => {
+    operationsLayers.push({ element: group, key, parentKey });
+  });
+  const branch = document.createElement("div");
+  branch.className = `layer-subgroup operations-branch operations-depth-${depth}`;
+  const heading = document.createElement("div");
+  heading.className = "layer-group-heading operations-branch-heading";
+  const controlsId = `${key}-controls`;
+  heading.append(
+    createOperationsDisclosure(title, controlsId),
+    createOperationsToggleForKey(
+      key,
+      title,
+      depth,
+      false,
+      true,
+      getOperationsSwatchColor(groups[0], depth),
+    ),
+  );
+  const childContainer = document.createElement("div");
+  childContainer.className = "layer-children";
+  childContainer.id = controlsId;
+  appendOperationsChildren(
+    groups.flatMap((group) => getOperationsChildren(group)),
+    childContainer,
+    depth + 1,
+    key,
+  );
   branch.append(heading, childContainer);
   return branch;
 }
@@ -310,15 +568,211 @@ function applyOperationsVisibility() {
         `${visible ? "Hide" : "Show"} ${button.dataset.operationsLabel}`,
       );
     });
+  updateHierarchyInteractivity();
+}
+
+function isSimplifiedActive() {
+  return simplifiedSidebar && Boolean(operationsMetadata);
+}
+
+function getMissionBranch(svg) {
+  if (!isSimplifiedActive() || !selectedMission) return null;
+  const mission = operationsMetadata.missions[selectedMission];
+  if (!mission?.svgKey) return null;
+  const branch = svg.querySelector(`#op_${mission.svgKey}_${activeMap}`);
+  return branch && hasRenderableContent(branch) ? branch : null;
+}
+
+function bindConditionalConsumables(group) {
+  const children = getOperationsChildren(group);
+  const targets = children.length > 0 ? children : [group];
+  targets.forEach((child) => {
+    if (!hasRenderableContent(child)) return;
+    const layerName =
+      operationsMetadata.conditionalConsumables?.[getDirectTitle(child)];
+    if (layerName) {
+      conditionalConsumableBindings.push({ element: child, layerName });
+    } else {
+      appendConditionalConsumableToggle(child);
+    }
+  });
+}
+
+function appendConditionalConsumableToggle(group) {
+  const key = group.id;
+  if (!conditionalConsumableState.has(key)) {
+    conditionalConsumableState.set(key, true);
+  }
+  const label = getDirectTitle(group);
+  const button = document.createElement("button");
+  button.className = "layer-toggle operations-layer-toggle";
+  button.type = "button";
+  button.dataset.operationsKey = key;
+  button.dataset.operationsLabel = label;
+  const swatch = document.createElement("span");
+  swatch.className = "layer-swatch operations-layer-swatch";
+  swatch.style.setProperty(
+    "--swatch-color",
+    getOperationsSwatchColor(group, 3),
+  );
+  button.append(swatch, document.createTextNode(label));
+  button.addEventListener("click", () => {
+    conditionalConsumableState.set(key, !conditionalConsumableState.get(key));
+    applyConditionalConsumableVisibility();
+    persistLayerStates();
+    updateAllButton();
+  });
+  conditionalToggles.push(button);
+  document.querySelector("#consumable-layers").append(button);
+}
+
+function removeConditionalToggles() {
+  conditionalToggles.forEach((button) => button.remove());
+  conditionalToggles = [];
+}
+
+function applyConditionalConsumableVisibility() {
+  conditionalConsumableBindings.forEach(({ element, layerName }) => {
+    const own = layerName
+      ? layerVisibility[layerName] !== false
+      : conditionalConsumableState.get(element.id) !== false;
+    element.style.display =
+      own && layerVisibility.consumables !== false ? "" : "none";
+  });
+  conditionalToggles.forEach((button) => {
+    const visible =
+      conditionalConsumableState.get(button.dataset.operationsKey) !== false;
+    button.classList.toggle("is-visible", visible);
+    button.setAttribute("aria-pressed", String(visible));
+    button.setAttribute(
+      "aria-label",
+      `${visible ? "Hide" : "Show"} ${button.dataset.operationsLabel}`,
+    );
+  });
 }
 
 function buildOperationsPoiTree(svg) {
   operationsLayers = [];
+  conditionalConsumableBindings = [];
+  removeConditionalToggles();
   operationsPoiTree.replaceChildren();
-  const root = svg.querySelector(`#ops_poi_${activeMap}`);
-  if (!root || !hasRenderableContent(root)) return;
-  const label = getDirectTitle(root) || "Operations Points of Interest";
-  operationsPoiTree.append(createOperationsBranch(root, label, 0));
+  const poiRoot = svg.querySelector(`#ops_poi_${activeMap}`);
+  if (isSimplifiedActive()) {
+    const missionBranch = getMissionBranch(svg);
+    if (missionBranch) {
+      if (poiRoot) {
+        poiRoot.style.display = "";
+        getOperationsChildren(poiRoot).forEach((sibling) => {
+          if (sibling !== missionBranch) sibling.style.display = "none";
+        });
+      }
+      missionBranch.style.display = "";
+      const rootLabel =
+        (poiRoot && getDirectTitle(poiRoot)) ||
+        "Operational Points of Interest";
+      const rootKey = getOperationsStateKey(missionBranch.id, 0);
+      const rootBranch = document.createElement("div");
+      rootBranch.className = "layer-group operations-poi-group";
+      const heading = document.createElement("div");
+      heading.className = "layer-group-heading operations-branch-heading";
+      const controlsId = `${getOperationsStateKey(
+        (poiRoot || missionBranch).id,
+        0,
+      )}-controls`;
+      heading.append(
+        createOperationsDisclosure(rootLabel, controlsId),
+        createOperationsToggle(missionBranch, rootLabel, 0, false, true),
+      );
+      const childContainer = document.createElement("div");
+      childContainer.className = "layer-children";
+      childContainer.id = controlsId;
+      getOperationsChildren(missionBranch).forEach((child) => {
+        if (child.id.startsWith("add_consumables_")) {
+          child.style.display = "";
+          bindConditionalConsumables(child);
+        } else {
+          childContainer.append(
+            createMergedOperationsBranch(
+              getDirectTitle(child),
+              [child],
+              1,
+              rootKey,
+            ),
+          );
+        }
+      });
+      rootBranch.append(heading, childContainer);
+      operationsPoiTree.append(rootBranch);
+      applyOperationsVisibility();
+      return;
+    }
+    if (!poiRoot || !hasRenderableContent(poiRoot)) return;
+    buildSimplifiedNoMissionTree(poiRoot);
+    return;
+  }
+  // Original mode: the full hierarchy is shown as authored, including
+  // the mission branches.
+  if (!poiRoot || !hasRenderableContent(poiRoot)) return;
+  const label = getDirectTitle(poiRoot) || "Operations Points of Interest";
+  operationsPoiTree.append(createOperationsBranch(poiRoot, label, 0));
+  applyOperationsVisibility();
+}
+
+// Simplified mode with no mission selected: the sidebar behaves as if all
+// missions were merged into one. Mission names never appear; their children
+// are promoted under the POI root and grouped by name, and additional
+// consumables roll up into the static Consumables group by type.
+function buildSimplifiedNoMissionTree(poiRoot) {
+  const label = getDirectTitle(poiRoot) || "Operational Points of Interest";
+  const rootKey = getOperationsStateKey(poiRoot.id, 0);
+  const rootBranch = document.createElement("div");
+  rootBranch.className = "layer-group operations-poi-group";
+  const heading = document.createElement("div");
+  heading.className = "layer-group-heading operations-branch-heading";
+  const controlsId = `${rootKey}-controls`;
+  heading.append(
+    createOperationsDisclosure(label, controlsId),
+    createOperationsToggle(poiRoot, label, 0, false, true),
+  );
+  const childContainer = document.createElement("div");
+  childContainer.className = "layer-children";
+  childContainer.id = controlsId;
+
+  const promoted = new Map();
+  getOperationsChildren(poiRoot).forEach((missionGroup) => {
+    missionGroup.style.display = "";
+    if (!missionGroup.id.startsWith("op_")) {
+      childContainer.append(
+        createOperationsBranch(
+          missionGroup,
+          getDirectTitle(missionGroup),
+          1,
+          rootKey,
+          true,
+        ),
+      );
+      return;
+    }
+    getOperationsChildren(missionGroup).forEach((child) => {
+      if (child.id.startsWith("add_consumables_")) {
+        child.style.display = "";
+        bindConditionalConsumables(child);
+        return;
+      }
+      const title = getDirectTitle(child);
+      if (!promoted.has(title)) promoted.set(title, []);
+      promoted.get(title).push(child);
+    });
+  });
+  [...promoted.entries()]
+    .sort((first, second) => sidebarCollator.compare(first[0], second[0]))
+    .forEach(([title, groups]) => {
+      childContainer.append(
+        createMergedOperationsBranch(title, groups, 1, rootKey),
+      );
+    });
+  rootBranch.append(heading, childContainer);
+  operationsPoiTree.append(rootBranch);
   applyOperationsVisibility();
 }
 
@@ -453,18 +907,83 @@ function renderMap() {
   rememberMapPointAtReticle();
 }
 
+function isLayerEffectivelyVisible(layerName) {
+  if (layerVisibility[layerName] === false) return false;
+  const parentName = layerParents[layerName];
+  return parentName ? isLayerEffectivelyVisible(parentName) : true;
+}
+
 function applyLayerVisibility() {
   layerNames.forEach((layerName) => {
     const group = image.querySelector(`#${layerName}_${activeMap}`);
     if (group) {
-      const parentName = Object.keys(layerChildren).find((candidate) =>
-        layerChildren[candidate].includes(layerName),
-      );
-      const parentVisible = parentName ? layerVisibility[parentName] : true;
-      group.style.display =
-        layerVisibility[layerName] && parentVisible ? "" : "none";
+      group.style.display = isLayerEffectivelyVisible(layerName)
+        ? ""
+        : "none";
     }
   });
+  applyConditionalConsumableVisibility();
+  updateHierarchyInteractivity();
+}
+
+// Children of an inactive hierarchy tick keep their own tick state but
+// become muted and non-interactive, since toggling them has no effect
+// until their parent is active again.
+function updateHierarchyInteractivity() {
+  document.querySelectorAll(".layer-toggle[data-layer]").forEach((button) => {
+    let disabled = false;
+    let parentName = layerParents[button.dataset.layer];
+    while (parentName) {
+      if (layerVisibility[parentName] === false) {
+        disabled = true;
+        break;
+      }
+      parentName = layerParents[parentName];
+    }
+    button.disabled = disabled;
+  });
+  conditionalToggles.forEach((button) => {
+    button.disabled = layerVisibility.consumables === false;
+  });
+  document
+    .querySelectorAll(".layer-toggle[data-operations-key]")
+    .forEach((button) => {
+      if (conditionalToggles.includes(button)) return;
+      let disabled = false;
+      let branch = button.closest(
+        ".operations-branch, .operations-poi-group",
+      );
+      // A branch's own tick must not be disabled by its own state —
+      // only by the state of its ancestors.
+      if (
+        branch &&
+        branch.querySelector(":scope > .layer-group-heading > .layer-toggle") ===
+          button
+      ) {
+        branch = branch.parentElement?.closest(
+          ".operations-branch, .operations-poi-group",
+        );
+      }
+      while (branch) {
+        const parentToggle = branch.querySelector(
+          ":scope > .layer-group-heading > .layer-toggle",
+        );
+        const parentKey = parentToggle?.dataset.operationsKey;
+        const parentActive = parentKey
+          ? conditionalConsumableState.has(parentKey)
+            ? conditionalConsumableState.get(parentKey) !== false
+            : operationsLayerVisibility.get(parentKey) !== false
+          : true;
+        if (!parentActive) {
+          disabled = true;
+          break;
+        }
+        branch = branch.parentElement?.closest(
+          ".operations-branch, .operations-poi-group",
+        );
+      }
+      button.disabled = disabled;
+    });
 }
 
 function getViewBoxCenter(svg) {
@@ -609,12 +1128,43 @@ function refreshUprightLayout() {
 }
 
 function hasLayerContent(layerName) {
+  if (layerName === "floors" || layerName === "elevated") {
+    return layerNames.some(
+      (childName) =>
+        layerParents[childName] === layerName && hasLayerContent(childName),
+    );
+  }
   const group = image.querySelector(`#${layerName}_${activeMap}`);
   return Boolean(
     group?.querySelector(
       "path, rect, circle, ellipse, line, polyline, polygon, text, use, image",
     ),
   );
+}
+
+function applyLabelsPlacement() {
+  const textGroup = document.querySelector('.layer-group[data-layer-group="text"]');
+  const labelsButton = document.querySelector(
+    ".layer-toggle[data-layer='labels']",
+  );
+  if (!textGroup || !labelsButton) return;
+  const swatch = labelsButton.querySelector(".labels-swatch");
+  if (isSimplifiedActive()) {
+    textGroup.hidden = true;
+    textGroup.before(labelsButton);
+    let tick = labelsButton.querySelector(".labels-tick");
+    if (!tick) {
+      tick = document.createElement("span");
+      tick.className = "labels-tick";
+      labelsButton.append(tick);
+    }
+    if (swatch) tick.append(swatch);
+  } else {
+    textGroup.hidden = false;
+    document.querySelector("#text-layers").append(labelsButton);
+    labelsButton.querySelector(".labels-tick")?.remove();
+    if (swatch) labelsButton.prepend(swatch);
+  }
 }
 
 function updateLayerAvailability() {
@@ -629,22 +1179,32 @@ function updateLayerAvailability() {
   });
 
   document
-    .querySelectorAll(".layer-subgroup:not(.operations-branch)")
+    .querySelectorAll(".layer-subgroup")
     .forEach((subgroup) => {
     const children = subgroup.querySelector(":scope > .layer-children");
-    const visibleChildren = children.querySelectorAll(
-      ":scope > .layer-toggle:not([hidden])",
+    if (!children) return;
+    const visibleChildren = [...children.children].filter(
+      (el) =>
+        !el.hidden &&
+        (el.classList.contains("layer-toggle") ||
+          el.classList.contains("layer-subgroup") ||
+          el.classList.contains("layer-group")),
     );
     const hasSingleChild = visibleChildren.length === 1;
     subgroup.hidden = visibleChildren.length === 0;
     subgroup.classList.toggle("has-single-child", hasSingleChild);
 
     if (hasSingleChild) {
-      const disclosure = subgroup.querySelector(":scope > .layer-disclosure");
-      disclosure.setAttribute("aria-expanded", "true");
+      const disclosure = subgroup.querySelector(
+        ":scope > .layer-group-heading > .layer-disclosure",
+      );
+      disclosure?.setAttribute("aria-expanded", "true");
       children.hidden = false;
     }
     });
+  applyLabelsPlacement();
+  restoreDisclosureStates();
+  updateAllButton();
 }
 
 async function loadMap(mapKey) {
@@ -706,6 +1266,121 @@ document.querySelectorAll(".deck-option").forEach((button) => {
   });
 });
 
+function updateMissionButtons() {
+  missionSelector.querySelectorAll(".mission-option").forEach((button) => {
+    const selected = button.dataset.mission === selectedMission;
+    button.classList.toggle("is-active", selected);
+    button.setAttribute("aria-pressed", String(selected));
+  });
+}
+
+function buildMissionButtons() {
+  missionSelector.replaceChildren();
+  if (!operationsMetadata?.missions) return;
+  Object.entries(operationsMetadata.missions).forEach(([key, mission]) => {
+    const button = document.createElement("button");
+    button.className = "mission-option";
+    button.type = "button";
+    button.dataset.mission = key;
+    button.setAttribute("aria-pressed", "false");
+    button.textContent = mission.title;
+    button.addEventListener("click", () => selectMission(key));
+    missionSelector.append(button);
+  });
+  updateMissionButtons();
+}
+
+function updateDeckAvailability() {
+  const mission =
+    isSimplifiedActive() && selectedMission
+      ? operationsMetadata.missions[selectedMission]
+      : null;
+  document.querySelectorAll(".deck-option").forEach((button) => {
+    button.hidden =
+      Boolean(mission) && !mission.decks.includes(button.dataset.map);
+  });
+  document
+    .querySelectorAll(".deck-option:not([hidden])")
+    .forEach((button, index) => {
+      button.setAttribute("aria-keyshortcuts", String(index + 1));
+    });
+  document.querySelectorAll(".deck-option[hidden]").forEach((button) => {
+    button.removeAttribute("aria-keyshortcuts");
+  });
+}
+
+function rebuildOperationsTree() {
+  const svg = image.querySelector("svg");
+  if (!svg) return;
+  buildOperationsPoiTree(svg);
+  updateLayerAvailability();
+  applyLayerVisibility();
+}
+
+function persistSelectedMission() {
+  if (selectedMission) {
+    localStorage.setItem(missionStorageKey, selectedMission);
+  } else {
+    localStorage.removeItem(missionStorageKey);
+  }
+}
+
+function selectMission(key) {
+  selectedMission = selectedMission === key ? null : key;
+  persistSelectedMission();
+  updateMissionButtons();
+  updateDeckAvailability();
+  if (selectedMission) {
+    const mission = operationsMetadata.missions[selectedMission];
+    const targetDeck =
+      mission.entryDeck && mission.decks.includes(mission.entryDeck)
+        ? mission.entryDeck
+        : (operationsMetadata.deckOrder || []).find((deckKey) =>
+            mission.decks.includes(deckKey),
+          );
+    if (targetDeck && targetDeck !== activeMap) {
+      document.querySelector(`.deck-option[data-map="${targetDeck}"]`)?.click();
+      return;
+    }
+  }
+  rebuildOperationsTree();
+}
+
+function applySimplifiedMode() {
+  const active = isSimplifiedActive();
+  missionControls.hidden = !active;
+  if (active) {
+    buildMissionButtons();
+    const storedMission = localStorage.getItem(missionStorageKey);
+    if (storedMission && operationsMetadata?.missions?.[storedMission]) {
+      selectedMission = storedMission;
+      updateMissionButtons();
+    }
+  } else {
+    selectedMission = null;
+    updateMissionButtons();
+  }
+  updateDeckAvailability();
+  if (active && selectedMission) {
+    const mission = operationsMetadata.missions[selectedMission];
+    if (!mission.decks.includes(activeMap)) {
+      const targetDeck =
+        mission.entryDeck && mission.decks.includes(mission.entryDeck)
+          ? mission.entryDeck
+          : (operationsMetadata.deckOrder || []).find((deckKey) =>
+              mission.decks.includes(deckKey),
+            );
+      if (targetDeck && targetDeck !== activeMap) {
+        document
+          .querySelector(`.deck-option[data-map="${targetDeck}"]`)
+          ?.click();
+        return;
+      }
+    }
+  }
+  rebuildOperationsTree();
+}
+
 document.querySelectorAll(".layer-toggle[data-layer]").forEach((button) => {
   button.addEventListener("click", () => {
     const layerName = button.dataset.layer;
@@ -713,6 +1388,8 @@ document.querySelectorAll(".layer-toggle[data-layer]").forEach((button) => {
     button.classList.toggle("is-visible", layerVisibility[layerName]);
     button.setAttribute("aria-pressed", String(layerVisibility[layerName]));
     applyLayerVisibility();
+    persistLayerStates();
+    updateAllButton();
   });
 });
 
@@ -722,23 +1399,54 @@ document.querySelectorAll(".layer-disclosure").forEach((button) => {
     button.setAttribute("aria-expanded", String(!expanded));
     document.querySelector(`#${button.getAttribute("aria-controls")}`).hidden =
       expanded;
+    persistDisclosureStates();
   });
 });
 
-document.querySelector("#show-all-layers").addEventListener("click", () => {
-  layerNames.forEach((layerName) => {
-    layerVisibility[layerName] = true;
+const allButton = document.querySelector("#show-all-layers");
+
+function getVisibleTickBoxes() {
+  return [...document.querySelectorAll(".layer-toggle")].filter((button) => {
+    if (button.hidden || button.closest("[hidden]")) return false;
+    return true;
   });
-  document.querySelectorAll(".layer-toggle[data-layer]").forEach((button) => {
-    button.classList.add("is-visible");
-    button.setAttribute("aria-pressed", "true");
-  });
-  operationsLayerVisibility.forEach((value, key) => {
-    operationsLayerVisibility.set(key, true);
-  });
-  applyLayerVisibility();
-  applyOperationsVisibility();
+}
+
+function isAllTicked() {
+  const buttons = getVisibleTickBoxes();
+  return (
+    buttons.length > 0 &&
+    buttons.every((button) => button.classList.contains("is-visible"))
+  );
+}
+
+function updateAllButton() {
+  const allTicked = isAllTicked();
+  allButton.classList.toggle("is-active", allTicked);
+  allButton.setAttribute("aria-pressed", String(allTicked));
+}
+
+allButton.addEventListener("click", () => {
+  if (isAllTicked()) {
+    const rootTicks = [...document.querySelectorAll(".layer-parent")].filter(
+      (button) => !button.closest("[hidden]"),
+    );
+    const labelsButton = document.querySelector(
+      '.layer-tree > .layer-toggle[data-layer="labels"]',
+    );
+    if (labelsButton) rootTicks.push(labelsButton);
+    rootTicks.forEach((button) => {
+      if (button.classList.contains("is-visible")) button.click();
+    });
+  } else {
+    getVisibleTickBoxes().forEach((button) => {
+      button.disabled = false;
+      if (!button.classList.contains("is-visible")) button.click();
+    });
+  }
+  updateAllButton();
 });
+updateAllButton();
 
 document.querySelectorAll(".orientation-option").forEach((button) => {
   button.addEventListener("click", () => {
@@ -844,7 +1552,9 @@ document.addEventListener("keydown", (event) => {
   } else if (!event.ctrlKey && event.shiftKey && floorShortcuts[event.code]) {
     handled = clickAvailableLayer(floorShortcuts[event.code]);
   } else if (!event.ctrlKey && !event.shiftKey && /^Digit[1-4]$/.test(event.code)) {
-    const deck = document.querySelectorAll(".deck-option")[Number(event.code.at(-1)) - 1];
+    const deck = document.querySelectorAll(".deck-option:not([hidden])")[
+      Number(event.code.at(-1)) - 1
+    ];
     if (deck) {
       deck.click();
       handled = true;

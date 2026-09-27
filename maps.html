@@ -52,6 +52,52 @@
             Viewer by <span class="credit-name">CMDR Indy Novascend</span><br />
             and <span class="credit-name">CMDR Jules Vector</span>
           </p>
+          <section class="sidebar-settings" aria-label="Sidebar settings">
+            <div
+              class="sidebar-style-controls"
+              role="group"
+              aria-label="Sidebar style"
+              title="Choose your preferred sidebar style"
+            >
+              <button
+                class="sidebar-style-option is-active"
+                type="button"
+                data-sidebar-style="original"
+                aria-pressed="true"
+                title="Choose your preferred sidebar style"
+              >
+                Original
+              </button>
+              <button
+                class="sidebar-style-option"
+                type="button"
+                data-sidebar-style="simplified"
+                aria-pressed="false"
+                title="Choose your preferred sidebar style"
+              >
+                Simplified
+              </button>
+            </div>
+          </section>
+          <section
+            class="mission-controls"
+            id="mission-controls"
+            aria-labelledby="mission-title"
+            hidden
+          >
+            <div class="layer-controls-heading">
+              <div>
+                <p class="eyebrow">Mission</p>
+                <h2 id="mission-title">Choose Mission</h2>
+              </div>
+            </div>
+            <div
+              class="mission-selector"
+              id="mission-selector"
+              role="group"
+              aria-label="Choose a mission"
+            ></div>
+          </section>
           <section class="layer-controls" aria-labelledby="layer-title">
             <div class="layer-controls-heading">
               <div>
@@ -86,14 +132,26 @@
                 </div>
                 <div class="layer-children" id="architecture-layers">
                   <div class="layer-subgroup">
-                    <button
-                      class="layer-disclosure"
-                      type="button"
-                      aria-expanded="true"
-                      aria-controls="floor-layers"
-                    >
-                      <span aria-hidden="true">&#9662;</span><span>Floors</span>
-                    </button>
+                    <div class="layer-group-heading">
+                      <button
+                        class="layer-disclosure"
+                        type="button"
+                        aria-expanded="true"
+                        aria-controls="floor-layers"
+                      >
+                        <span aria-hidden="true">&#9662;</span
+                        ><span>Floors</span>
+                      </button>
+                      <button
+                        class="layer-toggle is-visible"
+                        type="button"
+                        aria-label="Show Floors"
+                        aria-pressed="true"
+                        data-layer="floors"
+                      >
+                        <span class="layer-swatch architecture-swatch"></span>
+                      </button>
+                    </div>
                     <div class="layer-children" id="floor-layers">
                       <button
                         class="layer-toggle is-visible"
@@ -134,15 +192,26 @@
                     </div>
                   </div>
                   <div class="layer-subgroup">
-                    <button
-                      class="layer-disclosure"
-                      type="button"
-                      aria-expanded="true"
-                      aria-controls="elevated-layers"
-                    >
-                      <span aria-hidden="true">&#9662;</span
-                      ><span>Elevated</span>
-                    </button>
+                    <div class="layer-group-heading">
+                      <button
+                        class="layer-disclosure"
+                        type="button"
+                        aria-expanded="true"
+                        aria-controls="elevated-layers"
+                      >
+                        <span aria-hidden="true">&#9662;</span
+                        ><span>Elevated</span>
+                      </button>
+                      <button
+                        class="layer-toggle is-visible"
+                        type="button"
+                        aria-label="Show Elevated"
+                        aria-pressed="true"
+                        data-layer="elevated"
+                      >
+                        <span class="layer-swatch architecture-swatch"></span>
+                      </button>
+                    </div>
                     <div class="layer-children" id="elevated-layers">
                       <button
                         class="layer-toggle is-visible"
@@ -246,7 +315,7 @@
                   <button
                     class="layer-disclosure"
                     type="button"
-                    aria-expanded="false"
+                    aria-expanded="true"
                     aria-controls="text-layers"
                   >
                     <span aria-hidden="true">&#9662;</span><span>Text</span>
@@ -261,7 +330,7 @@
                     <span class="layer-swatch text-swatch"></span>
                   </button>
                 </div>
-                <div class="layer-children" id="text-layers" hidden>
+                <div class="layer-children" id="text-layers">
                   <button
                     class="layer-toggle is-visible"
                     type="button"
