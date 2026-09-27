@@ -824,13 +824,9 @@ a {
   flex: 1 1 auto;
   min-height: 0;
   overflow-y: auto;
-  padding: 0 8px;
-  scrollbar-color: rgba(118, 215, 255, 0.35) transparent;
+  padding: 0 12px 0 8px;
+  scrollbar-color: rgba(118, 215, 255, 0.12) transparent;
   scrollbar-width: thin;
-}
-
-.layer-controls.is-scrolling {
-  scrollbar-color: rgba(118, 215, 255, 0.72) transparent;
 }
 
 .layer-controls::-webkit-scrollbar {
@@ -850,12 +846,7 @@ a {
 .layer-controls::-webkit-scrollbar-thumb {
   border: 2px solid transparent;
   border-radius: 8px;
-  background: rgba(118, 215, 255, 0.35);
-  background-clip: padding-box;
-}
-
-.layer-controls.is-scrolling::-webkit-scrollbar-thumb {
-  background: rgba(118, 215, 255, 0.72);
+  background: rgba(118, 215, 255, 0.12);
   background-clip: padding-box;
 }
 

@@ -168,7 +168,6 @@ let dragStart;
 let pinchStart;
 let activeMap = "habitat";
 let orientation = "portrait";
-let scrollbarHideTimer;
 let mapPointFrame;
 let pinnedMapPoint;
 let invertKeyboardPan = true;
@@ -845,18 +844,6 @@ new ResizeObserver(() => {
 }).observe(viewport);
 
 image.addEventListener("transitionend", rememberMapPointAtReticle);
-
-layerControls.addEventListener(
-  "scroll",
-  () => {
-    layerControls.classList.add("is-scrolling");
-    window.clearTimeout(scrollbarHideTimer);
-    scrollbarHideTimer = window.setTimeout(() => {
-      layerControls.classList.remove("is-scrolling");
-    }, 500);
-  },
-  { passive: true },
-);
 
 const uprightLayerNames = [
   "labels",
