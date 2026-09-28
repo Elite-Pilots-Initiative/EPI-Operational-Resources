@@ -186,6 +186,7 @@ const layerVisibility = Object.fromEntries(
 );
 
 const layerStateStorageKey = "layerStates";
+let storedLayerStates = null;
 
 function persistLayerStates() {
   localStorage.setItem(
@@ -206,6 +207,7 @@ function restoreLayerStates() {
     return;
   }
   if (!stored || typeof stored !== "object") return;
+  storedLayerStates = stored;
   layerNames.forEach((layerName) => {
     if (typeof stored.layers?.[layerName] === "boolean") {
       layerVisibility[layerName] = stored.layers[layerName];
@@ -685,6 +687,7 @@ function buildOperationsPoiTree(svg) {
   conditionalConsumableBindings = [];
   removeConditionalToggles();
   operationsPoiTree.replaceChildren();
+  buildArchitectureLayers(svg);
   const poiRoot = svg.querySelector(`#ops_poi_${activeMap}`);
   if (isSimplifiedActive()) {
     const missionBranch = getMissionBranch(svg);
@@ -1161,6 +1164,62 @@ function hasLayerContent(layerName) {
   );
 }
 
+// Deck SVGs can carry titled, mission-tagged groups directly in their
+// architecture region (e.g. "Barricades (Biohazard Takedown)"). Surface
+// each as an Architecture row so it can be toggled like any other layer;
+// Mission Mode shows the label without the parenthetical suffix.
+let dynamicLayerNames = [];
+
+function buildArchitectureLayers(svg) {
+  dynamicLayerNames.forEach((layerName) => {
+    const index = layerNames.indexOf(layerName);
+    if (index >= 0) layerNames.splice(index, 1);
+    delete layerParents[layerName];
+    // layerVisibility keeps the live value so the tick state survives
+    // rebuilds and deck paths that do not contain the layer.
+  });
+  dynamicLayerNames = [];
+  document
+    .querySelectorAll(".layer-toggle[data-dynamic-layer]")
+    .forEach((button) => button.remove());
+  const architectureGroup = svg.querySelector(`#architecture_${activeMap}`);
+  const container = document.querySelector("#architecture-layers");
+  if (!architectureGroup || !container) return;
+  getOperationsChildren(architectureGroup).forEach((child) => {
+    const layerName = getOperationsStateKey(child.id, 0);
+    if (!layerName || layerNames.includes(layerName)) return;
+    dynamicLayerNames.push(layerName);
+    layerNames.push(layerName);
+    layerParents[layerName] = "architecture";
+    if (layerVisibility[layerName] === undefined) {
+      layerVisibility[layerName] =
+        storedLayerStates?.layers?.[layerName] !== false;
+    }
+    const visible = layerVisibility[layerName] !== false;
+    layerVisibility[layerName] = visible;
+    const label = getOperationsDisplayTitle(child);
+    const button = document.createElement("button");
+    button.className = `layer-toggle${visible ? " is-visible" : ""}`;
+    button.type = "button";
+    button.dataset.layer = layerName;
+    button.dataset.dynamicLayer = layerName;
+    button.setAttribute("aria-pressed", String(visible));
+    button.setAttribute("aria-label", `Show ${label}`);
+    const swatch = document.createElement("span");
+    swatch.className = "layer-swatch architecture-swatch";
+    button.append(swatch, document.createTextNode(label));
+    button.addEventListener("click", () => {
+      layerVisibility[layerName] = !layerVisibility[layerName];
+      button.classList.toggle("is-visible", layerVisibility[layerName]);
+      button.setAttribute("aria-pressed", String(layerVisibility[layerName]));
+      applyLayerVisibility();
+      persistLayerStates();
+      updateAllButton();
+    });
+    container.append(button);
+  });
+}
+
 function applyLabelsPlacement() {
   const textGroup = document.querySelector('.layer-group[data-layer-group="text"]');
   const labelsButton = document.querySelector(
@@ -1184,6 +1243,48 @@ function applyLabelsPlacement() {
     labelsButton.querySelector(".labels-tick")?.remove();
     if (swatch) labelsButton.prepend(swatch);
   }
+}
+
+// Sidebar rows read alphabetically at every level; numbered labels like
+// "Floor 2" stay in natural order within their own parents.
+function sidebarItemSortText(el) {
+  const disclosure = el.querySelector(
+    ":scope > .layer-group-heading > .layer-disclosure",
+  );
+  if (disclosure) {
+    return disclosure.textContent.replace(/[▾▸]/g, "").trim();
+  }
+  if (el.id === "operations-poi-tree") {
+    const poiDisclosure = el.querySelector(".layer-disclosure");
+    if (poiDisclosure) {
+      return poiDisclosure.textContent.replace(/[▾▸]/g, "").trim();
+    }
+  }
+  return (el.textContent || "").trim();
+}
+
+// Labels (and its Original-mode Text group) always sorts last.
+function isTerminalSidebarItem(el) {
+  return el.matches(
+    '.layer-toggle[data-layer="labels"], .layer-group[data-layer-group="text"]',
+  );
+}
+
+function alphabetizeLayerContainers() {
+  const containers = [
+    document.querySelector(".layer-tree"),
+    ...document.querySelectorAll(".layer-children, #consumable-layers"),
+  ].filter(Boolean);
+  containers.forEach((container) => {
+    const items = [...container.children];
+    const terminal = items.filter(isTerminalSidebarItem);
+    items
+      .filter((el) => !isTerminalSidebarItem(el))
+      .map((el) => ({ el, key: sidebarItemSortText(el) }))
+      .sort((first, second) => sidebarCollator.compare(first.key, second.key))
+      .forEach(({ el }) => container.append(el));
+    terminal.forEach((el) => container.append(el));
+  });
 }
 
 function updateLayerAvailability() {
@@ -1222,6 +1323,7 @@ function updateLayerAvailability() {
     }
     });
   applyLabelsPlacement();
+  alphabetizeLayerContainers();
   restoreDisclosureStates();
   updateAllButton();
 }
@@ -1296,7 +1398,11 @@ function updateMissionButtons() {
 function buildMissionButtons() {
   missionSelector.replaceChildren();
   if (!operationsMetadata?.missions) return;
-  Object.entries(operationsMetadata.missions).forEach(([key, mission]) => {
+  Object.entries(operationsMetadata.missions)
+    .sort((first, second) =>
+      sidebarCollator.compare(first[1].title, second[1].title),
+    )
+    .forEach(([key, mission]) => {
     const button = document.createElement("button");
     button.className = "mission-option";
     button.type = "button";

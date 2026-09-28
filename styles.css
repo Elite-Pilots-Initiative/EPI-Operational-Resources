@@ -709,6 +709,11 @@ a {
   border-bottom: 1px solid rgba(118, 215, 255, 0.12);
 }
 
+.sidebar-settings {
+  padding-top: 8px;
+  border-top: 1px solid rgba(118, 215, 255, 0.12);
+}
+
 .mission-controls {
   padding-left: 8px;
   padding-right: 8px;
@@ -1059,7 +1064,7 @@ a {
 }
 
 .layer-subgroup.has-single-child > .layer-children {
-  padding: 0 0 0 7px;
+  padding: 0;
 }
 
 .layer-children[hidden] {
@@ -1104,7 +1109,8 @@ a {
 
 .layer-tree > .layer-toggle[data-layer="labels"] {
   justify-content: space-between;
-  padding: 4px 0 4px 8px;
+  padding: 4px 0 4px 4px;
+  border-right: 0;
   color: var(--text);
   font-size: 0.8rem;
   font-weight: 700;
@@ -1178,6 +1184,7 @@ a {
 .operations-branch-heading {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px;
   align-items: center;
 }
 
