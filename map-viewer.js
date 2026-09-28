@@ -327,6 +327,22 @@ function getDirectTitle(group) {
   );
 }
 
+// SVG item titles may carry their owning mission in parentheses (e.g.
+// "Barricades (Biohazard Takedown)"); Mission Mode presents them without it.
+function getOperationsDisplayTitle(group) {
+  const title = getDirectTitle(group);
+  if (!title || !isSimplifiedActive()) return title;
+  for (const { title: missionTitle } of Object.values(
+    operationsMetadata?.missions ?? {},
+  )) {
+    const suffix = ` (${missionTitle})`;
+    if (title.length > suffix.length && title.endsWith(suffix)) {
+      return title.slice(0, title.length - suffix.length).trim();
+    }
+  }
+  return title;
+}
+
 function hasRenderableContent(group) {
   return Boolean(
     group?.querySelector(
@@ -351,8 +367,8 @@ function getOperationsChildren(group) {
     )
     .sort((first, second) => {
       const titleOrder = sidebarCollator.compare(
-        getDirectTitle(first),
-        getDirectTitle(second),
+        getOperationsDisplayTitle(first),
+        getOperationsDisplayTitle(second),
       );
       return titleOrder || sidebarCollator.compare(first.id, second.id);
     });
@@ -490,12 +506,12 @@ function createOperationsBranch(
 function appendOperationsChildren(childGroups, container, depth, parentKey) {
   const titleTotals = new Map();
   childGroups.forEach((child) => {
-    const childTitle = getDirectTitle(child);
+    const childTitle = getOperationsDisplayTitle(child);
     titleTotals.set(childTitle, (titleTotals.get(childTitle) || 0) + 1);
   });
   const titleCounts = new Map();
   childGroups.forEach((child) => {
-    const childTitle = getDirectTitle(child);
+    const childTitle = getOperationsDisplayTitle(child);
     const nextCount = (titleCounts.get(childTitle) || 0) + 1;
     titleCounts.set(childTitle, nextCount);
     const childLabel =
@@ -600,7 +616,9 @@ function bindConditionalConsumables(group) {
   targets.forEach((child) => {
     if (!hasRenderableContent(child)) return;
     const layerName =
-      operationsMetadata.conditionalConsumables?.[getDirectTitle(child)];
+      operationsMetadata.conditionalConsumables?.[
+        getOperationsDisplayTitle(child)
+      ];
     if (layerName) {
       conditionalConsumableBindings.push({ element: child, layerName });
     } else {
@@ -614,7 +632,7 @@ function appendConditionalConsumableToggle(group) {
   if (!conditionalConsumableState.has(key)) {
     conditionalConsumableState.set(key, true);
   }
-  const label = getDirectTitle(group);
+  const label = getOperationsDisplayTitle(group);
   const button = document.createElement("button");
   button.className = "layer-toggle operations-layer-toggle";
   button.type = "button";
@@ -679,7 +697,7 @@ function buildOperationsPoiTree(svg) {
       }
       missionBranch.style.display = "";
       const rootLabel =
-        (poiRoot && getDirectTitle(poiRoot)) ||
+        (poiRoot && getOperationsDisplayTitle(poiRoot)) ||
         "Operational Points of Interest";
       const rootKey = getOperationsStateKey(missionBranch.id, 0);
       const rootBranch = document.createElement("div");
@@ -704,7 +722,7 @@ function buildOperationsPoiTree(svg) {
         } else {
           childContainer.append(
             createMergedOperationsBranch(
-              getDirectTitle(child),
+              getOperationsDisplayTitle(child),
               [child],
               1,
               rootKey,
@@ -724,7 +742,8 @@ function buildOperationsPoiTree(svg) {
   // Original mode: the full hierarchy is shown as authored, including
   // the mission branches.
   if (!poiRoot || !hasRenderableContent(poiRoot)) return;
-  const label = getDirectTitle(poiRoot) || "Operations Points of Interest";
+  const label =
+    getOperationsDisplayTitle(poiRoot) || "Operations Points of Interest";
   operationsPoiTree.append(createOperationsBranch(poiRoot, label, 0));
   applyOperationsVisibility();
 }
@@ -734,7 +753,8 @@ function buildOperationsPoiTree(svg) {
 // are promoted under the POI root and grouped by name, and additional
 // consumables roll up into the static Consumables group by type.
 function buildSimplifiedNoMissionTree(poiRoot) {
-  const label = getDirectTitle(poiRoot) || "Operational Points of Interest";
+  const label =
+    getOperationsDisplayTitle(poiRoot) || "Operational Points of Interest";
   const rootKey = getOperationsStateKey(poiRoot.id, 0);
   const rootBranch = document.createElement("div");
   rootBranch.className = "layer-group operations-poi-group";
@@ -756,7 +776,7 @@ function buildSimplifiedNoMissionTree(poiRoot) {
       childContainer.append(
         createOperationsBranch(
           missionGroup,
-          getDirectTitle(missionGroup),
+          getOperationsDisplayTitle(missionGroup),
           1,
           rootKey,
           true,
@@ -770,7 +790,7 @@ function buildSimplifiedNoMissionTree(poiRoot) {
         bindConditionalConsumables(child);
         return;
       }
-      const title = getDirectTitle(child);
+      const title = getOperationsDisplayTitle(child);
       if (!promoted.has(title)) promoted.set(title, []);
       promoted.get(title).push(child);
     });
