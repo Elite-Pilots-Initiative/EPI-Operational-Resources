@@ -52,30 +52,33 @@
             Viewer by <span class="credit-name">CMDR Indy Novascend</span><br />
             and <span class="credit-name">CMDR Jules Vector</span>
           </p>
-          <section class="sidebar-settings" aria-label="Sidebar settings">
+          <section class="sidebar-settings" aria-label="Mission Mode settings">
+            <div class="layer-controls-heading">
+              <p class="eyebrow">Mission Mode</p>
+            </div>
             <div
               class="sidebar-style-controls"
               role="group"
-              aria-label="Sidebar style"
-              title="Choose your preferred sidebar style"
+              aria-label="Mission Mode"
+              title="Toggle Mission Mode"
             >
-              <button
-                class="sidebar-style-option is-active"
-                type="button"
-                data-sidebar-style="original"
-                aria-pressed="true"
-                title="Choose your preferred sidebar style"
-              >
-                Original
-              </button>
               <button
                 class="sidebar-style-option"
                 type="button"
-                data-sidebar-style="simplified"
+                data-sidebar-style="off"
                 aria-pressed="false"
-                title="Choose your preferred sidebar style"
+                title="Toggle Mission Mode"
               >
-                Simplified
+                Off
+              </button>
+              <button
+                class="sidebar-style-option is-active"
+                type="button"
+                data-sidebar-style="on"
+                aria-pressed="true"
+                title="Toggle Mission Mode"
+              >
+                On
               </button>
             </div>
           </section>

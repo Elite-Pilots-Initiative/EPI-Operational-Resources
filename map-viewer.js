@@ -30,12 +30,12 @@ if (!window.EPI_CONFIG?.routes?.home) {
 const missionControls = document.querySelector("#mission-controls");
 const missionSelector = document.querySelector("#mission-selector");
 const sidebarStyleButtons = document.querySelectorAll(".sidebar-style-option");
-let simplifiedSidebar = localStorage.getItem("simplifiedSidebar") === "true";
+let simplifiedSidebar = localStorage.getItem("simplifiedSidebar") !== "false";
 
 function updateSidebarStyleButtons() {
   sidebarStyleButtons.forEach((button) => {
     const selected =
-      (button.dataset.sidebarStyle === "simplified") === simplifiedSidebar;
+      (button.dataset.sidebarStyle === "on") === simplifiedSidebar;
     button.classList.toggle("is-active", selected);
     button.setAttribute("aria-pressed", String(selected));
   });
@@ -57,7 +57,7 @@ function resetSidebarItemStates() {
 
 sidebarStyleButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    const next = button.dataset.sidebarStyle === "simplified";
+    const next = button.dataset.sidebarStyle === "on";
     if (next === simplifiedSidebar) return;
     simplifiedSidebar = next;
     localStorage.setItem("simplifiedSidebar", String(simplifiedSidebar));
@@ -545,15 +545,27 @@ function createMergedOperationsBranch(title, groups, depth, parentKey) {
 }
 
 function applyOperationsVisibility() {
+  // Resolve each key's full ancestor chain rather than relying on parents
+  // appearing earlier in operationsLayers: manually-built roots (e.g. the
+  // Simplified POI root) never register their own SVG group, so a child
+  // must still see that its root tick is off.
+  const parentKeys = new Map();
+  operationsLayers.forEach(({ key, parentKey }) => {
+    if (!parentKeys.has(key)) parentKeys.set(key, parentKey);
+  });
   const effectiveVisibility = new Map();
-  operationsLayers.forEach(({ element, key, parentKey }) => {
-    const visible = operationsLayerVisibility.get(key) !== false;
-    const parentVisible = parentKey
-      ? effectiveVisibility.get(parentKey) !== false
-      : true;
-    const effective = visible && parentVisible;
+  const effectiveFor = (key, seen = new Set()) => {
+    if (effectiveVisibility.has(key)) return effectiveVisibility.get(key);
+    if (seen.has(key)) return true;
+    seen.add(key);
+    let effective = operationsLayerVisibility.get(key) !== false;
+    const parentKey = parentKeys.get(key);
+    if (effective && parentKey) effective = effectiveFor(parentKey, seen);
     effectiveVisibility.set(key, effective);
-    element.style.display = effective ? "" : "none";
+    return effective;
+  };
+  operationsLayers.forEach(({ element, key }) => {
+    element.style.display = effectiveFor(key) ? "" : "none";
   });
   operationsPoiTree
     .querySelectorAll("[data-operations-key]")
