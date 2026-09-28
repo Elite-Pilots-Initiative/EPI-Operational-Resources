@@ -5,7 +5,10 @@
       "title": "Biohazard Takedown",
       "svgKey": "biohazard_takedown",
       "decks": ["habitat", "command", "engineering"],
-      "entryDeck": "command"
+      "entryDeck": "command",
+      "consumables": {
+        "energy-ports": [[0,0], [105.0,120.5]]
+      }
     },
     "reclamation-point": {
       "title": "Reclamation Point",
