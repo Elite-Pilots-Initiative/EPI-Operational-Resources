@@ -863,7 +863,7 @@ a {
   margin-bottom: 12px;
 }
 
-.sidebar-style-controls {
+.mission-mode-controls {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -874,7 +874,7 @@ a {
   background: var(--map-surface-soft);
 }
 
-.sidebar-style-option {
+.mission-mode-option {
   flex: 1 1 0;
   min-height: 30px;
   padding: 0 9px;
@@ -887,9 +887,9 @@ a {
   font-size: 0.72rem;
 }
 
-.sidebar-style-option:hover,
-.sidebar-style-option:focus-visible,
-.sidebar-style-option.is-active {
+.mission-mode-option:hover,
+.mission-mode-option:focus-visible,
+.mission-mode-option.is-active {
   background: rgba(118, 215, 255, 0.13);
   color: var(--text);
 }

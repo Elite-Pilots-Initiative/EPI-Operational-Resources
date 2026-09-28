@@ -29,13 +29,19 @@ if (!window.EPI_CONFIG?.routes?.home) {
 
 const missionControls = document.querySelector("#mission-controls");
 const missionSelector = document.querySelector("#mission-selector");
-const sidebarStyleButtons = document.querySelectorAll(".sidebar-style-option");
-let simplifiedSidebar = localStorage.getItem("simplifiedSidebar") !== "false";
+const missionModeButtons = document.querySelectorAll(".mission-mode-option");
+const missionModeStorageKey = "missionModeEnabled";
+// Continue honoring the pre-Mission Mode preference name for existing users.
+const legacyMissionModeStorageKey = "simplifiedSidebar";
+const storedMissionMode =
+  localStorage.getItem(missionModeStorageKey) ??
+  localStorage.getItem(legacyMissionModeStorageKey);
+let missionModeEnabled = storedMissionMode !== "false";
 
-function updateSidebarStyleButtons() {
-  sidebarStyleButtons.forEach((button) => {
+function updateMissionModeButtons() {
+  missionModeButtons.forEach((button) => {
     const selected =
-      (button.dataset.sidebarStyle === "on") === simplifiedSidebar;
+      (button.dataset.missionMode === "on") === missionModeEnabled;
     button.classList.toggle("is-active", selected);
     button.setAttribute("aria-pressed", String(selected));
   });
@@ -55,34 +61,34 @@ function resetSidebarItemStates() {
   });
 }
 
-sidebarStyleButtons.forEach((button) => {
+missionModeButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    const next = button.dataset.sidebarStyle === "on";
-    if (next === simplifiedSidebar) return;
-    simplifiedSidebar = next;
-    localStorage.setItem("simplifiedSidebar", String(simplifiedSidebar));
+    const next = button.dataset.missionMode === "on";
+    if (next === missionModeEnabled) return;
+    missionModeEnabled = next;
+    localStorage.setItem(missionModeStorageKey, String(missionModeEnabled));
     resetSidebarItemStates();
-    updateSidebarStyleButtons();
-    applySimplifiedMode();
+    updateMissionModeButtons();
+    applyMissionMode();
   });
 });
-updateSidebarStyleButtons();
+updateMissionModeButtons();
 
 let operationsMetadata = null;
 fetch("maps/megaships/operations-metadata.json")
   .then((response) => (response.ok ? response.json() : null))
   .then((metadata) => {
     operationsMetadata = metadata;
-    if (!metadata && simplifiedSidebar) {
+    if (!metadata && missionModeEnabled) {
       console.warn(
         "Operations metadata unavailable; falling back to the full sidebar.",
       );
     }
-    applySimplifiedMode();
+    applyMissionMode();
   })
   .catch(() => {
     operationsMetadata = null;
-    applySimplifiedMode();
+    applyMissionMode();
   });
 
 const aboutDialog = document.querySelector("#about-dialog");
@@ -284,7 +290,7 @@ function restoreDisclosureStates() {
     const expanded =
       typeof storedExpanded === "boolean"
         ? storedExpanded
-        : simplifiedSidebar
+        : missionModeEnabled
           ? false
           : getDisclosureDefaultExpanded(button);
     button.setAttribute("aria-expanded", String(expanded));
@@ -301,26 +307,6 @@ const sidebarCollator = new Intl.Collator(undefined, {
   sensitivity: "base",
 });
 
-function sortSidebarChildren(containerSelector, childSelector, getLabel) {
-  const container = document.querySelector(containerSelector);
-  [...container.querySelectorAll(childSelector)]
-    .sort((first, second) =>
-      sidebarCollator.compare(getLabel(first), getLabel(second)),
-    )
-    .forEach((child) => container.append(child));
-}
-
-sortSidebarChildren(
-  "#architecture-layers",
-  ":scope > .layer-subgroup",
-  (group) => group.querySelector(".layer-disclosure span:last-child").textContent,
-);
-sortSidebarChildren(
-  "#consumable-layers",
-  ":scope > .layer-toggle",
-  (button) => button.textContent.trim(),
-);
-
 function getDirectTitle(group) {
   return (
     [...group.children]
@@ -333,7 +319,7 @@ function getDirectTitle(group) {
 // "Barricades (Biohazard Takedown)"); Mission Mode presents them without it.
 function getOperationsDisplayTitle(group) {
   const title = getDirectTitle(group);
-  if (!title || !isSimplifiedActive()) return title;
+  if (!title || !isMissionModeActive()) return title;
   for (const { title: missionTitle } of Object.values(
     operationsMetadata?.missions ?? {},
   )) {
@@ -446,7 +432,7 @@ function createOperationsToggleForKey(
 function createOperationsDisclosure(
   label,
   controlsId,
-  defaultExpanded = !simplifiedSidebar,
+  defaultExpanded = !missionModeEnabled,
 ) {
   const button = document.createElement("button");
   button.className = "layer-disclosure";
@@ -564,8 +550,8 @@ function createMergedOperationsBranch(title, groups, depth, parentKey) {
 
 function applyOperationsVisibility() {
   // Resolve each key's full ancestor chain rather than relying on parents
-  // appearing earlier in operationsLayers: manually-built roots (e.g. the
-  // Simplified POI root) never register their own SVG group, so a child
+  // appearing earlier in operationsLayers: manually-built roots (for example,
+  // the Mission Mode POI root) never register their own SVG group, so a child
   // must still see that its root tick is off.
   const parentKeys = new Map();
   operationsLayers.forEach(({ key, parentKey }) => {
@@ -600,12 +586,12 @@ function applyOperationsVisibility() {
   updateHierarchyInteractivity();
 }
 
-function isSimplifiedActive() {
-  return simplifiedSidebar && Boolean(operationsMetadata);
+function isMissionModeActive() {
+  return missionModeEnabled && Boolean(operationsMetadata);
 }
 
 function getMissionBranch(svg) {
-  if (!isSimplifiedActive() || !selectedMission) return null;
+  if (!isMissionModeActive() || !selectedMission) return null;
   const mission = operationsMetadata.missions[selectedMission];
   if (!mission?.svgKey) return null;
   const branch = svg.querySelector(`#op_${mission.svgKey}_${activeMap}`);
@@ -689,7 +675,7 @@ function buildOperationsPoiTree(svg) {
   operationsPoiTree.replaceChildren();
   buildArchitectureLayers(svg);
   const poiRoot = svg.querySelector(`#ops_poi_${activeMap}`);
-  if (isSimplifiedActive()) {
+  if (isMissionModeActive()) {
     const missionBranch = getMissionBranch(svg);
     if (missionBranch) {
       if (poiRoot) {
@@ -739,10 +725,10 @@ function buildOperationsPoiTree(svg) {
       return;
     }
     if (!poiRoot || !hasRenderableContent(poiRoot)) return;
-    buildSimplifiedNoMissionTree(poiRoot);
+    buildAllMissionsTree(poiRoot);
     return;
   }
-  // Original mode: the full hierarchy is shown as authored, including
+  // With Mission Mode off, show the authored hierarchy, including
   // the mission branches.
   if (!poiRoot || !hasRenderableContent(poiRoot)) return;
   const label =
@@ -751,11 +737,11 @@ function buildOperationsPoiTree(svg) {
   applyOperationsVisibility();
 }
 
-// Simplified mode with no mission selected: the sidebar behaves as if all
+// Mission Mode with no mission selected behaves as if all
 // missions were merged into one. Mission names never appear; their children
 // are promoted under the POI root and grouped by name, and additional
 // consumables roll up into the static Consumables group by type.
-function buildSimplifiedNoMissionTree(poiRoot) {
+function buildAllMissionsTree(poiRoot) {
   const label =
     getOperationsDisplayTitle(poiRoot) || "Operational Points of Interest";
   const rootKey = getOperationsStateKey(poiRoot.id, 0);
@@ -1227,7 +1213,7 @@ function applyLabelsPlacement() {
   );
   if (!textGroup || !labelsButton) return;
   const swatch = labelsButton.querySelector(".labels-swatch");
-  if (isSimplifiedActive()) {
+  if (isMissionModeActive()) {
     textGroup.hidden = true;
     textGroup.before(labelsButton);
     let tick = labelsButton.querySelector(".labels-tick");
@@ -1263,7 +1249,7 @@ function sidebarItemSortText(el) {
   return (el.textContent || "").trim();
 }
 
-// Labels (and its Original-mode Text group) always sorts last.
+// Labels, and the Text group shown when Mission Mode is off, always sort last.
 function isTerminalSidebarItem(el) {
   return el.matches(
     '.layer-toggle[data-layer="labels"], .layer-group[data-layer-group="text"]',
@@ -1417,7 +1403,7 @@ function buildMissionButtons() {
 
 function updateDeckAvailability() {
   const mission =
-    isSimplifiedActive() && selectedMission
+    isMissionModeActive() && selectedMission
       ? operationsMetadata.missions[selectedMission]
       : null;
   document.querySelectorAll(".deck-option").forEach((button) => {
@@ -1471,8 +1457,8 @@ function selectMission(key) {
   rebuildOperationsTree();
 }
 
-function applySimplifiedMode() {
-  const active = isSimplifiedActive();
+function applyMissionMode() {
+  const active = isMissionModeActive();
   missionControls.hidden = !active;
   if (active) {
     buildMissionButtons();
