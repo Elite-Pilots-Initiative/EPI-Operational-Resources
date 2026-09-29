@@ -1379,6 +1379,9 @@ function updateMissionButtons() {
     button.classList.toggle("is-active", selected);
     button.setAttribute("aria-pressed", String(selected));
   });
+  // An unchosen mission is the one call to action in the sidebar: pulse the
+  // section's orange under-glow until a mission is selected.
+  missionControls.classList.toggle("is-awaiting-mission", !selectedMission);
 }
 
 function buildMissionButtons() {

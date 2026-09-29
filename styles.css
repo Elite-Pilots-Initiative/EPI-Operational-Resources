@@ -702,21 +702,67 @@ a {
   padding: 24px 12px 24px 18px;
 }
 
+/* Each sidebar section sits in its own rounded container, inset to the
+   shared content column; the border matches the deck buttons' hover color. */
 .sidebar-settings,
 .mission-controls,
 .layer-controls {
-  padding-bottom: 8px;
-  border-bottom: 1px solid rgba(118, 215, 255, 0.12);
+  margin: 0 12px 0 8px;
+  border: 1px solid rgba(118, 215, 255, 0.55);
+  border-radius: 10px;
 }
 
 .sidebar-settings {
-  padding-top: 8px;
-  border-top: 1px solid rgba(118, 215, 255, 0.12);
+  padding: 8px 12px 12px 8px;
 }
 
 .mission-controls {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding: 8px 12px 12px 8px;
+}
+
+/* Match the perceived eyebrow-to-first-title gap to the mission titles'
+   own spacing: 7px box gap + 3px button padding = the 10px text gap the
+   titles have between each other (4px grid gap + 3px padding per side). */
+.mission-controls .layer-controls-heading {
+  margin-bottom: 7px;
+}
+
+.mission-controls .layer-controls-heading .eyebrow {
+  margin-bottom: 0;
+}
+
+/* An unselected mission is the sidebar's call to action: the container's
+   border turns orange and pulses over a slow under-glow until a mission
+   is chosen. The halo pools light under the section, and the small
+   downward shadow spills it out from beneath. */
+.mission-controls.is-awaiting-mission {
+  animation: mission-await-pulse 2.8s ease-in-out infinite;
+}
+
+@keyframes mission-await-pulse {
+  0%,
+  100% {
+    border-color: rgba(255, 134, 13, 0.4);
+    box-shadow:
+      0 0 18px -4px rgba(255, 134, 13, 0.2),
+      0 7px 20px -7px rgba(255, 134, 13, 0.3);
+  }
+  50% {
+    border-color: rgba(255, 134, 13, 0.85);
+    box-shadow:
+      0 0 24px -4px rgba(255, 134, 13, 0.36),
+      0 9px 26px -7px rgba(255, 134, 13, 0.52);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mission-controls.is-awaiting-mission {
+    animation: none;
+    border-color: rgba(255, 134, 13, 0.6);
+    box-shadow:
+      0 0 22px -4px rgba(255, 134, 13, 0.3),
+      0 9px 26px -7px rgba(255, 134, 13, 0.42);
+  }
 }
 
 .map-sidebar-content[hidden] {
@@ -829,7 +875,7 @@ a {
   flex: 1 1 auto;
   min-height: 0;
   overflow-y: auto;
-  padding: 0 12px 0 8px;
+  padding: 8px 12px 8px 8px;
   scrollbar-color: rgba(118, 215, 255, 0.12) transparent;
   scrollbar-width: thin;
 }
@@ -937,7 +983,7 @@ a {
 
 .layer-controls-heading .eyebrow {
   margin-bottom: 6px;
-  font-size: 0.66rem;
+  font-size: 1rem;
 }
 
 .layer-controls-heading h2 {
