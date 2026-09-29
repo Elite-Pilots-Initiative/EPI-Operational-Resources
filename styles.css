@@ -12,6 +12,10 @@
   --orange: #ff9b3d;
   --orange-soft: rgba(255, 155, 61, 0.18);
   --shadow: rgba(10, 16, 29, 0.8);
+  /* OPERATIONS MEGASHIP MAPS: the largest size that fits the sidebar
+     header on one line. Sidebar section titles sit 2pt below it. */
+  --sidebar-brand-size: 15.5px;
+  --sidebar-title-size: calc(var(--sidebar-brand-size) - 2pt);
 }
 
 * {
@@ -699,15 +703,15 @@ a {
   min-width: 0;
   min-height: 0;
   overflow: hidden;
-  padding: 24px 12px 24px 18px;
+  padding: 8px;
 }
 
-/* Each sidebar section sits in its own rounded container, inset to the
-   shared content column; the border matches the deck buttons' hover color. */
+/* Each sidebar section sits in its own rounded container spanning the
+   sidebar's 8px content inset; the border matches the deck buttons' hover
+   color, and the 8px flex gap separates the containers on all sides. */
 .sidebar-settings,
 .mission-controls,
 .layer-controls {
-  margin: 0 12px 0 8px;
   border: 1px solid rgba(118, 215, 255, 0.55);
   border-radius: 10px;
 }
@@ -816,7 +820,8 @@ a {
 .map-app-brand > div {
   gap: 9px;
   color: var(--text);
-  font-size: 0.9rem;
+  font-size: var(--sidebar-brand-size);
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -835,7 +840,7 @@ a {
 }
 
 .map-credits {
-  margin: 0 8px;
+  margin: 0;
   color: var(--muted);
   font-size: 0.76rem;
   line-height: 1.5;
@@ -983,12 +988,12 @@ a {
 
 .layer-controls-heading .eyebrow {
   margin-bottom: 6px;
-  font-size: 1rem;
+  font-size: var(--sidebar-title-size);
 }
 
 .layer-controls-heading h2 {
   margin: 0;
-  font-size: 1rem;
+  font-size: var(--sidebar-title-size);
 }
 
 .layer-reset {
@@ -1317,7 +1322,7 @@ a {
 }
 
 .map-sidebar-note {
-  margin: auto 8px 0;
+  margin: auto 0 0;
   color: var(--muted);
   font-size: 0.75rem;
   line-height: 1.7;
@@ -1333,7 +1338,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  margin: 4px 8px 0;
+  margin: 4px 0 0;
   padding: 10px 0;
   border: 0;
   border-top: 1px solid rgba(141, 171, 211, 0.12);
@@ -1893,7 +1898,7 @@ a {
 
   .map-sidebar-content {
     gap: 8px;
-    padding: 14px 12px;
+    padding: 8px;
   }
 
   .map-sidebar-note {
