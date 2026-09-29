@@ -735,6 +735,16 @@ a {
   margin-bottom: 0;
 }
 
+/* Match the MISSION MODE-to-toggle gap to the mission selector's
+   title-to-first-title gap (10px). */
+.sidebar-settings .layer-controls-heading {
+  margin-bottom: 10px;
+}
+
+.sidebar-settings .layer-controls-heading .eyebrow {
+  margin-bottom: 0;
+}
+
 /* An unselected mission is the sidebar's call to action: the container's
    border turns orange and pulses over a slow under-glow until a mission
    is chosen. The halo pools light under the section, and the small
@@ -830,6 +840,13 @@ a {
 .layer-controls-heading .eyebrow,
 #open-about {
   color: var(--orange);
+}
+
+/* The brand row vertically centers its title against the 32px logo; pull
+   the title up so its top gap matches the section containers' title gap. */
+.map-app-brand > div span {
+  position: relative;
+  top: -5px;
 }
 
 .map-app-brand .brand-mark {
@@ -989,6 +1006,17 @@ a {
 .layer-controls-heading .eyebrow {
   margin-bottom: 6px;
   font-size: var(--sidebar-title-size);
+}
+
+/* The layer heading row is just "MAP LAYERS" + the All button: center both
+   on the same line and drop the eyebrow's bottom margin so the alignment
+   is exact. */
+.layer-controls .layer-controls-heading {
+  align-items: center;
+}
+
+.layer-controls .layer-controls-heading .eyebrow {
+  margin-bottom: 0;
 }
 
 .layer-controls-heading h2 {
@@ -1338,8 +1366,8 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  margin: 4px 0 0;
-  padding: 10px 0;
+  margin: 2px 0 0;
+  padding: 5px 0;
   border: 0;
   border-top: 1px solid rgba(141, 171, 211, 0.12);
   background: transparent;
