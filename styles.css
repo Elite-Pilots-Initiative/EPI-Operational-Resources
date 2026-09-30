@@ -12,6 +12,10 @@
   --orange: #ff9b3d;
   --orange-soft: rgba(255, 155, 61, 0.18);
   --shadow: rgba(10, 16, 29, 0.8);
+  /* OPERATIONS MEGASHIP MAPS: the largest size that fits the sidebar
+     header on one line. Sidebar section titles sit 2pt below it. */
+  --sidebar-brand-size: 15.5px;
+  --sidebar-title-size: calc(var(--sidebar-brand-size) - 2pt);
 }
 
 * {
@@ -695,11 +699,84 @@ a {
   grid-row: 1;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 8px;
   min-width: 0;
   min-height: 0;
   overflow: hidden;
-  padding: 24px 12px 24px 18px;
+  padding: 8px;
+}
+
+/* Each sidebar section sits in its own rounded container spanning the
+   sidebar's 8px content inset; the border matches the deck buttons' hover
+   color, and the 8px flex gap separates the containers on all sides. */
+.sidebar-settings,
+.mission-controls,
+.layer-controls {
+  border: 1px solid rgba(118, 215, 255, 0.55);
+  border-radius: 10px;
+}
+
+.sidebar-settings {
+  padding: 8px 12px 12px 8px;
+}
+
+.mission-controls {
+  padding: 8px 12px 12px 8px;
+}
+
+/* Match the perceived eyebrow-to-first-title gap to the mission titles'
+   own spacing: 7px box gap + 3px button padding = the 10px text gap the
+   titles have between each other (4px grid gap + 3px padding per side). */
+.mission-controls .layer-controls-heading {
+  margin-bottom: 7px;
+}
+
+.mission-controls .layer-controls-heading .eyebrow {
+  margin-bottom: 0;
+}
+
+/* Match the MISSION MODE-to-toggle gap to the mission selector's
+   title-to-first-title gap (10px). */
+.sidebar-settings .layer-controls-heading {
+  margin-bottom: 10px;
+}
+
+.sidebar-settings .layer-controls-heading .eyebrow {
+  margin-bottom: 0;
+}
+
+/* An unselected mission is the sidebar's call to action: the container's
+   border turns orange and pulses over a slow under-glow until a mission
+   is chosen. The halo pools light under the section, and the small
+   downward shadow spills it out from beneath. */
+.mission-controls.is-awaiting-mission {
+  animation: mission-await-pulse 2.8s ease-in-out infinite;
+}
+
+@keyframes mission-await-pulse {
+  0%,
+  100% {
+    border-color: rgba(255, 134, 13, 0.4);
+    box-shadow:
+      0 0 18px -4px rgba(255, 134, 13, 0.2),
+      0 7px 20px -7px rgba(255, 134, 13, 0.3);
+  }
+  50% {
+    border-color: rgba(255, 134, 13, 0.85);
+    box-shadow:
+      0 0 24px -4px rgba(255, 134, 13, 0.36),
+      0 9px 26px -7px rgba(255, 134, 13, 0.52);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mission-controls.is-awaiting-mission {
+    animation: none;
+    border-color: rgba(255, 134, 13, 0.6);
+    box-shadow:
+      0 0 22px -4px rgba(255, 134, 13, 0.3),
+      0 9px 26px -7px rgba(255, 134, 13, 0.42);
+  }
 }
 
 .map-sidebar-content[hidden] {
@@ -753,7 +830,8 @@ a {
 .map-app-brand > div {
   gap: 9px;
   color: var(--text);
-  font-size: 0.9rem;
+  font-size: var(--sidebar-brand-size);
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -764,6 +842,13 @@ a {
   color: var(--orange);
 }
 
+/* The brand row vertically centers its title against the 32px logo; pull
+   the title up so its top gap matches the section containers' title gap. */
+.map-app-brand > div span {
+  position: relative;
+  top: -5px;
+}
+
 .map-app-brand .brand-mark {
   width: 32px;
   height: 32px;
@@ -772,7 +857,7 @@ a {
 }
 
 .map-credits {
-  margin: -18px 8px 0;
+  margin: 0;
   color: var(--muted);
   font-size: 0.76rem;
   line-height: 1.5;
@@ -812,13 +897,9 @@ a {
   flex: 1 1 auto;
   min-height: 0;
   overflow-y: auto;
-  padding: 0 8px;
-  scrollbar-color: transparent transparent;
+  padding: 8px 12px 8px 8px;
+  scrollbar-color: rgba(118, 215, 255, 0.12) transparent;
   scrollbar-width: thin;
-}
-
-.layer-controls.is-scrolling {
-  scrollbar-color: rgba(118, 215, 255, 0.72) transparent;
 }
 
 .layer-controls::-webkit-scrollbar {
@@ -838,12 +919,7 @@ a {
 .layer-controls::-webkit-scrollbar-thumb {
   border: 2px solid transparent;
   border-radius: 8px;
-  background: transparent;
-  background-clip: padding-box;
-}
-
-.layer-controls.is-scrolling::-webkit-scrollbar-thumb {
-  background: rgba(118, 215, 255, 0.72);
+  background: rgba(118, 215, 255, 0.12);
   background-clip: padding-box;
 }
 
@@ -855,22 +931,105 @@ a {
   margin-bottom: 12px;
 }
 
+.mission-mode-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--map-surface-soft);
+}
+
+.mission-mode-option {
+  flex: 1 1 0;
+  min-height: 30px;
+  padding: 0 9px;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.72rem;
+}
+
+.mission-mode-option:hover,
+.mission-mode-option:focus-visible,
+.mission-mode-option.is-active {
+  background: rgba(118, 215, 255, 0.13);
+  color: var(--text);
+}
+
+.mission-selector {
+  display: grid;
+  gap: 4px;
+}
+
+.mission-option {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 3px 10px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-align: left;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.mission-option:hover,
+.mission-option:focus-visible {
+  border-color: rgba(118, 215, 255, 0.55);
+  color: var(--text);
+}
+
+.mission-option.is-active {
+  border-color: var(--orange);
+  background: linear-gradient(
+    100deg,
+    rgba(255, 155, 61, 0.18),
+    var(--map-surface-soft)
+  );
+  color: var(--text);
+}
+
 .layer-controls-heading .eyebrow {
   margin-bottom: 6px;
-  font-size: 0.66rem;
+  font-size: var(--sidebar-title-size);
+}
+
+/* The layer heading row is just "MAP LAYERS" + the All button: center both
+   on the same line and drop the eyebrow's bottom margin so the alignment
+   is exact. */
+.layer-controls .layer-controls-heading {
+  align-items: center;
+}
+
+.layer-controls .layer-controls-heading .eyebrow {
+  margin-bottom: 0;
 }
 
 .layer-controls-heading h2 {
   margin: 0;
-  font-size: 1rem;
+  font-size: var(--sidebar-title-size);
 }
 
 .layer-reset {
   padding: 4px 7px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(208, 21, 225, 0.55);
   border-radius: 5px;
   background: transparent;
-  color: var(--muted);
+  color: #d015e1;
   cursor: pointer;
   font: inherit;
   font-size: 0.68rem;
@@ -878,7 +1037,13 @@ a {
 
 .layer-reset:hover,
 .layer-reset:focus-visible {
-  border-color: var(--cyan);
+  border-color: #d015e1;
+  color: var(--text);
+}
+
+.layer-reset.is-active {
+  border-color: #d015e1;
+  background: rgba(208, 21, 225, 0.2);
   color: var(--text);
 }
 
@@ -888,8 +1053,7 @@ a {
 }
 
 .layer-group {
-  border-bottom: 1px solid rgba(141, 171, 211, 0.08);
-  padding: 4px 0 7px;
+  padding: 0;
 }
 
 .layer-group-heading {
@@ -918,8 +1082,19 @@ a {
 .layer-disclosure span:first-child {
   width: 10px;
   color: var(--cyan);
-  font-size: 0.65rem;
+  font-size: 0;
   transition: transform 180ms ease;
+}
+
+.layer-disclosure span:first-child::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin: 0 auto;
+  border-left: 3.5px solid transparent;
+  border-right: 3.5px solid transparent;
+  border-top: 7px solid currentColor;
 }
 
 .layer-disclosure[aria-expanded="false"] span:first-child {
@@ -931,6 +1106,12 @@ a {
   color: var(--cyan);
 }
 
+.layer-group > .layer-group-heading > .layer-disclosure span:first-child::before {
+  border-left-width: 5px;
+  border-right-width: 5px;
+  border-top-width: 9px;
+}
+
 .layer-children {
   display: grid;
   gap: 2px;
@@ -938,11 +1119,10 @@ a {
 }
 
 .layer-subgroup {
-  border-top: 1px solid rgba(141, 171, 211, 0.06);
   padding: 3px 0;
 }
 
-.layer-subgroup > .layer-disclosure {
+.layer-subgroup > .layer-group-heading > .layer-disclosure {
   padding-left: 7px;
   color: var(--muted);
   font-size: 0.74rem;
@@ -958,12 +1138,12 @@ a {
   padding: 0;
 }
 
-.layer-subgroup.has-single-child > .layer-disclosure {
+.layer-subgroup.has-single-child > .layer-group-heading {
   display: none;
 }
 
 .layer-subgroup.has-single-child > .layer-children {
-  padding: 0 0 0 7px;
+  padding: 0;
 }
 
 .layer-children[hidden] {
@@ -1006,9 +1186,53 @@ a {
   color: var(--text);
 }
 
+.layer-tree > .layer-toggle[data-layer="labels"] {
+  justify-content: space-between;
+  padding: 4px 0 4px 4px;
+  border-right: 0;
+  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.layer-tree > .layer-toggle[data-layer="labels"]:not(.is-visible) {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.labels-tick {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  padding: 7px 8px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+}
+
+.layer-tree > .layer-toggle[data-layer="labels"].is-visible .labels-tick {
+  border-color: #ff860d;
+  background: rgba(255, 134, 13, 0.2);
+}
+
+.layer-tree
+  > .layer-toggle[data-layer="labels"]:not(.is-visible)
+  .labels-tick
+  .layer-swatch {
+  border: 1px solid #ff860d;
+  background: transparent;
+  box-shadow: none;
+}
+
 .layer-toggle:not(.is-visible) {
   opacity: 0.45;
   text-decoration: line-through;
+}
+
+.layer-toggle:disabled {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.45;
 }
 
 .layer-swatch {
@@ -1024,8 +1248,8 @@ a {
   background: var(--cyan);
 }
 .consumables-swatch {
-  color: #ff9b3d;
-  background: #ff9b3d;
+  color: #8a5cff;
+  background: #8a5cff;
 }
 .operations-layer-swatch {
   color: var(--swatch-color);
@@ -1033,13 +1257,13 @@ a {
 }
 
 .operations-branch {
-  border-top: 1px solid rgba(200, 200, 200, 0.08);
   padding: 3px 0;
 }
 
 .operations-branch-heading {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px;
   align-items: center;
 }
 
@@ -1051,25 +1275,50 @@ a {
   font-weight: 600;
 }
 
+.operations-poi-group > .operations-branch-heading > .layer-disclosure {
+  padding-left: 4px;
+  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
 .operations-depth-2 > .operations-branch-heading > .layer-disclosure {
   font-size: 0.72rem;
   font-weight: 500;
 }
 
-.operations-poi-toggle.is-visible {
-  border-color: #8a5cff;
-  background: rgba(138, 92, 255, 0.2);
+.operations-branch-heading > .layer-toggle,
+.layer-subgroup > .layer-group-heading > .layer-toggle {
+  width: 28px;
+  justify-content: center;
 }
 
-.operations-poi-toggle:not(.is-visible) {
+.layer-parent.is-visible {
+  border-color: var(--tick-color, transparent);
+  background: color-mix(in srgb, var(--tick-color, transparent) 20%, transparent);
+}
+
+.layer-parent:not(.is-visible) {
   opacity: 1;
   text-decoration: none;
 }
 
-.operations-poi-toggle:not(.is-visible) .operations-layer-swatch {
-  border: 1px solid #8a5cff;
+.layer-parent:not(.is-visible) .layer-swatch {
+  border: 1px solid var(--tick-color, transparent);
   background: transparent;
   box-shadow: none;
+}
+
+.layer-group[data-layer-group="architecture"] .layer-parent {
+  --tick-color: var(--cyan);
+}
+
+.layer-group[data-layer-group="consumables"] .layer-parent {
+  --tick-color: #8a5cff;
+}
+
+.layer-group[data-layer-group="text"] .layer-parent {
+  --tick-color: #ff860d;
 }
 .energy-swatch {
   color: #ffff00;
@@ -1092,16 +1341,16 @@ a {
   background: #00a933;
 }
 .text-swatch {
-  color: #ebf2ff;
-  background: #ebf2ff;
+  color: #ff860d;
+  background: #ff860d;
 }
 .labels-swatch {
-  color: #76d7ff;
-  background: #76d7ff;
+  color: #ff860d;
+  background: #ff860d;
 }
 
 .map-sidebar-note {
-  margin: auto 8px 0;
+  margin: auto 0 0;
   color: var(--muted);
   font-size: 0.75rem;
   line-height: 1.7;
@@ -1117,8 +1366,8 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  margin: 4px 8px 0;
-  padding: 10px 0;
+  margin: 2px 0 0;
+  padding: 5px 0;
   border: 0;
   border-top: 1px solid rgba(141, 171, 211, 0.12);
   background: transparent;
@@ -1386,6 +1635,10 @@ a {
 .deck-option:focus-visible {
   border-color: rgba(118, 215, 255, 0.55);
   color: var(--text);
+}
+
+.deck-option[hidden] {
+  display: none;
 }
 
 .deck-option.is-active {
@@ -1672,8 +1925,8 @@ a {
   }
 
   .map-sidebar-content {
-    gap: 16px;
-    padding: 14px 12px;
+    gap: 8px;
+    padding: 8px;
   }
 
   .map-sidebar-note {

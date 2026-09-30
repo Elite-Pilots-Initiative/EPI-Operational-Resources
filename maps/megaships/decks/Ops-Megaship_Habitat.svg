@@ -22297,7 +22297,100 @@
    id="path2120-1"
    style="stroke-width:26.4583;stroke-dasharray:none" />
         </g>
-       </g>
+       </g><g
+   id="barricades_biohazard_takedown_habitat"
+   transform="matrix(100,0,0,100,-85919.999,0)"><title
+     id="title101">Barricades (Biohazard Takedown)</title><g
+     class="com.sun.star.drawing.CustomShape"
+     id="g1115"
+     style="display:inline"
+     transform="matrix(0.00996329,0,0,0.01106728,1088.8742,-16.835159)">
+        <g
+   id="g1114">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="8888"
+   y="40649"
+   width="320"
+   height="955"
+   id="rect69"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="#ff860d"
+   stroke="none"
+   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
+   id="path1113"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="none"
+   stroke="#ff860d"
+   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
+   id="path1114"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+        </g>
+       </g><g
+     class="com.sun.star.drawing.CustomShape"
+     id="g1137"
+     style="display:inline"
+     transform="matrix(0.00996329,0,0,0.01106728,1088.8742,-105.52135)">
+        <g
+   id="g1136">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="8888"
+   y="40649"
+   width="320"
+   height="955"
+   id="rect1131"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="#ff860d"
+   stroke="none"
+   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
+   id="path1131"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="none"
+   stroke="#ff860d"
+   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
+   id="path1133"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+        </g>
+       </g><g
+     class="com.sun.star.drawing.CustomShape"
+     id="g1139"
+     style="display:inline"
+     transform="matrix(0.00996329,0,0,0.01106728,868.328,-233.24386)">
+        <g
+   id="g1138">
+         <rect
+   class="BoundingBox"
+   stroke="none"
+   fill="none"
+   x="8888"
+   y="40649"
+   width="320"
+   height="955"
+   id="rect1137"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="#ff860d"
+   stroke="none"
+   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
+   id="path1137"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+         <path
+   fill="none"
+   stroke="#ff860d"
+   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
+   id="path1138"
+   style="stroke-width:26.4583;stroke-dasharray:none" />
+        </g>
+       </g></g>
       </g>
       <g
    class="Group"
@@ -22327,7 +22420,7 @@
      class="TextShape"
      id="g2204-1"
      style="display:inline"
-     transform="translate(85919.999)">
+     transform="translate(84755.828)">
         <g
    id="id406-3">
          <rect
@@ -22733,7 +22826,7 @@
      class="TextShape"
      id="g2159-3"
      style="display:inline"
-     transform="translate(85919.999)">
+     transform="translate(85919.999,582.08336)">
         <g
    id="id400-1">
          <rect
@@ -22888,7 +22981,7 @@
      class="TextShape"
      id="g2176-8"
      style="display:inline"
-     transform="translate(85919.999)">
+     transform="translate(85602.497,2804.5845)">
         <g
    id="id402-0">
          <rect
@@ -23032,7 +23125,7 @@
      class="TextShape"
      id="g2190-8"
      style="display:inline"
-     transform="translate(85919.999)">
+     transform="translate(85919.999,2963.3346)">
         <g
    id="id404-6">
          <rect
@@ -23104,7 +23197,7 @@
      class="TextShape"
      id="g2197-3"
      style="display:inline"
-     transform="translate(85919.999)">
+     transform="translate(86343.335,394.25046)">
         <g
    id="id405-1">
          <rect
@@ -27591,99 +27684,7 @@
            id="path63"
            style="fill:#0066cc;fill-opacity:1" /></g></g><g
        id="nav_biohazard_takedown_habitat"><title
-         id="title92">Navigation</title><g
-         id="barricades_biohazard_takedown_habitat"><title
-           id="title101">Barricades</title><g
-           class="com.sun.star.drawing.CustomShape"
-           id="g1115"
-           style="display:inline"
-           transform="matrix(0.00996329,0,0,0.01106728,1088.8742,-16.835159)">
-        <g
-   id="g1114">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="8888"
-   y="40649"
-   width="320"
-   height="955"
-   id="rect69"
-   style="stroke-width:26.4583;stroke-dasharray:none" />
-         <path
-   fill="#ff860d"
-   stroke="none"
-   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
-   id="path1113"
-   style="stroke-width:26.4583;stroke-dasharray:none" />
-         <path
-   fill="none"
-   stroke="#ff860d"
-   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
-   id="path1114"
-   style="stroke-width:26.4583;stroke-dasharray:none" />
-        </g>
-       </g><g
-           class="com.sun.star.drawing.CustomShape"
-           id="g1137"
-           style="display:inline"
-           transform="matrix(0.00996329,0,0,0.01106728,1088.8742,-105.52135)">
-        <g
-   id="g1136">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="8888"
-   y="40649"
-   width="320"
-   height="955"
-   id="rect1131"
-   style="stroke-width:26.4583;stroke-dasharray:none" />
-         <path
-   fill="#ff860d"
-   stroke="none"
-   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
-   id="path1131"
-   style="stroke-width:26.4583;stroke-dasharray:none" />
-         <path
-   fill="none"
-   stroke="#ff860d"
-   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
-   id="path1133"
-   style="stroke-width:26.4583;stroke-dasharray:none" />
-        </g>
-       </g><g
-           class="com.sun.star.drawing.CustomShape"
-           id="g1139"
-           style="display:inline"
-           transform="matrix(0.00996329,0,0,0.01106728,868.328,-233.24386)">
-        <g
-   id="g1138">
-         <rect
-   class="BoundingBox"
-   stroke="none"
-   fill="none"
-   x="8888"
-   y="40649"
-   width="320"
-   height="955"
-   id="rect1137"
-   style="stroke-width:26.4583;stroke-dasharray:none" />
-         <path
-   fill="#ff860d"
-   stroke="none"
-   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
-   id="path1137"
-   style="stroke-width:26.4583;stroke-dasharray:none" />
-         <path
-   fill="none"
-   stroke="#ff860d"
-   d="m 9048,41602 h -159 v -952 h 317 v 952 z"
-   id="path1138"
-   style="stroke-width:26.4583;stroke-dasharray:none" />
-        </g>
-       </g></g></g></g></g></g>
+         id="title92">Navigation</title></g></g></g></g>
 
  
  

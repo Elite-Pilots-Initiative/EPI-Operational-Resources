@@ -1,0 +1,33 @@
+{
+  "deckOrder": ["habitat", "command", "engineering", "cargo"],
+  "missions": {
+    "biohazard-takedown": {
+      "title": "Biohazard Takedown",
+      "svgKey": "biohazard_takedown",
+      "decks": ["habitat", "command", "engineering"],
+      "entryDeck": "command",
+      "consumables": {
+        "energy-ports": [[0,0], [105.0,120.5]]
+      }
+    },
+    "reclamation-point": {
+      "title": "Reclamation Point",
+      "svgKey": "reclamation_point",
+      "decks": ["engineering", "cargo"],
+      "entryDeck": "cargo"
+    },
+    "tactical-takedown": {
+      "title": "Tactical Takedown",
+      "svgKey": "tactical_takedown",
+      "decks": ["command", "engineering"],
+      "entryDeck": "command"
+    }
+  },
+  "conditionalConsumables": {
+    "Energy Ports": "energy-ports",
+    "Ammo Boxes": "ammo-boxes",
+    "Batteries": "batteries",
+    "Grenade Cases": "grenade-cases",
+    "Medkits": "medkits"
+  }
+}

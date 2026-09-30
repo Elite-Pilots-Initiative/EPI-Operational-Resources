@@ -21225,7 +21225,7 @@
        
       <g
    id="footers_command"
-   transform="translate(-1.4767682e-4)"><title
+   transform="translate(-846.66686)"><title
      id="title24">Footers</title><g
      class="TextShape"
      id="g567"
@@ -21540,7 +21540,7 @@
      class="TextShape"
      id="g520"
      style="display:inline"
-     transform="translate(1.4767682e-4)">
+     transform="translate(1.4767682e-4,-1058.3334)">
         <g
    id="id21">
          <rect
@@ -21756,24 +21756,26 @@
      class="TextShape"
      id="g543"
      style="display:inline"
-     transform="translate(1.4767682e-4)">
+     transform="translate(-529.16654,2645.8344)">
         <g
    id="id24">
          <rect
    class="BoundingBox"
    stroke="none"
    fill="none"
-   x="6785"
+   x="6928.0024"
    y="38303"
-   width="2838"
+   width="2551.9946"
    height="650"
-   id="rect534" />
+   id="rect534"
+   style="stroke-width:0.948274" />
          <path
    fill="#000000"
    fill-opacity="0.502"
    stroke="none"
-   d="M 8204,38952 H 6785 v -649 h 2837 v 649 z"
-   id="path534" />
+   d="M 8204,38952 H 6928.0027 v -649 h 2551.0954 v 649 z"
+   id="path534"
+   style="stroke-width:0.948274" />
          <text
    class="SVGTextShape"
    id="text543"><tspan
@@ -21844,24 +21846,26 @@
      class="TextShape"
      id="g552"
      style="display:inline"
-     transform="translate(1.4767682e-4)">
+     transform="translate(517.24995,2698.7511)">
         <g
    id="id25">
          <rect
    class="BoundingBox"
    stroke="none"
    fill="none"
-   x="32285"
+   x="32404.168"
    y="38303"
-   width="2838"
+   width="2575.8284"
    height="650"
-   id="rect543" />
+   id="rect543"
+   style="stroke-width:0.952691" />
          <path
    fill="#000000"
    fill-opacity="0.502"
    stroke="none"
-   d="m 33704,38952 h -1419 v -649 h 2837 v 649 z"
-   id="path543" />
+   d="m 33692.046,38952 h -1311.711 v -649 h 2622.496 v 649 z"
+   id="path543"
+   style="stroke-width:0.961452" />
          <text
    class="SVGTextShape"
    id="text552"><tspan

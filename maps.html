@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Interactive Operations Megaship deck maps for Elite Dangerous."
+      content="Interactive Operations Megaship maps for Elite Dangerous."
     />
-    <title>Operations Megaship Deck Maps | Elite Pilots Initiative</title>
+    <title>Operations Megaship Maps | Elite Pilots Initiative</title>
     <script src="site-config.js"></script>
     <script src="route-guard.js"></script>
     <link rel="stylesheet" href="styles.css" />
@@ -44,20 +44,62 @@
                 class="map-brand-logo"
                 src="dist/assets/img/EDPI-logo_square.png"
                 alt="Elite Pilots Initiative squadron"
-              /><span>Operations Megaship Deck Maps</span>
+              /><span>Operations Megaship Maps</span>
             </div>
           </div>
           <p class="map-credits">
             Maps by <span class="credit-name">CMDR Indy Novascend</span><br />
-            Viewer by <span class="credit-name">CMDR Indy Novascend</span><br />
-            and <span class="credit-name">CMDR Jules Vector</span>
+            Viewer app by <span class="credit-name">CMDRs Indy Novascend & Jules Vector</span><br />
           </p>
+          <section class="sidebar-settings" aria-label="Mission Mode settings">
+            <div class="layer-controls-heading">
+              <p class="eyebrow">Mission Mode</p>
+            </div>
+            <div
+              class="mission-mode-controls"
+              role="group"
+              aria-label="Mission Mode"
+              title="Toggle Mission Mode"
+            >
+              <button
+                class="mission-mode-option"
+                type="button"
+                data-mission-mode="off"
+                aria-pressed="false"
+                title="Toggle Mission Mode"
+              >
+                Off
+              </button>
+              <button
+                class="mission-mode-option is-active"
+                type="button"
+                data-mission-mode="on"
+                aria-pressed="true"
+                title="Toggle Mission Mode"
+              >
+                On
+              </button>
+            </div>
+          </section>
+          <section
+            class="mission-controls"
+            id="mission-controls"
+            aria-labelledby="mission-title"
+            hidden
+          >
+            <div class="layer-controls-heading">
+              <p class="eyebrow" id="mission-title">Select Mission</p>
+            </div>
+            <div
+              class="mission-selector"
+              id="mission-selector"
+              role="group"
+              aria-label="Choose a mission"
+            ></div>
+          </section>
           <section class="layer-controls" aria-labelledby="layer-title">
             <div class="layer-controls-heading">
-              <div>
-                <p class="eyebrow">Map Layers</p>
-                <h2 id="layer-title">Show / Hide</h2>
-              </div>
+              <p class="eyebrow" id="layer-title">Map Layers</p>
               <button class="layer-reset" type="button" id="show-all-layers">
                 All
               </button>
@@ -86,14 +128,26 @@
                 </div>
                 <div class="layer-children" id="architecture-layers">
                   <div class="layer-subgroup">
-                    <button
-                      class="layer-disclosure"
-                      type="button"
-                      aria-expanded="true"
-                      aria-controls="floor-layers"
-                    >
-                      <span aria-hidden="true">&#9662;</span><span>Floors</span>
-                    </button>
+                    <div class="layer-group-heading">
+                      <button
+                        class="layer-disclosure"
+                        type="button"
+                        aria-expanded="true"
+                        aria-controls="floor-layers"
+                      >
+                        <span aria-hidden="true">&#9662;</span
+                        ><span>Floors</span>
+                      </button>
+                      <button
+                        class="layer-toggle is-visible"
+                        type="button"
+                        aria-label="Show Floors"
+                        aria-pressed="true"
+                        data-layer="floors"
+                      >
+                        <span class="layer-swatch architecture-swatch"></span>
+                      </button>
+                    </div>
                     <div class="layer-children" id="floor-layers">
                       <button
                         class="layer-toggle is-visible"
@@ -134,15 +188,26 @@
                     </div>
                   </div>
                   <div class="layer-subgroup">
-                    <button
-                      class="layer-disclosure"
-                      type="button"
-                      aria-expanded="true"
-                      aria-controls="elevated-layers"
-                    >
-                      <span aria-hidden="true">&#9662;</span
-                      ><span>Elevated</span>
-                    </button>
+                    <div class="layer-group-heading">
+                      <button
+                        class="layer-disclosure"
+                        type="button"
+                        aria-expanded="true"
+                        aria-controls="elevated-layers"
+                      >
+                        <span aria-hidden="true">&#9662;</span
+                        ><span>Elevated</span>
+                      </button>
+                      <button
+                        class="layer-toggle is-visible"
+                        type="button"
+                        aria-label="Show Elevated"
+                        aria-pressed="true"
+                        data-layer="elevated"
+                      >
+                        <span class="layer-swatch architecture-swatch"></span>
+                      </button>
+                    </div>
                     <div class="layer-children" id="elevated-layers">
                       <button
                         class="layer-toggle is-visible"
@@ -246,7 +311,7 @@
                   <button
                     class="layer-disclosure"
                     type="button"
-                    aria-expanded="false"
+                    aria-expanded="true"
                     aria-controls="text-layers"
                   >
                     <span aria-hidden="true">&#9662;</span><span>Text</span>
@@ -261,7 +326,7 @@
                     <span class="layer-swatch text-swatch"></span>
                   </button>
                 </div>
-                <div class="layer-children" id="text-layers" hidden>
+                <div class="layer-children" id="text-layers">
                   <button
                     class="layer-toggle is-visible"
                     type="button"
