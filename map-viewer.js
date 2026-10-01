@@ -1296,7 +1296,8 @@ function updateLayerAvailability() {
           el.classList.contains("layer-subgroup") ||
           el.classList.contains("layer-group")),
     );
-    const hasSingleChild = visibleChildren.length === 1;
+    const hasSingleChild =
+      isMissionModeActive() && visibleChildren.length === 1;
     subgroup.hidden = visibleChildren.length === 0;
     subgroup.classList.toggle("has-single-child", hasSingleChild);
 
